@@ -1,0 +1,50 @@
+﻿<Window x:Class="CursachFront.Autorization"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CursachFront"
+        mc:Ignorable="d"
+        Title="Autorization"  Height="500" Width="400" WindowStyle="None" Background="WhiteSmoke">
+    <Grid x:Name="MainRoot">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="231*"/>
+            <RowDefinition Height="135*"/>
+            <RowDefinition Height="140*"/>
+        </Grid.RowDefinitions>
+        <Border x:Name="WindowBorder" Background="#101317" Opacity="0.9"  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" />
+        <Image  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Source="Source\interpollog.png" Margin="20"></Image>
+        <Border x:Name="PasportBorder" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Border x:Name="BarderLogin" BorderBrush="#101317" BorderThickness="1" CornerRadius="10" Margin="10" Padding="4"></Border>
+                <Border x:Name="BarderPassword" BorderBrush="#101317" BorderThickness="1" CornerRadius="10" Margin="10" Grid.Row="1" Padding="4"></Border>
+            </Grid>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="27*" />
+                    <RowDefinition Height="40*" />
+                    <RowDefinition Height="56*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="77*"/>
+                    <ColumnDefinition Width="212*"/>
+                    <ColumnDefinition Width="77*"/>
+                </Grid.ColumnDefinitions>
+                <CheckBox x:Name="checkBox2" IsThreeState="True" IsChecked="True" Content="Remember me" Grid.ColumnSpan="2"  BorderBrush="#101317" Background="#101317" />
+                <Button Grid.Row="1" Grid.Column="1" BorderBrush="#1e3357" Foreground="WhiteSmoke" Background="#1e3357" Content="Log in" Style="{DynamicResource MaterialDesignPaperButton}" Margin="5"></Button>
+                <Button Grid.Row="2" Grid.Column="1" BorderBrush="#1e3357" Foreground="Black" BorderThickness="1" Content="View" Style="{DynamicResource MaterialDesignFlatAccentButton}"  Margin="5"></Button>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

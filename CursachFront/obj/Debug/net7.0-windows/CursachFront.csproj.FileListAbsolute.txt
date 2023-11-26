@@ -150,3 +150,45 @@ C:\Users\yyarm\Desktop\Нова папка (2)\CursachFront\CursachFront\obj\Deb
 C:\Users\yyarm\Desktop\Нова папка (2)\CursachFront\CursachFront\obj\Debug\net7.0-windows\CursachFront.pdb
 C:\Users\yyarm\Desktop\Нова папка (2)\CursachFront\CursachFront\obj\Debug\net7.0-windows\CursachFront.genruntimeconfig.cache
 C:\Users\yyarm\Desktop\Нова папка (2)\CursachFront\CursachFront\obj\Debug\net7.0-windows\ref\CursachFront.dll
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\bin\Debug\net7.0-windows\CursachFront.exe
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\bin\Debug\net7.0-windows\CursachFront.deps.json
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\bin\Debug\net7.0-windows\CursachFront.runtimeconfig.json
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\bin\Debug\net7.0-windows\CursachFront.dll
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\bin\Debug\net7.0-windows\CursachFront.pdb
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\bin\Debug\net7.0-windows\MaterialDesignColors.dll
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\bin\Debug\net7.0-windows\MaterialDesignThemes.Wpf.dll
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\bin\Debug\net7.0-windows\Microsoft.Xaml.Behaviors.dll
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\CursachFront.csproj.AssemblyReference.cache
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\Autorization.g.cs
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\CHANDGESUSPECT.g.cs
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\MainWindow.g.cs
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\More info.g.cs
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\NewUser.g.cs
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\PageOption.g.cs
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\PageUserCabinet.g.cs
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\searching.g.cs
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\Veiw.g.cs
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\App.g.cs
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\CursachFront_MarkupCompile.cache
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\CursachFront_MarkupCompile.lref
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\App.baml
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\Autorization.baml
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\CHANDGESUSPECT.baml
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\MainWindow.baml
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\More info.baml
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\NewUser.baml
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\PageOption.baml
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\PageUserCabinet.baml
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\searching.baml
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\Veiw.baml
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\CursachFront.g.resources
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\CursachFront.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\CursachFront.AssemblyInfoInputs.cache
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\CursachFront.AssemblyInfo.cs
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\CursachFront.csproj.CoreCompileInputs.cache
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\CursachFront.csproj.CopyComplete
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\CursachFront.dll
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\refint\CursachFront.dll
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\CursachFront.pdb
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\CursachFront.genruntimeconfig.cache
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\ref\CursachFront.dll

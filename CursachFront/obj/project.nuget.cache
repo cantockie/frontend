@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "uo8rVHdPIKJOGd4siGA71httdH4bTC9wkVWhdBsl/fOKhaTAnwRUr6+9FxMNKXWHY8ebaFEMCXMe0+aiPS+bOg==",
+  "dgSpecHash": "Tgdy5bwr9WIit5csowooWYIslBaCz24JTVRrOnzAsFWKUkSz4IrRN7yTEez45pM2HZ3CSRvRROTiRH+0h6hdHQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\yyarm\\Desktop\\Нова папка (2)\\CursachFront\\CursachFront\\CursachFront.csproj",
+  "projectFilePath": "C:\\Users\\Администратор\\Documents\\GitHub\\frontend\\CursachFront\\CursachFront.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\yyarm\\.nuget\\packages\\materialdesigncolors\\2.1.4\\materialdesigncolors.2.1.4.nupkg.sha512",
-    "C:\\Users\\yyarm\\.nuget\\packages\\materialdesignthemes\\4.9.0\\materialdesignthemes.4.9.0.nupkg.sha512",
-    "C:\\Users\\yyarm\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+    "C:\\Users\\Администратор\\.nuget\\packages\\materialdesigncolors\\2.1.4\\materialdesigncolors.2.1.4.nupkg.sha512",
+    "C:\\Users\\Администратор\\.nuget\\packages\\materialdesignthemes\\4.9.0\\materialdesignthemes.4.9.0.nupkg.sha512",
+    "C:\\Users\\Администратор\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
   ],
   "logs": []
 }
