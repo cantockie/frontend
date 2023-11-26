@@ -23,5 +23,13 @@ namespace CursachFront
         {
             InitializeComponent();
         }
+        private void CansellButton(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+        private void MinimizateButton(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
     }
 }
