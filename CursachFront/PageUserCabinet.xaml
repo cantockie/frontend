@@ -1,0 +1,89 @@
+﻿<Page x:Class="CursachFront.PageUserCabinet"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:CursachFront"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageUserCabinet" Background="Transparent">
+
+
+    <Page.Resources>
+
+        <Style x:Key="Transparent" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="IsHitTestVisible" Value="True"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border"
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    CornerRadius="4">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"/>
+                        </Border>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Page.Resources>
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.ColumnSpan="2" Grid.RowSpan="2"  Padding="20" Background="#1e3357"  BorderThickness="1" BorderBrush="Black"  >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Border Background="#12161f" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="0,0,0,140" CornerRadius="20"  ></Border>
+        <StackPanel Grid.Row="1" Orientation="Vertical">
+                    <TextBlock Text="Name"       Foreground="WhiteSmoke"   TextAlignment="Left"     FontSize="20"    Margin="5" />
+                    <TextBlock Text="First Name" Foreground="WhiteSmoke"   TextAlignment="Left"     FontSize="20"   Margin="5"/>
+                    <TextBlock Text="Status"     Foreground="WhiteSmoke"   TextAlignment="Left"     FontSize="20"   Margin="5" />
+                    <TextBlock Text="Experience" Foreground="WhiteSmoke"   TextAlignment="Left"     FontSize="20"   Margin="5" />
+                    <TextBlock Text="Contry"     Foreground="WhiteSmoke"   TextAlignment="Left"     FontSize="20"   Margin="5" />
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1"  Orientation="Vertical">
+            <TextBox x:Name="Name" Text="Родриго"              Foreground="WhiteSmoke"  TextAlignment="Left"  FontSize="20"   />
+            <TextBox x:Name="Sname" Text="Борджия"       Foreground="WhiteSmoke"  TextAlignment="Left"  FontSize="20"   />
+            <TextBox x:Name="Status" Text="Офицер"          Foreground="WhiteSmoke"  TextAlignment="Left"  FontSize="20"   />
+            <TextBox x:Name="Experience" Text="2 года"  Foreground="WhiteSmoke"  TextAlignment="Left"  FontSize="20"   />
+             <TextBox x:Name="ContryOficer" Text="UKR"         Foreground="WhiteSmoke"  TextAlignment="Left"  FontSize="20"  />
+        </StackPanel>
+            </Grid>
+        </Border>
+       
+         <Border Grid.ColumnSpan="2" CornerRadius="20" Padding="10"  BorderThickness="1"  Margin="20">
+            <Image  Grid.ColumnSpan="2" Source="/Source/7.jpg"  Margin="20"/>
+        </Border>
+
+        <Button x:Name="CloseCabin" Grid.RowSpan="2"  Grid.ColumnSpan="2"  Style="{DynamicResource Transparent }" Click="CancellCabinet"/>
+
+        <Button x:Name="SetingProfile" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Margin="0,0,0,40"
+           Style="{StaticResource MaterialDesignIconButton}"  >
+            <materialDesign:PackIcon Kind="Settings" Height="54" Width="48"/>
+        </Button>
+    </Grid>
+</Page>

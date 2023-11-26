@@ -1,0 +1,93 @@
+﻿<Window x:Class="CursachFront.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:CursachFront"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowState="Maximized" WindowStyle="None">
+    <Window.Resources>
+        <Style x:Key="Transparent" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="IsHitTestVisible" Value="True"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                CornerRadius="4">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                VerticalAlignment="Center"/>
+                        </Border>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="130*"/>
+            <ColumnDefinition Width="243*"/>
+            <ColumnDefinition Width="213*"/>
+            <ColumnDefinition Width="187*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="212*"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Column="2" MinWidth="240" MaxWidth="600"  Grid.ColumnSpan="2" Source="\Source\interpollog.png" Margin="120,0,0,0" Grid.RowSpan="2" />
+       
+        <Border x:Name="TopDecorBorder"  Background="#1c222e" BorderBrush="Transparent" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Visibility="Visible">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="191*"/>
+                    <ColumnDefinition Width="62*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock  x:Name="Deviz" FontWeight="Bold" Grid.ColumnSpan="2" Text="Coniungens vigilum ad tutiorem orbem"  TextAlignment="Center" Foreground="WhiteSmoke"  FontSize="30"  VerticalAlignment="Center"  HorizontalAlignment="Center" />
+                <Border x:Name="UserCabinetBorder" BorderThickness="1"  BorderBrush="#475263" Background="#1e3357" Grid.Column="2" Margin="3" CornerRadius="10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Height="32">
+                            <TextBlock x:Name="HitextBlock"  Text="Hi " Foreground="WhiteSmoke" FontSize="16"  VerticalAlignment="Center"  Margin="3" />
+                            <TextBlock x:Name="StatusBlock"  Text="Ohicer " Foreground="WhiteSmoke" FontSize="16"  VerticalAlignment="Center"  Margin="3"/>
+                            <TextBlock x:Name="FiOBlock"     Text="Rodrigo Borgia" Foreground="WhiteSmoke" TextWrapping="Wrap" FontSize="16"  VerticalAlignment="Center"   Margin="3"/>
+                            <Image x:Name="AdminStatus" Source="Source\GoldZnachok.png" Width="50" VerticalAlignment="Center" />
+                        </StackPanel>
+                        <Border x:Name="FotoBorder" BorderThickness="1" BorderBrush="#475263" Grid.Column="1"  Width="60" Height="60" HorizontalAlignment="Left" >
+                            <Image x:Name="fotopoliceman" Width="40" Source="Source\7.jpg"/>
+                        </Border>
+                    </Grid>
+                </Border>
+                <Button x:Name="Cabinet" Click="ToCabinet" Grid.Column="1"  BorderBrush="Transparent"  Style="{DynamicResource Transparent}"/>
+            </Grid>
+        </Border>
+       
+        <Border x:Name="LeftDecorBorder" Background="#15356e" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Visibility="Visible">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="45*"/>
+                    <RowDefinition Height="389*"/>
+                </Grid.RowDefinitions>
+                <Button x:Name="OptionButton" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" Foreground="Gray" Click="ToOption"
+        Style="{StaticResource MaterialDesignIconButton}"  >
+                    <materialDesign:PackIcon Kind="Menu"/>
+                </Button>
+            </Grid>
+        </Border>
+        
+        <Frame x:Name="FindesPages"   NavigationUIVisibility="Hidden"  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="2"/>
+        <Frame x:Name="CadinetOficer" NavigationUIVisibility="Hidden"  Grid.Row="0"  Grid.Column="4"  Grid.RowSpan="2"/>
+        <Frame x:Name="OptionsPages"  NavigationUIVisibility="Hidden"  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+
+    </Grid>
+</Window>
