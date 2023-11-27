@@ -31,5 +31,12 @@ namespace CursachFront
         {
             WindowState = WindowState.Minimized;
         }
+        private void toMainwindow(object sender, RoutedEventArgs e)
+        {
+            MainWindow newWindow = new MainWindow();
+            this.Close();
+            newWindow.ShowDialog();
+            
+        }
     }
 }

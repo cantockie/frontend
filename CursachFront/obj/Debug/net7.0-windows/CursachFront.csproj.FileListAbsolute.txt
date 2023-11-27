@@ -192,3 +192,5 @@ C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\D
 C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\CursachFront.pdb
 C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\CursachFront.genruntimeconfig.cache
 C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\ref\CursachFront.dll
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\FullUserCabinet.g.cs
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\FullUserCabinet.baml

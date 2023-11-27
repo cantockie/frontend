@@ -27,6 +27,7 @@ namespace CursachFront
         private static CHANDGESUSPECT Changer = new CHANDGESUSPECT();
         private static NewUser NUser = new NewUser();
         private static More_info Info = new More_info();
+        private static FullUserCabinet FullUserCabinet = new FullUserCabinet();
         public MainWindow()
         {
             InitializeComponent();
@@ -80,5 +81,15 @@ namespace CursachFront
 
         private void ToMoreInformationMetod() { FindesPages.Content = Info; }
         public void CansellMoreInformationMetod() { FindesPages.Content = null; }
+        /// //////////////////кнопки FullCabinet/
+        private void ToFullUserCabinet(object sender, RoutedEventArgs e) { FindesPages.Content = FullUserCabinet; }
+        public static void CancellFullUserCabinet(MainWindow mainWindow) { mainWindow.CansellFullUserCabinetMetod(); }
+        public static void ToFullUserCabinetEnotherframe(MainWindow mainWindow) {   mainWindow.ToFullUserCabinetMetod();}
+        public static void ToBackFullUserCabinetEnotherframe(MainWindow mainWindow) { mainWindow.GoBackFullUserCabinetMetod(); }
+
+        private void ToFullUserCabinetMetod() { FindesPages.Content = FullUserCabinet;}
+        public void  CansellFullUserCabinetMetod() { FindesPages.Content = null; }
+        public void GoBackFullUserCabinetMetod() { if (FindesPages.NavigationService.CanGoBack){ FindesPages.NavigationService.GoBack();} }
+
     }
 }

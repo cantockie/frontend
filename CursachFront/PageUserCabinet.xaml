@@ -81,7 +81,7 @@
 
         <Button x:Name="CloseCabin" Grid.RowSpan="2"  Grid.ColumnSpan="2"  Style="{DynamicResource Transparent }" Click="CancellCabinet"/>
 
-        <Button x:Name="SetingProfile" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Margin="0,0,0,40"
+        <Button x:Name="SetingProfile" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Click="FullCabinet" Margin="0,0,0,40"
            Style="{StaticResource MaterialDesignIconButton}"  >
             <materialDesign:PackIcon Kind="Settings" Height="54" Width="48"/>
         </Button>

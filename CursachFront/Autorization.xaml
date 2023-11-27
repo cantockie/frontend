@@ -80,7 +80,7 @@
                     <ColumnDefinition Width="77*"/>
                 </Grid.ColumnDefinitions>
                 <CheckBox x:Name="checkBox2"  Content="Remember me" Grid.ColumnSpan="2"  BorderBrush="#101317" Background="#101317" />
-                <Button Grid.Row="1" Grid.Column="1" BorderBrush="#1e3357" Foreground="WhiteSmoke" Background="#1e3357" Content="Log in" Style="{DynamicResource MaterialDesignPaperButton}" Margin="5"></Button>
+                <Button Grid.Row="1" Click="toMainwindow"  Grid.Column="1" BorderBrush="#1e3357" Foreground="WhiteSmoke" Background="#1e3357" Content="Log in" Style="{DynamicResource MaterialDesignPaperButton}" Margin="5"></Button>
                 <Button Grid.Row="2" Grid.Column="1" BorderBrush="#1e3357" Foreground="Black" BorderThickness="1" Content="View" Style="{DynamicResource MaterialDesignFlatAccentButton}"  Margin="5"></Button>
             </Grid>
         </Border>

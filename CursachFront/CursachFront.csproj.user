@@ -13,6 +13,9 @@
     <Compile Update="CHANDGESUSPECT.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="FullUserCabinet.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="More info.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -37,6 +40,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="CHANDGESUSPECT.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FullUserCabinet.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

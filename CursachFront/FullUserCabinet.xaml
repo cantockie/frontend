@@ -1,0 +1,177 @@
+﻿<Page x:Class="CursachFront.FullUserCabinet"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CursachFront"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="FullUserCabinet">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="164*"/>
+            <RowDefinition Height="203*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.ColumnSpan="2" Grid.RowSpan="4" Background="#101317" Opacity="0.9"/>
+        <Border  Background="#1e232b" Grid.ColumnSpan="2" BorderBrush="Transparent" CornerRadius="0,0,20,20" Padding="10"/>
+
+        
+        <Border Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" CornerRadius="20"  BorderBrush="Azure" BorderThickness="1" Margin="5,5,5,5" Padding="5">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="id:" FontSize="20" Foreground="WhiteSmoke" VerticalAlignment="Center" />
+                <TextBlock x:Name="idOficer" Width="2000"  FontSize="20"  Foreground="WhiteSmoke"  Margin="5" VerticalAlignment="Center" />
+            </StackPanel>
+            
+        </Border>
+        <Border x:Name="InsadeChangerSuspect" Grid.Column="1" Grid.Row="2" Grid.RowSpan="2"  BorderBrush="Azure" BorderThickness="1" CornerRadius="10" Padding="4" Margin="5">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Border>
+                    <Grid>
+                        <Border x:Name="Mask" Margin="30,20,60,30"  CornerRadius="10" Background="Azure"/>
+                        <Border x:Name="FotocartBorder" Margin="30,20,60,30" Width="{Binding Width, ElementName=Mask}" Height="{Binding Height, ElementName=Mask}" CornerRadius="10" BorderBrush="Azure" BorderThickness="1" Padding="0">
+                            <Grid>
+                                <Border x:Name="ImageMask" Background="Transparent">
+                                    <Image x:Name="FotocarSuspect" Source="/Source/7.jpg" Stretch="Fill">
+                                        <Image.OpacityMask>
+                                            <VisualBrush Visual="{Binding ElementName=Mask}"/>
+                                        </Image.OpacityMask>
+                                    </Image>
+                                </Border>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </Border>
+                <Border x:Name="ImprintBorder" Grid.Column="0" Grid.Row="1" BorderBrush="Azure" BorderThickness="1" Margin="30,30,60,30" CornerRadius="10" Padding="5" >
+                    <Image x:Name="ImprintImage" Source="\Source\pngwing.png"></Image>
+                </Border>
+                <Border x:Name="ParametrsSubjectborder" Grid.Column="1" Grid.RowSpan="2" BorderBrush="Azure" BorderThickness="1"  Padding="6,15,6,15" Margin="3,20,3,30" CornerRadius="10">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Border  BorderBrush="Azure" BorderThickness="1"   Padding="2"  Grid.Row="0"  Margin="5" CornerRadius="10">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Name :"  Margin="5" Foreground="WhiteSmoke" ></TextBlock>
+                                <TextBox x:Name="NameOficer" Foreground="WhiteSmoke"  Width="230" ></TextBox>
+                            </StackPanel>
+                        </Border>
+                        <Border  BorderBrush="Azure" BorderThickness="1"   Padding="2"  Grid.Row="1"  Margin="5" CornerRadius="10">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="SName :"  Margin="5" Foreground="WhiteSmoke" ></TextBlock>
+                                <TextBox x:Name="SNameOficer" Foreground="WhiteSmoke"  Width="230" ></TextBox>
+                            </StackPanel>
+                        </Border>
+                        <Border  BorderBrush="Azure" BorderThickness="1"   Padding="2"  Grid.Row="2"  Margin="5" CornerRadius="10">
+
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Hender :"  Margin="5" Foreground="WhiteSmoke" ></TextBlock>
+                                <TextBox x:Name="HenderOficer" Foreground="WhiteSmoke"  Width="230" ></TextBox>
+                            </StackPanel>
+                        </Border>
+                        <Border  BorderBrush="Azure" BorderThickness="1"     Padding="2" Grid.Row="3"  Margin="5" CornerRadius="10">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Rank :"  Margin="5" Foreground="WhiteSmoke"></TextBlock>
+                                <TextBox x:Name="Rank" Foreground="WhiteSmoke"  Width="230" ></TextBox>
+                            </StackPanel>
+                        </Border>
+                        <Border  BorderBrush="Azure" BorderThickness="1"    Padding="2" Grid.Row="4" Margin="5" CornerRadius="10">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Birthday :"   Foreground="WhiteSmoke"  Margin="5"></TextBlock>
+                                <TextBox x:Name="DrOficer" Foreground="WhiteSmoke"  Width="230"></TextBox>
+                            </StackPanel>
+                        </Border>
+                        <Border  BorderBrush="Azure" BorderThickness="1"    Padding="2" Grid.Row="5" Margin="5" CornerRadius="10">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Education :" Foreground="WhiteSmoke"   Margin="5"></TextBlock>
+                                <TextBox x:Name="EducationOficer" Foreground="WhiteSmoke"  Width="230" ></TextBox>
+                            </StackPanel>
+                        </Border>
+                        <Border  BorderBrush="Azure" BorderThickness="1"    Padding="2" Grid.Row="6"   Margin="5" CornerRadius="10">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Country :" Foreground="WhiteSmoke"  Margin="5"></TextBlock>
+                                <TextBox x:Name="CountryOficer"  Foreground="WhiteSmoke"  Width="230"></TextBox>
+                            </StackPanel>
+                        </Border>
+                        <Border  BorderBrush="Azure" BorderThickness="1"   Padding="2"  Grid.Row="7"   Margin="5" CornerRadius="10">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Departments :" Foreground="WhiteSmoke"   Margin="5"></TextBlock>
+                                <TextBox x:Name="DepartmentsOficer" Foreground="WhiteSmoke"  Width="230" ></TextBox>
+                            </StackPanel>
+                        </Border>
+                        <Border  BorderBrush="Azure" BorderThickness="1"   Padding="2" Grid.Row="8"   Margin="5" CornerRadius="10">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Specialization:" Foreground="WhiteSmoke"   Margin="5"></TextBlock>
+                                <TextBox x:Name="SpecializationOficer" Foreground="WhiteSmoke"  Width="230" ></TextBox>
+                            </StackPanel>
+                        </Border>
+                        <Border x:Name="Standart"  BorderBrush="Azure" BorderThickness="1"   Padding="2"  Grid.Row="9" Margin="5" CornerRadius="10">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Contact Information: " Foreground="WhiteSmoke"   Margin="5"></TextBlock>
+                                <TextBox x:Name="ContactInformationOficer" Foreground="WhiteSmoke"  Width="230" ></TextBox>
+                            </StackPanel>
+                        </Border>
+                        <Border  BorderBrush="Azure" BorderThickness="1"   Padding="2"  Grid.Row="10" Margin="5" CornerRadius="10">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Last active mission : " Foreground="WhiteSmoke"   Margin="5"></TextBlock>
+                                <TextBox x:Name="LastActiveMission" Foreground="WhiteSmoke"  Width="230" ></TextBox>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+
+
+        <Border x:Name="VidomostiSuspect" Grid.Column="0" Grid.Row="2" Grid.RowSpan="2"  BorderBrush="Azure" BorderThickness="1" CornerRadius="10" Padding="4" Margin="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="116*"/>
+                    <RowDefinition Height="169*"/>
+                    <RowDefinition Height="62*"/>
+                </Grid.RowDefinitions>
+                <Border Grid.RowSpan="2" Padding="5" BorderBrush="Azure" BorderThickness="1" Margin="0,0,0,20" CornerRadius="10">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Personal profile : " Foreground="WhiteSmoke"   Margin="5"></TextBlock>
+                        <TextBox x:Name="BIOOficer" Foreground="WhiteSmoke" TextWrapping="Wrap"  Width="600" ></TextBox>
+                    </StackPanel>
+                </Border>
+                <Border x:Name="ButtonsChenger" Grid.Row="2" BorderBrush="Azure" BorderThickness="1" Padding="2"   Margin="0,0,0,20" CornerRadius="10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="SaveChangeButton" Style="{DynamicResource MaterialDesignPaperLightButton}" Content="Save"  VerticalAlignment="Center" BorderBrush="Transparent"  Background="Green" Margin="5" Width="100"/>
+                        <Button x:Name="Change" Style="{DynamicResource MaterialDesignPaperLightButton}"           Content="Change"  VerticalAlignment="Center" BorderBrush="Transparent"   Margin="5" Width="100" />
+                        <Button x:Name="BackButton"   Style="{DynamicResource MaterialDesignPaperLightButton}"           Click="Back"  Content="Back" Grid.Column="1"  VerticalAlignment="Center" BorderBrush="Transparent"   Margin="5" Width="100" />
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>
