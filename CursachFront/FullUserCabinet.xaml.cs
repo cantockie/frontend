@@ -24,9 +24,9 @@ namespace CursachFront
         {
             InitializeComponent();
         }
-        private void Back(object sender, RoutedEventArgs e)
-        {
-            MainWindow.Cancell((MainWindow)Window.GetWindow(this));
+        private void b(object sender, RoutedEventArgs e)
+        {        
+            MainWindow.ToBackFullUserCabinetEnotherframe((MainWindow)Window.GetWindow(this));
         }
     }
 }

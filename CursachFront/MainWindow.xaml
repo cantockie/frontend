@@ -65,9 +65,23 @@
                         <TextBlock x:Name="StatusBlock"    Grid.Column="1" Text="Ohicer "  Foreground="WhiteSmoke"  FontSize="15"  HorizontalAlignment="Center"  VerticalAlignment="Center" />
                         <TextBlock x:Name="NameOficer"     Grid.Column="2" Text="Rodrigo"  Foreground="WhiteSmoke"  FontSize="15"  HorizontalAlignment="Left"    VerticalAlignment="Center" />
                         <TextBlock x:Name="SNameOficer"    Grid.Column="3" Text="Borgia"   Foreground="WhiteSmoke"  FontSize="15"  HorizontalAlignment="Left"    VerticalAlignment="Center" />
-                        <Image Grid.Column="4" Grid.ColumnSpan="2" Source="/Source/Down.png" ></Image>
-
-
+                        <Border Grid.Column="4" Padding="0,2,0,0">
+                            <Grid>
+                                <Border x:Name="Mask" Width="40" MaxWidth="200" Background="Azure" />
+                                <Border x:Name="FotocartBorder"  Width="{Binding Width, ElementName=Mask}" Height="{Binding Height, ElementName=Mask}" Padding="0">
+                                    <Grid>
+                                        <Border x:Name="ImageMask" Background="Transparent">
+                                            <Image x:Name="FotocarSuspect" Source="/Source/7.jpg" Stretch="Fill" >
+                                                <Image.OpacityMask>
+                                                    <VisualBrush Visual="{Binding ElementName=Mask}"/>
+                                                </Image.OpacityMask>
+                                            </Image>
+                                        </Border>
+                                    </Grid>
+                                </Border>
+                            </Grid>
+                        </Border>
+                        <Image  Grid.Column="5" Source="/Source/Down.png"  />
                     </Grid>
                 </Border>
                 <Button x:Name="Cabinet" Click="ToCabinet" Grid.Column="1"  BorderBrush="Transparent"  Style="{DynamicResource Transparent}"/>

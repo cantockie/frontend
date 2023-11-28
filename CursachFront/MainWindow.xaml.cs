@@ -89,7 +89,7 @@ namespace CursachFront
 
         private void ToFullUserCabinetMetod() { FindesPages.Content = FullUserCabinet;}
         public void  CansellFullUserCabinetMetod() { FindesPages.Content = null; }
-        public void GoBackFullUserCabinetMetod() { if (FindesPages.NavigationService.CanGoBack){ FindesPages.NavigationService.GoBack();} }
+        public void  GoBackFullUserCabinetMetod() { if (FindesPages.NavigationService.CanGoBack) { FindesPages.NavigationService.GoBack(); } else { FindesPages.Content = null;} }
 
     }
 }

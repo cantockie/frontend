@@ -166,9 +166,9 @@
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <Button x:Name="SaveChangeButton" Style="{DynamicResource MaterialDesignPaperLightButton}" Content="Save"  VerticalAlignment="Center" BorderBrush="Transparent"  Background="Green" Margin="5" Width="100"/>
-                        <Button x:Name="Change" Style="{DynamicResource MaterialDesignPaperLightButton}"           Content="Change"  VerticalAlignment="Center" BorderBrush="Transparent"   Margin="5" Width="100" />
-                        <Button x:Name="BackButton"   Style="{DynamicResource MaterialDesignPaperLightButton}"           Click="Back"  Content="Back" Grid.Column="1"  VerticalAlignment="Center" BorderBrush="Transparent"   Margin="5" Width="100" />
+                        <Button x:Name="SaveChangeButton" Style="{DynamicResource MaterialDesignPaperLightButton}"  Content="Save"  VerticalAlignment="Center" BorderBrush="Transparent"  Background="Green" Margin="5" Width="100"/>
+                        <Button x:Name="Change" Style="{DynamicResource MaterialDesignPaperLightButton}"             Content="Change"  VerticalAlignment="Center" BorderBrush="Transparent"   Margin="5" Width="100" />
+                        <Button x:Name="BackButton"   Style="{DynamicResource MaterialDesignPaperLightButton}"       Click="b"  Content="Back" Grid.Column="1"  VerticalAlignment="Center" BorderBrush="Transparent"   Margin="5" Width="100" />
                     </Grid>
                 </Border>
             </Grid>

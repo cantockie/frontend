@@ -75,7 +75,7 @@
             </Grid>
         </Border>
 
-        <Border Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="10" MinHeight="200" Height="300" MaxHeight="400"  MinWidth="150" Width="250" MaxWidth="350">
+        <Border Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="10" MinHeight="200" Height="300" MaxHeight="400"  MinWidth="100" Width="250" MaxWidth="350">
             <Grid>
                 <Border x:Name="Mask" Margin="20"  CornerRadius="10" Background="Azure"/>
                 <Border x:Name="FotocartBorder" Width="{Binding Width, ElementName=Mask}" Height="{Binding Height, ElementName=Mask}" CornerRadius="10" BorderBrush="Azure" BorderThickness="1" Padding="0">
