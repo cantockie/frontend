@@ -9,11 +9,18 @@
 
   <ItemGroup>
     <None Remove="Source\7.jpg" />
+    <None Remove="Source\Down.png" />
     <None Remove="Source\GoldZnachok.png" />
     <None Remove="Source\inetpollwhite1.png" />
     <None Remove="Source\interpollog.png" />
     <None Remove="Source\klipartz.com.png" />
     <None Remove="Source\pngwing.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Source\Down.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>

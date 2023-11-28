@@ -74,9 +74,22 @@
         </StackPanel>
             </Grid>
         </Border>
-       
-         <Border Grid.ColumnSpan="2" CornerRadius="20" Padding="10"  BorderThickness="1"  Margin="20">
-            <Image  Grid.ColumnSpan="2" Source="/Source/7.jpg"  Margin="20"/>
+
+        <Border Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="10" MinHeight="200" Height="300" MaxHeight="400"  MinWidth="150" Width="250" MaxWidth="350">
+            <Grid>
+                <Border x:Name="Mask" Margin="20"  CornerRadius="10" Background="Azure"/>
+                <Border x:Name="FotocartBorder" Width="{Binding Width, ElementName=Mask}" Height="{Binding Height, ElementName=Mask}" CornerRadius="10" BorderBrush="Azure" BorderThickness="1" Padding="0">
+                    <Grid>
+                        <Border x:Name="ImageMask" Background="Transparent">
+                            <Image x:Name="FotocarSuspect" Source="/Source/7.jpg" Stretch="Fill">
+                                <Image.OpacityMask>
+                                    <VisualBrush Visual="{Binding ElementName=Mask}"/>
+                                </Image.OpacityMask>
+                            </Image>
+                        </Border>
+                    </Grid>
+                </Border>
+            </Grid>
         </Border>
 
         <Button x:Name="CloseCabin" Grid.RowSpan="2"  Grid.ColumnSpan="2"  Style="{DynamicResource Transparent }" Click="CancellCabinet"/>

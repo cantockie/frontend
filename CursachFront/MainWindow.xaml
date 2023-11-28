@@ -51,21 +51,23 @@
                     <ColumnDefinition Width="62*"/>
                 </Grid.ColumnDefinitions>
                 <TextBlock  x:Name="Deviz" FontWeight="Bold" Grid.ColumnSpan="2" Text="Coniungens vigilum ad tutiorem orbem"  TextAlignment="Center" Foreground="WhiteSmoke"  FontSize="30"  VerticalAlignment="Center"  HorizontalAlignment="Center" />
-                <Border x:Name="UserCabinetBorder" BorderThickness="1"  BorderBrush="#475263" Background="#1e3357" Grid.Column="2" Margin="3" CornerRadius="10">
+                <Border x:Name="UserCabinetBorder" BorderThickness="1"  BorderBrush="#475263" Background="#1e3357" Grid.Column="2" Margin="3" Padding="3" CornerRadius="10">
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition />
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Height="32">
-                            <TextBlock x:Name="HitextBlock"  Text="Hi " Foreground="WhiteSmoke" FontSize="16"  VerticalAlignment="Center"  Margin="3" />
-                            <TextBlock x:Name="StatusBlock"  Text="Ohicer " Foreground="WhiteSmoke" FontSize="16"  VerticalAlignment="Center"  Margin="3"/>
-                            <TextBlock x:Name="FiOBlock"     Text="Rodrigo Borgia" Foreground="WhiteSmoke" TextWrapping="Wrap" FontSize="16"  VerticalAlignment="Center"   Margin="3"/>
-                            <Image x:Name="AdminStatus" Source="Source\GoldZnachok.png" Width="50" VerticalAlignment="Center" />
-                        </StackPanel>
-                        <Border x:Name="FotoBorder" BorderThickness="1" BorderBrush="#475263" Grid.Column="1"  Width="60" Height="60" HorizontalAlignment="Left" >
-                            <Image x:Name="fotopoliceman" Width="40" Source="Source\7.jpg"/>
-                        </Border>
+                        <TextBlock x:Name="HitextBlock"    Grid.Column="0" Text="Hi"       Foreground="WhiteSmoke"  FontSize="15"  HorizontalAlignment="Right"   VerticalAlignment="Center" Margin="3"/>
+                        <TextBlock x:Name="StatusBlock"    Grid.Column="1" Text="Ohicer "  Foreground="WhiteSmoke"  FontSize="15"  HorizontalAlignment="Center"  VerticalAlignment="Center" />
+                        <TextBlock x:Name="NameOficer"     Grid.Column="2" Text="Rodrigo"  Foreground="WhiteSmoke"  FontSize="15"  HorizontalAlignment="Left"    VerticalAlignment="Center" />
+                        <TextBlock x:Name="SNameOficer"    Grid.Column="3" Text="Borgia"   Foreground="WhiteSmoke"  FontSize="15"  HorizontalAlignment="Left"    VerticalAlignment="Center" />
+                        <Image Grid.Column="4" Grid.ColumnSpan="2" Source="/Source/Down.png" ></Image>
+
+
                     </Grid>
                 </Border>
                 <Button x:Name="Cabinet" Click="ToCabinet" Grid.Column="1"  BorderBrush="Transparent"  Style="{DynamicResource Transparent}"/>
