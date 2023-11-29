@@ -95,9 +95,10 @@
                     <RowDefinition Height="389*"/>
                 </Grid.RowDefinitions>
                 <Button x:Name="OptionButton" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" Foreground="Gray" Click="ToOption"
-        Style="{StaticResource MaterialDesignIconButton}"  >
+                    Style="{StaticResource MaterialDesignIconButton}"  >
                     <materialDesign:PackIcon Kind="Menu"/>
                 </Button>
+
             </Grid>
         </Border>
         
@@ -105,5 +106,16 @@
         <Frame x:Name="CadinetOficer" NavigationUIVisibility="Hidden"  Grid.Row="0"  Grid.Column="4"  Grid.RowSpan="2"/>
         <Frame x:Name="OptionsPages"  NavigationUIVisibility="Hidden"  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
 
+       
+            <Button  Click="MinimizateButton" Grid.Row="1" VerticalAlignment="Bottom" Margin="2,2,2,40"
+        Style="{StaticResource MaterialDesignIconButton}" Foreground="#8f8c88" Height="30" Width="39">
+                <materialDesign:PackIcon Kind="Minimize"  Height="30" Width="30"/>
+            </Button>
+        <Button  Click="CansellButton" Grid.Row="1" VerticalAlignment="Bottom" Margin="2,2,2,10"
+      
+                     Style="{StaticResource MaterialDesignIconButton}" Foreground="#8f8c88" Height="30" Width="39" >
+                <materialDesign:PackIcon Kind="Close"     Height="30" Width="30" />
+            </Button>
+        
     </Grid>
 </Window>

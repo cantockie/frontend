@@ -90,6 +90,14 @@ namespace CursachFront
         private void ToFullUserCabinetMetod() { FindesPages.Content = FullUserCabinet;}
         public void  CansellFullUserCabinetMetod() { FindesPages.Content = null; }
         public void  GoBackFullUserCabinetMetod() { if (FindesPages.NavigationService.CanGoBack) { FindesPages.NavigationService.GoBack(); } else { FindesPages.Content = null;} }
-
+        /// //////////////////
+        private void CansellButton(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+        private void MinimizateButton(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
     }
 }

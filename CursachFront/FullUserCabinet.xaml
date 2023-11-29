@@ -7,7 +7,13 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="FullUserCabinet">
-
+    <Page.Resources>
+        <Style x:Key="CustomBorder" TargetType="Border">
+            <Setter Property="BorderBrush" Value="Azure" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="CornerRadius" Value="10" />
+        </Style>
+    </Page.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -23,14 +29,14 @@
         <Border  Background="#1e232b" Grid.ColumnSpan="2" BorderBrush="Transparent" CornerRadius="0,0,20,20" Padding="10"/>
 
         
-        <Border Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" CornerRadius="20"  BorderBrush="Azure" BorderThickness="1" Margin="5,5,5,5" Padding="5">
+        <Border Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Margin="5,5,5,5" CornerRadius="20" Padding="5" Style="{DynamicResource CustomBorder}">
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="id:" FontSize="20" Foreground="WhiteSmoke" VerticalAlignment="Center" />
                 <TextBlock x:Name="idOficer" Width="2000"  FontSize="20"  Foreground="WhiteSmoke"  Margin="5" VerticalAlignment="Center" />
             </StackPanel>
             
         </Border>
-        <Border x:Name="InsadeChangerSuspect" Grid.Column="1" Grid.Row="2" Grid.RowSpan="2"  BorderBrush="Azure" BorderThickness="1" CornerRadius="10" Padding="4" Margin="5">
+        <Border x:Name="InsadeChangerSuspect" Grid.Column="1" Grid.Row="2" Grid.RowSpan="2" Padding="4" Margin="5" Style="{StaticResource CustomBorder}" >
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
@@ -43,7 +49,7 @@
                 <Border>
                     <Grid>
                         <Border x:Name="Mask" Margin="30,20,60,30"  CornerRadius="10" Background="Azure"/>
-                        <Border x:Name="FotocartBorder" Margin="30,20,60,30" Width="{Binding Width, ElementName=Mask}" Height="{Binding Height, ElementName=Mask}" CornerRadius="10" BorderBrush="Azure" BorderThickness="1" Padding="0">
+                        <Border x:Name="FotocartBorder" Margin="30,20,60,30" Width="{Binding Width, ElementName=Mask}" Height="{Binding Height, ElementName=Mask}"  Style="{StaticResource CustomBorder}">
                             <Grid>
                                 <Border x:Name="ImageMask" Background="Transparent">
                                     <Image x:Name="FotocarSuspect" Source="/Source/7.jpg" Stretch="Fill">
@@ -56,10 +62,10 @@
                         </Border>
                     </Grid>
                 </Border>
-                <Border x:Name="ImprintBorder" Grid.Column="0" Grid.Row="1" BorderBrush="Azure" BorderThickness="1" Margin="30,30,60,30" CornerRadius="10" Padding="5" >
+                <Border x:Name="ImprintBorder" Grid.Column="0" Grid.Row="1" Margin="30,30,60,30" Padding="5"  Style="{StaticResource CustomBorder}">
                     <Image x:Name="ImprintImage" Source="\Source\pngwing.png"></Image>
                 </Border>
-                <Border x:Name="ParametrsSubjectborder" Grid.Column="1" Grid.RowSpan="2" BorderBrush="Azure" BorderThickness="1"  Padding="6,15,6,15" Margin="3,20,3,30" CornerRadius="10">
+                <Border x:Name="ParametrsSubjectborder" Grid.Column="1" Grid.RowSpan="2" Padding="6,15,6,15" Margin="3,20,3,30"  Style="{StaticResource CustomBorder}">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -74,71 +80,71 @@
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <Border  BorderBrush="Azure" BorderThickness="1"   Padding="2"  Grid.Row="0"  Margin="5" CornerRadius="10">
+                        <Border  Padding="2"  Grid.Row="0"  Margin="5"  Style="{StaticResource CustomBorder}">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Name :"  Margin="5" Foreground="WhiteSmoke" ></TextBlock>
-                                <TextBox x:Name="NameOficer" Foreground="WhiteSmoke"  Width="230" ></TextBox>
+                                <TextBox x:Name="NameOficer" IsReadOnly="True" Foreground="WhiteSmoke"  Width="230" ></TextBox>
                             </StackPanel>
                         </Border>
-                        <Border  BorderBrush="Azure" BorderThickness="1"   Padding="2"  Grid.Row="1"  Margin="5" CornerRadius="10">
+                        <Border  Padding="2"  Grid.Row="1"  Margin="5"  Style="{StaticResource CustomBorder}">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="SName :"  Margin="5" Foreground="WhiteSmoke" ></TextBlock>
-                                <TextBox x:Name="SNameOficer" Foreground="WhiteSmoke"  Width="230" ></TextBox>
+                                <TextBox x:Name="SNameOficer" IsReadOnly="True" Foreground="WhiteSmoke"  Width="230" ></TextBox>
                             </StackPanel>
                         </Border>
-                        <Border  BorderBrush="Azure" BorderThickness="1"   Padding="2"  Grid.Row="2"  Margin="5" CornerRadius="10">
+                        <Border  Padding="2"  Grid.Row="2"  Margin="5" Style="{StaticResource CustomBorder}">
 
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Hender :"  Margin="5" Foreground="WhiteSmoke" ></TextBlock>
-                                <TextBox x:Name="HenderOficer" Foreground="WhiteSmoke"  Width="230" ></TextBox>
+                                <TextBox x:Name="HenderOficer" IsReadOnly="True" Foreground="WhiteSmoke"  Width="230" ></TextBox>
                             </StackPanel>
                         </Border>
-                        <Border  BorderBrush="Azure" BorderThickness="1"     Padding="2" Grid.Row="3"  Margin="5" CornerRadius="10">
+                        <Border  Padding="2" Grid.Row="3"  Margin="5" Style="{StaticResource CustomBorder}">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Rank :"  Margin="5" Foreground="WhiteSmoke"></TextBlock>
-                                <TextBox x:Name="Rank" Foreground="WhiteSmoke"  Width="230" ></TextBox>
+                                <TextBox x:Name="Rank"  IsReadOnly="True" Foreground="WhiteSmoke"  Width="230" ></TextBox>
                             </StackPanel>
                         </Border>
-                        <Border  BorderBrush="Azure" BorderThickness="1"    Padding="2" Grid.Row="4" Margin="5" CornerRadius="10">
+                        <Border  Padding="2" Grid.Row="4" Margin="5" Style="{StaticResource CustomBorder}">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Birthday :"   Foreground="WhiteSmoke"  Margin="5"></TextBlock>
-                                <TextBox x:Name="DrOficer" Foreground="WhiteSmoke"  Width="230"></TextBox>
+                                <TextBox x:Name="DrOficer" IsReadOnly="True" Foreground="WhiteSmoke"  Width="230"></TextBox>
                             </StackPanel>
                         </Border>
-                        <Border  BorderBrush="Azure" BorderThickness="1"    Padding="2" Grid.Row="5" Margin="5" CornerRadius="10">
+                        <Border   Padding="2" Grid.Row="5" Margin="5" Style="{StaticResource CustomBorder}">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Education :" Foreground="WhiteSmoke"   Margin="5"></TextBlock>
-                                <TextBox x:Name="EducationOficer" Foreground="WhiteSmoke"  Width="230" ></TextBox>
+                                <TextBox x:Name="EducationOficer" IsReadOnly="True" Foreground="WhiteSmoke"  Width="230" ></TextBox>
                             </StackPanel>
                         </Border>
-                        <Border  BorderBrush="Azure" BorderThickness="1"    Padding="2" Grid.Row="6"   Margin="5" CornerRadius="10">
+                        <Border  Padding="2" Grid.Row="6"   Margin="5" Style="{StaticResource CustomBorder}">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Country :" Foreground="WhiteSmoke"  Margin="5"></TextBlock>
-                                <TextBox x:Name="CountryOficer"  Foreground="WhiteSmoke"  Width="230"></TextBox>
+                                <TextBox x:Name="CountryOficer" IsReadOnly="True" Foreground="WhiteSmoke"  Width="230"></TextBox>
                             </StackPanel>
                         </Border>
-                        <Border  BorderBrush="Azure" BorderThickness="1"   Padding="2"  Grid.Row="7"   Margin="5" CornerRadius="10">
+                        <Border  Padding="2"  Grid.Row="7"   Margin="5" Style="{StaticResource CustomBorder}">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Departments :" Foreground="WhiteSmoke"   Margin="5"></TextBlock>
-                                <TextBox x:Name="DepartmentsOficer" Foreground="WhiteSmoke"  Width="230" ></TextBox>
+                                <TextBox x:Name="DepartmentsOficer" IsReadOnly="True" Foreground="WhiteSmoke"  Width="230" ></TextBox>
                             </StackPanel>
                         </Border>
-                        <Border  BorderBrush="Azure" BorderThickness="1"   Padding="2" Grid.Row="8"   Margin="5" CornerRadius="10">
+                        <Border  Padding="2" Grid.Row="8"   Margin="5" Style="{StaticResource CustomBorder}">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Specialization:" Foreground="WhiteSmoke"   Margin="5"></TextBlock>
-                                <TextBox x:Name="SpecializationOficer" Foreground="WhiteSmoke"  Width="230" ></TextBox>
+                                <TextBox x:Name="SpecializationOficer" IsReadOnly="True" Foreground="WhiteSmoke"  Width="230" ></TextBox>
                             </StackPanel>
                         </Border>
-                        <Border x:Name="Standart"  BorderBrush="Azure" BorderThickness="1"   Padding="2"  Grid.Row="9" Margin="5" CornerRadius="10">
+                        <Border x:Name="Standart" Padding="2"  Grid.Row="9" Margin="5" Style="{StaticResource CustomBorder}">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Contact Information: " Foreground="WhiteSmoke"   Margin="5"></TextBlock>
-                                <TextBox x:Name="ContactInformationOficer" Foreground="WhiteSmoke"  Width="230" ></TextBox>
+                                <TextBox x:Name="ContactInformationOficer" IsReadOnly="True" Foreground="WhiteSmoke"  Width="230" ></TextBox>
                             </StackPanel>
                         </Border>
-                        <Border  BorderBrush="Azure" BorderThickness="1"   Padding="2"  Grid.Row="10" Margin="5" CornerRadius="10">
+                        <Border  Padding="2"  Grid.Row="10" Margin="5" Style="{StaticResource CustomBorder}">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Last active mission : " Foreground="WhiteSmoke"   Margin="5"></TextBlock>
-                                <TextBox x:Name="LastActiveMission" Foreground="WhiteSmoke"  Width="230" ></TextBox>
+                                <TextBox x:Name="LastActiveMission" IsReadOnly="True" Foreground="WhiteSmoke"  Width="230" ></TextBox>
                             </StackPanel>
                         </Border>
                     </Grid>
@@ -147,27 +153,27 @@
         </Border>
 
 
-        <Border x:Name="VidomostiSuspect" Grid.Column="0" Grid.Row="2" Grid.RowSpan="2"  BorderBrush="Azure" BorderThickness="1" CornerRadius="10" Padding="4" Margin="5">
+        <Border x:Name="VidomostiSuspect" Grid.Column="0" Grid.Row="2" Grid.RowSpan="2" Padding="4" Margin="5" Style="{StaticResource CustomBorder}">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="116*"/>
                     <RowDefinition Height="169*"/>
                     <RowDefinition Height="62*"/>
                 </Grid.RowDefinitions>
-                <Border Grid.RowSpan="2" Padding="5" BorderBrush="Azure" BorderThickness="1" Margin="0,0,0,20" CornerRadius="10">
+                <Border Grid.RowSpan="2"       Grid.Row="0" Padding="5" Margin="0,0,0,20" Style="{StaticResource CustomBorder}">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Personal profile : " Foreground="WhiteSmoke"   Margin="5"></TextBlock>
-                        <TextBox x:Name="BIOOficer" Foreground="WhiteSmoke" TextWrapping="Wrap"  Width="600" ></TextBox>
+                        <TextBox x:Name="BIOOficer" IsReadOnly="True" Foreground="WhiteSmoke" TextWrapping="Wrap"  Width="600" ></TextBox>
                     </StackPanel>
                 </Border>
-                <Border x:Name="ButtonsChenger" Grid.Row="2" BorderBrush="Azure" BorderThickness="1" Padding="2"   Margin="0,0,0,20" CornerRadius="10">
+                <Border x:Name="ButtonsChenger" Grid.Row="2" Padding="2" Margin="0,0,0,20" Style="{StaticResource CustomBorder}">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <Button x:Name="SaveChangeButton" Style="{DynamicResource MaterialDesignPaperLightButton}"  Content="Save"  VerticalAlignment="Center" BorderBrush="Transparent"  Background="Green" Margin="5" Width="100"/>
-                        <Button x:Name="Change" Style="{DynamicResource MaterialDesignPaperLightButton}"             Content="Change"  VerticalAlignment="Center" BorderBrush="Transparent"   Margin="5" Width="100" />
+                        <Button x:Name="Change" Style="{DynamicResource MaterialDesignPaperLightButton}"             Content="Change"  VerticalAlignment="Center" BorderBrush="Transparent"   Margin="5" Width="100" Click="Change_Click" />
                         <Button x:Name="BackButton"   Style="{DynamicResource MaterialDesignPaperLightButton}"       Click="b"  Content="Back" Grid.Column="1"  VerticalAlignment="Center" BorderBrush="Transparent"   Margin="5" Width="100" />
                     </Grid>
                 </Border>

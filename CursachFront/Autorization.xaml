@@ -7,7 +7,24 @@
         xmlns:local="clr-namespace:CursachFront"
         mc:Ignorable="d"
         Title="Autorization"  Height="500" Width="400" WindowStyle="None" Background="WhiteSmoke" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style x:Key="CustomBorder" TargetType="Border" BasedOn="{StaticResource MaterialDesignToolBarMainPanelBorderStyle}">
+            <Setter Property="BorderBrush" Value="#101317" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="Padding" Value="4" />
+        </Style>
+        <Style x:Key="CustomButton1" TargetType="Button" BasedOn="{StaticResource MaterialDesignFlatButton}">
+            <Setter Property="BorderBrush" Value="#1e3357" />
+            <Setter Property="Foreground"  Value="Black" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Margin"  Value="5" />
+          
+        </Style>
+    </Window.Resources>
     <Grid x:Name="MainRoot" >
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
@@ -43,14 +60,14 @@
                     <RowDefinition />
                     <RowDefinition />
                 </Grid.RowDefinitions>
-                <Border x:Name="BarderLogin" BorderBrush="#101317" BorderThickness="1" CornerRadius="10" Margin="10" Padding="4">
+                <Border x:Name="BarderLogin" Grid.Row="0" Style="{DynamicResource CustomBorder}">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Login : "   VerticalAlignment="Center" ></TextBlock>
+                        <TextBlock Text="Login : "         VerticalAlignment="Center" ></TextBlock>
                         <TextBox Name="Login" Width="290"  VerticalAlignment="Center" ></TextBox>
                     </StackPanel>
 
                 </Border>
-                <Border x:Name="BarderPassword" BorderBrush="#101317" BorderThickness="1" CornerRadius="10" Margin="10" Grid.Row="1" Padding="4">
+                <Border x:Name="BarderPassword" Grid.Row="1" Style="{DynamicResource CustomBorder}">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Password : "   VerticalAlignment="Center" ></TextBlock>
                         <PasswordBox  Width="270" Visibility="Visible" VerticalAlignment="Center"/>
@@ -60,7 +77,7 @@
                             <materialDesign:PackIcon Kind="EyeClosed" Height="18" Width="29"  />
                         </Button>
                         <Button  
-                            Style="{StaticResource MaterialDesignIconButton}" Foreground="#8f8c88" Height="18" Width="39">
+                        Style="{StaticResource MaterialDesignIconButton}" Foreground="#8f8c88" Height="18" Width="39">
                             <materialDesign:PackIcon Kind="Eye" Height="18" Width="29"/>
                         </Button>
                     </StackPanel>
@@ -80,8 +97,8 @@
                     <ColumnDefinition Width="77*"/>
                 </Grid.ColumnDefinitions>
                 <CheckBox x:Name="checkBox2"  Content="Remember me" Grid.ColumnSpan="2"  BorderBrush="#101317" Background="#101317" />
-                <Button Grid.Row="1" Click="toMainwindow"  Grid.Column="1" BorderBrush="#1e3357" Foreground="WhiteSmoke" Background="#1e3357" Content="Log in" Style="{DynamicResource MaterialDesignPaperButton}" Margin="5"></Button>
-                <Button Grid.Row="2" Grid.Column="1" BorderBrush="#1e3357" Foreground="Black" BorderThickness="1" Content="View" Style="{DynamicResource MaterialDesignFlatAccentButton}"  Margin="5"></Button>
+                <Button Grid.Row="1" Grid.Column="1" Click="toMainwindow"  Content="Log in" Style="{DynamicResource MaterialDesignPaperButton}"  Background="#1e3357" BorderBrush="#1e3357" Foreground="WhiteSmoke"  ></Button>
+                <Button Grid.Row="2" Grid.Column="1" Click="toMainwindow"  Content="View"   Style="{DynamicResource CustomButton1}"              ></Button>
             </Grid>
         </Border>
     </Grid>

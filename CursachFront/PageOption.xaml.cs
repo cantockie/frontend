@@ -48,6 +48,7 @@ namespace CursachFront
         private void ToUserEnotherFrameOption(object sender, RoutedEventArgs e)
         {
             MainWindow.ToNewUserEnotherframe((MainWindow)Window.GetWindow(this));
+            MainWindow.Cancell((MainWindow)Window.GetWindow(this));
         }//адмін панель
     }
 }

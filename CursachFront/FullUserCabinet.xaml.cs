@@ -28,5 +28,10 @@ namespace CursachFront
         {        
             MainWindow.ToBackFullUserCabinetEnotherframe((MainWindow)Window.GetWindow(this));
         }
+
+        private void Change_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
