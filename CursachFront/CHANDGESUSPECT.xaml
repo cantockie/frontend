@@ -7,6 +7,31 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="CHANDGESUSPECT">
+    <Page.Resources>
+        <Style x:Key="TransparentButton" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <!-- Цвет текста кнопки -->
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                         BorderBrush="{TemplateBinding BorderBrush}"
+                         BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <!-- Изменение курсора при наведении -->
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Page.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="39*"/>
@@ -22,7 +47,7 @@
         <Border  Background="#1e232b" Grid.ColumnSpan="2" BorderBrush="Transparent" CornerRadius="0,0,20,20" Padding="10"/>
 
         <Border Grid.Column="0" Grid.Row="1" CornerRadius="20" BorderBrush="Azure" BorderThickness="1" Margin="5,5,5,5">
-            <ComboBox x:Name="Vibor" Margin="10" FontSize="20" Foreground="WhiteSmoke"  VerticalAlignment="Center" >
+            <ComboBox x:Name="Vibor" Margin="10" FontSize="20" Foreground="WhiteSmoke"  BorderBrush="Azure"  VerticalAlignment="Center" >
                 <ComboBoxItem Content="Change"  Foreground="Black"  />
                 <ComboBoxItem Content="Add"     Foreground="Black"  />
                 <ComboBoxItem Content="Delete"  Foreground="Black" />
@@ -56,11 +81,13 @@
                                 </Border>
                             </Grid>
                         </Border>
+                        <Button x:Name="ButtonSelectFoto" Margin="30,20,60,30" Width="{Binding Width, ElementName=FotocarSuspect}" Height="{Binding Height, ElementName=FotocarSuspect}" Style="{DynamicResource TransparentButton}" Click="ButtonSelectFoto_Click"></Button>
                     </Grid>
                 </Border>
                 <Border x:Name="ImprintBorder" Grid.Column="0" Grid.Row="1" BorderBrush="Azure" BorderThickness="1" Margin="30,30,60,30" CornerRadius="10" Padding="5" >
                     <Image x:Name="ImprintImage" Source="\Source\pngwing.png"></Image>
                 </Border>
+                <Button x:Name="ButtonSelectImprint" Grid.Column="0" Grid.Row="1"  Margin="30,30,60,30" Width="{Binding Width, ElementName=ImprintBorder}" Height="{Binding Height, ElementName=ImprintBorder}" Style="{DynamicResource TransparentButton}" Click="ButtonSelectImprint_Click"></Button>
                 <Border x:Name="ParametrsSubjectborder" Grid.Column="1" Grid.RowSpan="2" BorderBrush="Azure" BorderThickness="1"  Margin="0,20,0,30" CornerRadius="10" Grid.ColumnSpan="2" Padding="20">
                     <Grid>
                         <Grid.ColumnDefinitions>

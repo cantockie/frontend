@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,36 @@ namespace CursachFront
         public CHANDGESUSPECT()
         {
             InitializeComponent();
+            ButtonSelectFoto.Click += ButtonSelectFoto_Click;
+            ButtonSelectImprint.Click += ButtonSelectImprint_Click;
+        }
+        private void ButtonSelectFoto_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image files (*.jpg, *.jpeg, *.png)|*.jpg;*.jpeg;*.png|All files (*.*)|*.*";
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                // openFileDialog.FileName содержит путь к выбранному файлу
+                string selectedFilePath = openFileDialog.FileName;
+
+                // Загрузка выбранного изображения в элемент Image
+                FotocarSuspect.Source = new BitmapImage(new Uri(selectedFilePath));
+            }
+        }
+        private void ButtonSelectImprint_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image files (*.jpg, *.jpeg, *.png)|*.jpg;*.jpeg;*.png|All files (*.*)|*.*";
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                // openFileDialog.FileName содержит путь к выбранному файлу
+                string selectedFilePath = openFileDialog.FileName;
+
+                // Загрузка выбранного изображения в элемент Image
+                ImprintImage.Source = new BitmapImage(new Uri(selectedFilePath));
+            }
         }
     }
 }
