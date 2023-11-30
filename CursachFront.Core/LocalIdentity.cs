@@ -14,9 +14,10 @@ public static class LocalIdentity
         get { return _user is not null; }
     }
     
-    public static bool IsInRole
+    public static bool IsInRole(string role)
     {
-        get { return Roles.GetRoles().Any(prp => prp.Equals(_user.Role));; }
+         //return Roles.GetRoles().Any(prp => prp.Equals(_user.Role));; 
+         return _user.Role == role;
     }
     
     public static AppUser User

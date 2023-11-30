@@ -1,0 +1,53 @@
+{
+  "AppUsers": [
+    {
+      "Id": 0,
+      "Role": "ADMIN",
+      "FirstName": null,
+      "LastName": null,
+      "HashedPassword": "nFb0ium6/SBSYgNL/MIjKyxjNIy3I9aB7DnxNAn5kMw=",
+      "Username": "admin@gmail.com"
+    },
+
+    {
+      "Id": 2,
+      "Role": "USER",
+      "FirstName": null,
+      "LastName": null,
+      "HashedPassword": "0IAM0V+LhJgjIg96EvuqZl/kJu0d2xO2DsuJpdQSwd4=",
+      "Username": "user@gmail.com"
+    },
+
+    {
+      "Id": 3,
+      "Role": "MANAGER",
+      "FirstName": null,
+      "LastName": null,
+      "HashedPassword": "g0pwm6JTTr4+4Tl/1Pe9KIsqzB0goI1shi3NmbbwRAA=",
+      "Username": "manager@gmail.com"
+    },
+
+    {
+      "Id": 4,
+      "Role": null,
+      "FirstName": null,
+      "LastName": null,
+      "HashedPassword": "NnRn9D1YDDwHBAp4x4kK5CYtrUd4h4+aSdX2UsgWiaU=",
+      "Username": "null@gmail.com"
+    }
+  ],
+  "Prisoners": [
+    {
+      "Id": 0,
+      "Name": "a",
+      "Surname": "b",
+      "Hospital": null,
+      "Birthday": 0,
+      "ColorHair": "red",
+      "Country": null,
+      "LastSee": null,
+      "CriminalArticles": null,
+      "PhotoName": null
+    }
+  ]
+}

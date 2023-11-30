@@ -23,24 +23,18 @@ namespace CursachFront
     /// </summary>
     public partial class PageOption : Page
     {
-        private byte accessCode = 0;
-        //private LocalIdentity localIdentity;
+  
         public PageOption()
         {
+           
             InitializeComponent();
-        }
-        private byte AcessGiven(AppUser user)
-        {
-            switch(user.Role)
-            {
-                case "ADMIN":
-                    return 11;
-                case "MANAGER":
-                    return 22;
-                case "SEARCHER":
-                    return 33;
-                default:  return 202;
-            }
+
+            if (!LocalIdentity.IsInRole(Roles.ADMIN))
+                Admin.IsEnabled = false;
+            if (!(LocalIdentity.IsInRole(Roles.ADMIN) || LocalIdentity.IsInRole(Roles.MANAGER)))
+                Manager.IsEnabled = false;
+            if (!(LocalIdentity.IsInRole(Roles.ADMIN) || LocalIdentity.IsInRole(Roles.MANAGER) || LocalIdentity.IsInRole(Roles.USER)))
+                Search.IsEnabled = false;
         }
         private void CancellOp(object sender, RoutedEventArgs e)
         {

@@ -22,9 +22,6 @@
     <Compile Update="NewUser.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="PageOption.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="PageUserCabinet.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
