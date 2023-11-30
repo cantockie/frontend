@@ -171,8 +171,8 @@
                         </Border>
                         <Border  Grid.Row="10" Padding="2" Margin="5" Style="{StaticResource CustomBorder}">
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Last active mission : " Foreground="WhiteSmoke"   Margin="5"></TextBlock>
-                                <TextBox x:Name="LastActiveMission" Foreground="WhiteSmoke"  Width="230" ></TextBox>
+                                <TextBlock Text="Level Protection : " Foreground="WhiteSmoke"   Margin="5"></TextBlock>
+                                <TextBox x:Name="Level" Foreground="WhiteSmoke"  Width="230" ></TextBox>
                             </StackPanel>
                         </Border>
                     </Grid>

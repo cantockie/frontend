@@ -1,53 +1,73 @@
 {
   "AppUsers": [
     {
-      "Id": 0,
-      "Role": "ADMIN",
-      "FirstName": null,
-      "LastName": null,
-      "HashedPassword": "nFb0ium6/SBSYgNL/MIjKyxjNIy3I9aB7DnxNAn5kMw=",
-      "Username": "admin@gmail.com"
-    },
-
-    {
-      "Id": 2,
-      "Role": "USER",
-      "FirstName": null,
-      "LastName": null,
-      "HashedPassword": "0IAM0V+LhJgjIg96EvuqZl/kJu0d2xO2DsuJpdQSwd4=",
-      "Username": "user@gmail.com"
-    },
-
-    {
-      "Id": 3,
-      "Role": "MANAGER",
-      "FirstName": null,
-      "LastName": null,
-      "HashedPassword": "g0pwm6JTTr4+4Tl/1Pe9KIsqzB0goI1shi3NmbbwRAA=",
-      "Username": "manager@gmail.com"
-    },
-
-    {
-      "Id": 4,
-      "Role": null,
-      "FirstName": null,
-      "LastName": null,
-      "HashedPassword": "NnRn9D1YDDwHBAp4x4kK5CYtrUd4h4+aSdX2UsgWiaU=",
-      "Username": "null@gmail.com"
-    }
+  "Id": 1,
+  "Role": "ADMIN",
+  "FirstName": "John",
+  "LastName": "Doe",
+  "Rank": "Director",
+  "Gender": "Male",
+  "BirthDay": "1990-05-15T00:00:00",
+  "Education": "Ph.D. in Computer Science",
+  "Country": "United States",
+  "Departments": "IT, Research",
+  "Specifications": "Security, AI",
+  "Email": "john.doe@example.com",
+  "Protection": 256,
+  "HashedPassword": "nFb0ium6/SBSYgNL/MIjKyxjNIy3I9aB7DnxNAn5kMw=",
+  "Username": "admin@gmail.com"
+},
+{
+  "Id": 2,
+  "Role": "USER",
+  "FirstName": "Alice",
+  "LastName": "Johnson",
+  "Rank": "Engineer",
+  "Gender": "Female",
+  "BirthDay": "1988-12-03T00:00:00",
+  "Education": "B.Sc. in Electrical Engineering",
+  "Country": "Canada",
+  "Departments": "Engineering",
+  "Specifications": "Power Systems",
+  "Email": "alice.johnson@example.com",
+  "Protection": 128,
+  "HashedPassword": "0IAM0V+LhJgjIg96EvuqZl/kJu0d2xO2DsuJpdQSwd4=",
+  "Username": "user@gmail.com"
+},
+{
+  "Id": 3,
+  "Role": "MANAGER",
+  "FirstName": "Michael",
+  "LastName": "Smith",
+  "Rank": "Manager",
+  "Gender": "Male",
+  "BirthDay": "1975-07-22T00:00:00",
+  "Education": "MBA",
+  "Country": "United Kingdom",
+  "Departments": "Management",
+  "Specifications": "Project Management",
+  "Email": "michael.smith@example.com",
+  "Protection": 512,
+  "HashedPassword": "g0pwm6JTTr4+4Tl/1Pe9KIsqzB0goI1shi3NmbbwRAA=",
+  "Username": "manager@gmail.com"
+},
+{
+  "Id": 4,
+  "Role": "GUEST",
+  "FirstName": "Eva",
+  "LastName": "Green",
+  "Rank": null,
+  "Gender": "Female",
+  "BirthDay": "1985-04-18T00:00:00",
+  "Education": "Bachelor's in Arts",
+  "Country": "France",
+  "Departments": null,
+  "Specifications": null,
+  "Email": "eva.green@example.com",
+  "Protection": 64,
+  "HashedPassword": "NnRn9D1YDDwHBAp4x4kK5CYtrUd4h4+aSdX2UsgWiaU=",
+  "Username": "null@gmail.com"
+}
   ],
-  "Prisoners": [
-    {
-      "Id": 0,
-      "Name": "a",
-      "Surname": "b",
-      "Hospital": null,
-      "Birthday": 0,
-      "ColorHair": "red",
-      "Country": null,
-      "LastSee": null,
-      "CriminalArticles": null,
-      "PhotoName": null
-    }
-  ]
+  
 }
