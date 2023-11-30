@@ -195,8 +195,8 @@
                         </Border>
                         <Border  Grid.Row="3" Grid.Column="1" Padding="2"  Margin="5" Style="{DynamicResource CustomBorder}">
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Urgency of Detention : "  Margin="5" Foreground="WhiteSmoke" ></TextBlock>
-                                <TextBox x:Name="UrgencyOfDetention"  Foreground="WhiteSmoke" Width="230" ></TextBox>
+                                <TextBlock Text="Blood type : "  Margin="5" Foreground="WhiteSmoke" ></TextBlock>
+                                <TextBox x:Name="blood"  Foreground="WhiteSmoke" Width="230" ></TextBox>
                             </StackPanel>
                         </Border>
                         <Border  Grid.Row="4" Grid.Column="1"   Padding="2"  Margin="5" Style="{DynamicResource CustomBorder}">

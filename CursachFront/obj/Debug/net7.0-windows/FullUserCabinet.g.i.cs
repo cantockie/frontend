@@ -269,7 +269,7 @@ namespace CursachFront {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/CursachFront;component/fullusercabinet.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/CursachFront;V1.0.0.0;component/fullusercabinet.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\FullUserCabinet.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
