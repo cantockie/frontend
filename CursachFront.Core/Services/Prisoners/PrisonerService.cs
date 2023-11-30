@@ -8,9 +8,6 @@ public class PrisonerService
 {
     public IEnumerable<Prisoner> GetFilteredAsync(SearchFilter filter)
     {
-        // if (!LocalIdentity.IsInRole)
-        //     throw new Exception("Unathorized");
-        
         return LocalDb.Prisoners.Where(prp =>
             (string.IsNullOrEmpty(filter.Name) || prp.Name.Contains(filter.Name))
             && (string.IsNullOrEmpty(filter.Surname) || prp.Surname.Contains(filter.Surname))
@@ -22,6 +19,10 @@ public class PrisonerService
             && (string.IsNullOrEmpty(filter.CriminalArticles) || prp.CriminalArticles.Contains(filter.CriminalArticles))
         );
     }
+    //public IEnumerable<Prisoner> GetFilteredShort(SearchFilter filter)
+    //{
+    //    return LocalDb.Prisoners.Where();
+    //}
 
     public void Add(Prisoner prisoner)
         => LocalDb.Prisoners.Add(prisoner);

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CursachFront.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+38fa5527c9ab433e8f12d7d0ead5f2c7ba1e8031")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a3a00892f32ffb058d31789a2a3f1d2deeed493")]
 [assembly: System.Reflection.AssemblyProductAttribute("CursachFront.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CursachFront.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

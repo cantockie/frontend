@@ -25,7 +25,6 @@ namespace CursachFront
 
         protected override void OnExit(ExitEventArgs e)
         {
-            _cursachConfiguration.Prisoners.Add(new Core.Models.Prisoner() { Name = "a", Surname = "b", ColorHair = "red" });
             _cursachConfiguration.SaveToFile();
             base.OnExit(e);
         }

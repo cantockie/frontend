@@ -164,8 +164,8 @@
                         </Border>
                         <Border Grid.Row="3" Grid.Column="1" Margin="5" Padding="2" Style="{StaticResource CustomBorder}">
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Urgency of Detention : "  Margin="5" Foreground="WhiteSmoke" ></TextBlock>
-                                <TextBox x:Name="UrgencyOfDetention"  Foreground="WhiteSmoke" Width="230" ></TextBox>
+                                <TextBlock Text="Blood type : "  Margin="5" Foreground="WhiteSmoke" ></TextBlock>
+                                <TextBox x:Name="blood"  Foreground="WhiteSmoke" Width="230" ></TextBox>
                             </StackPanel>
                         </Border>
                         <Border Grid.Row="4" Grid.Column="1" Margin="5" Padding="2" Style="{StaticResource CustomBorder}">

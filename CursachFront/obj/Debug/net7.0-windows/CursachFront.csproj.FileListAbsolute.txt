@@ -242,3 +242,6 @@ C:\Users\yyarm\Desktop\Нова папка (2)\CursachFront\frontend\CursachFron
 C:\Users\yyarm\Desktop\Нова папка (2)\CursachFront\frontend\CursachFront\bin\Debug\net7.0-windows\CursachFront.Core.dll
 C:\Users\yyarm\Desktop\Нова папка (2)\CursachFront\frontend\CursachFront\bin\Debug\net7.0-windows\CursachFront.Core.pdb
 C:\Users\yyarm\Desktop\Нова папка (2)\CursachFront\frontend\CursachFront\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\bin\Debug\net7.0-windows\CursachFront.Core.dll
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\bin\Debug\net7.0-windows\CursachFront.Core.pdb
