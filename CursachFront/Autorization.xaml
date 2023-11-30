@@ -70,13 +70,13 @@
                 <Border x:Name="BarderPassword" Grid.Row="1" Style="{DynamicResource CustomBorder}">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Password : "   VerticalAlignment="Center" ></TextBlock>
-                        <PasswordBox  Width="270" Visibility="Visible" VerticalAlignment="Center"/>
+                        <PasswordBox x:Name="passwordBox" Width="270" Visibility="Visible" VerticalAlignment="Center"/>
                         <TextBox Name="PasswordTextBox" Width="270" Visibility="Collapsed" VerticalAlignment="Center" ></TextBox>
                         <Button    Visibility="Collapsed"
                         Style="{StaticResource MaterialDesignIconButton}" Foreground="#8f8c88" Height="18" Width="39">
                             <materialDesign:PackIcon Kind="EyeClosed" Height="18" Width="29"  />
                         </Button>
-                        <Button  
+                        <Button x:Name="ViewButton" Click="ViewPassword_Click"   Command="{Binding TogglePasswordVisibilityCommand}"
                         Style="{StaticResource MaterialDesignIconButton}" Foreground="#8f8c88" Height="18" Width="39">
                             <materialDesign:PackIcon Kind="Eye" Height="18" Width="29"/>
                         </Button>
@@ -96,9 +96,9 @@
                     <ColumnDefinition Width="212*"/>
                     <ColumnDefinition Width="77*"/>
                 </Grid.ColumnDefinitions>
-                <CheckBox x:Name="checkBox2"  Content="Remember me" Grid.ColumnSpan="2"  BorderBrush="#101317" Background="#101317" />
-                <Button Grid.Row="1" Grid.Column="1" Click="toMainwindow"  Content="Log in" Style="{DynamicResource MaterialDesignPaperButton}"  Background="#1e3357" BorderBrush="#1e3357" Foreground="WhiteSmoke"  ></Button>
-                <Button Grid.Row="2" Grid.Column="1" Click="toMainwindow"  Content="View"   Style="{DynamicResource CustomButton1}"              ></Button>
+                <CheckBox x:Name="RememberMe"  Content="Remember me" Grid.ColumnSpan="2"  BorderBrush="#101317" Background="#101317" />
+                <Button Grid.Row="1" Grid.Column="1" Click="toMainwindow" x:Name="logIN" Content="Log in" Style="{DynamicResource MaterialDesignPaperButton}"  Background="#1e3357" BorderBrush="#1e3357" Foreground="WhiteSmoke"  ></Button>
+                <Button Grid.Row="2" Grid.Column="1" Click="toView_Button" x:Name="viEW"  Content="View"   Style="{DynamicResource CustomButton1}"></Button>
             </Grid>
         </Border>
     </Grid>

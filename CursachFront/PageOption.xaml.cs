@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CursachFront.Core;
+using CursachFront.Core.Models;
+using CursachFront.Core.Models.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +23,24 @@ namespace CursachFront
     /// </summary>
     public partial class PageOption : Page
     {
+        private byte accessCode = 0;
+        //private LocalIdentity localIdentity;
         public PageOption()
         {
             InitializeComponent();
+        }
+        private byte AcessGiven(AppUser user)
+        {
+            switch(user.Role)
+            {
+                case "ADMIN":
+                    return 11;
+                case "MANAGER":
+                    return 22;
+                case "SEARCHER":
+                    return 33;
+                default:  return 202;
+            }
         }
         private void CancellOp(object sender, RoutedEventArgs e)
         {

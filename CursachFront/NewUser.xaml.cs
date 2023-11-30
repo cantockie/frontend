@@ -26,6 +26,7 @@ namespace CursachFront
             InitializeComponent();
             ButtonSelectFoto.Click += ButtonSelectFoto_Click;
             ButtonSelectImprint.Click += ButtonSelectImprint_Click;
+            
         }
         private void ButtonSelectFoto_Click(object sender, RoutedEventArgs e)
         {
@@ -34,12 +35,43 @@ namespace CursachFront
 
             if (openFileDialog.ShowDialog() == true)
             {
-                // openFileDialog.FileName содержит путь к выбранному файлу
                 string selectedFilePath = openFileDialog.FileName;
 
-                // Загрузка выбранного изображения в элемент Image
                 FotocarSuspect.Source = new BitmapImage(new Uri(selectedFilePath));
             }
+        }
+        private void Vibor_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            AddButton.Visibility = Visibility.Collapsed;
+            ChangeButton.Visibility = Visibility.Collapsed;
+            DeleteButton.Visibility = Visibility.Collapsed;
+
+            if (Vibor.SelectedItem == Update)
+            {
+                ChangeButton.Visibility = Visibility.Visible;
+            }
+            else if (Vibor.SelectedItem == Add)
+            {
+                AddButton.Visibility = Visibility.Visible;
+            }
+            else if (Vibor.SelectedItem == Delete)
+            {
+                DeleteButton.Visibility = Visibility.Visible;
+            }
+        }
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Обработка события для кнопки Add
+        }
+
+        private void UpdateButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Обработка события для кнопки Update
+        }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Обработка события для кнопки Delete
         }
         private void ButtonSelectImprint_Click(object sender, RoutedEventArgs e)
         {
@@ -48,10 +80,7 @@ namespace CursachFront
 
             if (openFileDialog.ShowDialog() == true)
             {
-                // openFileDialog.FileName содержит путь к выбранному файлу
                 string selectedFilePath = openFileDialog.FileName;
-
-                // Загрузка выбранного изображения в элемент Image
                 ImprintImage.Source = new BitmapImage(new Uri(selectedFilePath));
             }
         }

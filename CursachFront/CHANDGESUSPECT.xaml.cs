@@ -55,5 +55,47 @@ namespace CursachFront
                 ImprintImage.Source = new BitmapImage(new Uri(selectedFilePath));
             }
         }
+        private void Vibor_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // Cast SelectedItem to ComboBoxItem
+            ComboBoxItem selectedItem = (ComboBoxItem)Vibor.SelectedItem;
+
+            // If selectedItem is null, return
+            if (selectedItem == null)
+                return;
+
+            // Hide all buttons
+            AddButton.Visibility = Visibility.Collapsed;
+            SaveChangeButton.Visibility = Visibility.Collapsed;
+            DeleteButton.Visibility = Visibility.Collapsed;
+
+            // Show the corresponding button based on the selected ComboBoxItem
+            if (selectedItem == Change)
+            {
+                SaveChangeButton.Visibility = Visibility.Visible;
+            }
+            else if (selectedItem == Add)
+            {
+                AddButton.Visibility = Visibility.Visible;
+            }
+            else if (selectedItem == Delete)
+            {
+                DeleteButton.Visibility = Visibility.Visible;
+            }
+        }
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void UpdateButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

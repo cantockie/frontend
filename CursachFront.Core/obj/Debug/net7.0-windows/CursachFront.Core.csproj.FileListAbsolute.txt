@@ -1,0 +1,78 @@
+C:\Users\yyarm\source\repos\frontend\CursachFront.Core\bin\Debug\net7.0-windows\CursachFront.Core.deps.json
+C:\Users\yyarm\source\repos\frontend\CursachFront.Core\bin\Debug\net7.0-windows\CursachFront.Core.dll
+C:\Users\yyarm\source\repos\frontend\CursachFront.Core\bin\Debug\net7.0-windows\CursachFront.Core.pdb
+C:\Users\yyarm\source\repos\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.csproj.AssemblyReference.cache
+C:\Users\yyarm\source\repos\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yyarm\source\repos\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.AssemblyInfoInputs.cache
+C:\Users\yyarm\source\repos\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.AssemblyInfo.cs
+C:\Users\yyarm\source\repos\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.csproj.CoreCompileInputs.cache
+C:\Users\yyarm\source\repos\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.sourcelink.json
+C:\Users\yyarm\source\repos\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.dll
+C:\Users\yyarm\source\repos\frontend\CursachFront.Core\obj\Debug\net7.0-windows\refint\CursachFront.Core.dll
+C:\Users\yyarm\source\repos\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.pdb
+C:\Users\yyarm\source\repos\frontend\CursachFront.Core\obj\Debug\net7.0-windows\ref\CursachFront.Core.dll
+C:\Users\trusv\Desktop\frontend\CursachFront.Core\bin\Debug\net7.0-windows\CursachFront.Core.deps.json
+C:\Users\trusv\Desktop\frontend\CursachFront.Core\bin\Debug\net7.0-windows\CursachFront.Core.dll
+C:\Users\trusv\Desktop\frontend\CursachFront.Core\bin\Debug\net7.0-windows\CursachFront.Core.pdb
+C:\Users\trusv\Desktop\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.csproj.AssemblyReference.cache
+C:\Users\trusv\Desktop\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\trusv\Desktop\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.AssemblyInfoInputs.cache
+C:\Users\trusv\Desktop\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.AssemblyInfo.cs
+C:\Users\trusv\Desktop\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.csproj.CoreCompileInputs.cache
+C:\Users\trusv\Desktop\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.sourcelink.json
+C:\Users\trusv\Desktop\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.dll
+C:\Users\trusv\Desktop\frontend\CursachFront.Core\obj\Debug\net7.0-windows\refint\CursachFront.Core.dll
+C:\Users\trusv\Desktop\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.pdb
+C:\Users\trusv\Desktop\frontend\CursachFront.Core\obj\Debug\net7.0-windows\ref\CursachFront.Core.dll
+C:\Users\yyarm\Desktop\njknnkknnk\frontend\CursachFront.Core\bin\Debug\net7.0-windows\CursachFront.Core.deps.json
+C:\Users\yyarm\Desktop\njknnkknnk\frontend\CursachFront.Core\bin\Debug\net7.0-windows\CursachFront.Core.dll
+C:\Users\yyarm\Desktop\njknnkknnk\frontend\CursachFront.Core\bin\Debug\net7.0-windows\CursachFront.Core.pdb
+C:\Users\yyarm\Desktop\njknnkknnk\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.csproj.AssemblyReference.cache
+C:\Users\yyarm\Desktop\njknnkknnk\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yyarm\Desktop\njknnkknnk\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.AssemblyInfoInputs.cache
+C:\Users\yyarm\Desktop\njknnkknnk\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.AssemblyInfo.cs
+C:\Users\yyarm\Desktop\njknnkknnk\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.csproj.CoreCompileInputs.cache
+C:\Users\yyarm\Desktop\njknnkknnk\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.sourcelink.json
+C:\Users\yyarm\Desktop\njknnkknnk\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.dll
+C:\Users\yyarm\Desktop\njknnkknnk\frontend\CursachFront.Core\obj\Debug\net7.0-windows\refint\CursachFront.Core.dll
+C:\Users\yyarm\Desktop\njknnkknnk\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.pdb
+C:\Users\yyarm\Desktop\njknnkknnk\frontend\CursachFront.Core\obj\Debug\net7.0-windows\ref\CursachFront.Core.dll
+C:\Users\trusv\Downloads\ZIP_-_WinRAR_6\njknnkknnk\frontend\CursachFront.Core\bin\Debug\net7.0-windows\CursachFront.Core.deps.json
+C:\Users\trusv\Downloads\ZIP_-_WinRAR_6\njknnkknnk\frontend\CursachFront.Core\bin\Debug\net7.0-windows\CursachFront.Core.dll
+C:\Users\trusv\Downloads\ZIP_-_WinRAR_6\njknnkknnk\frontend\CursachFront.Core\bin\Debug\net7.0-windows\CursachFront.Core.pdb
+C:\Users\trusv\Downloads\ZIP_-_WinRAR_6\njknnkknnk\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.csproj.AssemblyReference.cache
+C:\Users\trusv\Downloads\ZIP_-_WinRAR_6\njknnkknnk\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\trusv\Downloads\ZIP_-_WinRAR_6\njknnkknnk\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.AssemblyInfoInputs.cache
+C:\Users\trusv\Downloads\ZIP_-_WinRAR_6\njknnkknnk\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.AssemblyInfo.cs
+C:\Users\trusv\Downloads\ZIP_-_WinRAR_6\njknnkknnk\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.csproj.CoreCompileInputs.cache
+C:\Users\trusv\Downloads\ZIP_-_WinRAR_6\njknnkknnk\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.sourcelink.json
+C:\Users\trusv\Downloads\ZIP_-_WinRAR_6\njknnkknnk\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.dll
+C:\Users\trusv\Downloads\ZIP_-_WinRAR_6\njknnkknnk\frontend\CursachFront.Core\obj\Debug\net7.0-windows\refint\CursachFront.Core.dll
+C:\Users\trusv\Downloads\ZIP_-_WinRAR_6\njknnkknnk\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.pdb
+C:\Users\trusv\Downloads\ZIP_-_WinRAR_6\njknnkknnk\frontend\CursachFront.Core\obj\Debug\net7.0-windows\ref\CursachFront.Core.dll
+C:\Users\yyarm\Desktop\Нова папка (5)\CursachFront.Core\bin\Debug\net7.0-windows\CursachFront.Core.deps.json
+C:\Users\yyarm\Desktop\Нова папка (5)\CursachFront.Core\bin\Debug\net7.0-windows\CursachFront.Core.dll
+C:\Users\yyarm\Desktop\Нова папка (5)\CursachFront.Core\bin\Debug\net7.0-windows\CursachFront.Core.pdb
+C:\Users\yyarm\Desktop\Нова папка (5)\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.csproj.AssemblyReference.cache
+C:\Users\yyarm\Desktop\Нова папка (5)\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yyarm\Desktop\Нова папка (5)\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.AssemblyInfoInputs.cache
+C:\Users\yyarm\Desktop\Нова папка (5)\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.AssemblyInfo.cs
+C:\Users\yyarm\Desktop\Нова папка (5)\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.csproj.CoreCompileInputs.cache
+C:\Users\yyarm\Desktop\Нова папка (5)\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.sourcelink.json
+C:\Users\yyarm\Desktop\Нова папка (5)\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.dll
+C:\Users\yyarm\Desktop\Нова папка (5)\CursachFront.Core\obj\Debug\net7.0-windows\refint\CursachFront.Core.dll
+C:\Users\yyarm\Desktop\Нова папка (5)\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.pdb
+C:\Users\yyarm\Desktop\Нова папка (5)\CursachFront.Core\obj\Debug\net7.0-windows\ref\CursachFront.Core.dll
+C:\Users\yyarm\Desktop\Нова папка (2)\CursachFront\frontend\CursachFront.Core\bin\Debug\net7.0-windows\CursachFront.Core.deps.json
+C:\Users\yyarm\Desktop\Нова папка (2)\CursachFront\frontend\CursachFront.Core\bin\Debug\net7.0-windows\CursachFront.Core.dll
+C:\Users\yyarm\Desktop\Нова папка (2)\CursachFront\frontend\CursachFront.Core\bin\Debug\net7.0-windows\CursachFront.Core.pdb
+C:\Users\yyarm\Desktop\Нова папка (2)\CursachFront\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.csproj.AssemblyReference.cache
+C:\Users\yyarm\Desktop\Нова папка (2)\CursachFront\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yyarm\Desktop\Нова папка (2)\CursachFront\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.AssemblyInfoInputs.cache
+C:\Users\yyarm\Desktop\Нова папка (2)\CursachFront\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.AssemblyInfo.cs
+C:\Users\yyarm\Desktop\Нова папка (2)\CursachFront\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.csproj.CoreCompileInputs.cache
+C:\Users\yyarm\Desktop\Нова папка (2)\CursachFront\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.sourcelink.json
+C:\Users\yyarm\Desktop\Нова папка (2)\CursachFront\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.dll
+C:\Users\yyarm\Desktop\Нова папка (2)\CursachFront\frontend\CursachFront.Core\obj\Debug\net7.0-windows\refint\CursachFront.Core.dll
+C:\Users\yyarm\Desktop\Нова папка (2)\CursachFront\frontend\CursachFront.Core\obj\Debug\net7.0-windows\CursachFront.Core.pdb
+C:\Users\yyarm\Desktop\Нова папка (2)\CursachFront\frontend\CursachFront.Core\obj\Debug\net7.0-windows\ref\CursachFront.Core.dll
