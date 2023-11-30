@@ -7,6 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="NewUser">
+    
     <Page.Resources>
         <Style x:Key="TransparentButton" TargetType="Button">
             <Setter Property="Background" Value="Transparent"/>
@@ -52,10 +53,10 @@
         <Border  Background="#1e232b" Grid.ColumnSpan="2" BorderBrush="Transparent" CornerRadius="0,0,20,20" Padding="10"/>
 
         <Border Grid.Column="0" Grid.Row="1" CornerRadius="20" Margin="5,5,5,5" Style="{StaticResource CustomBorder}">
-            <ComboBox x:Name="Vibor" Margin="10" FontSize="20" BorderBrush="Azure" Foreground="WhiteSmoke" VerticalAlignment="Center">
-                <ComboBoxItem Content="Change"  Foreground="Black"  />
-                <ComboBoxItem Content="Add"     Foreground="Black"  />
-                <ComboBoxItem Content="Delete"  Foreground="Black" />
+            <ComboBox x:Name="Vibor" Margin="10" FontSize="20" BorderBrush="Azure" Foreground="WhiteSmoke" VerticalAlignment="Center" SelectionChanged="Vibor_SelectionChanged">
+                <ComboBoxItem x:Name="Update" Content="Change"  Foreground="Black"  />
+                <ComboBoxItem x:Name="Add" Content="Add"     Foreground="Black"  />
+                <ComboBoxItem x:Name="Delete" Content="Delete"  Foreground="Black" />
             </ComboBox>
         </Border>
         <Border Grid.Column="1" Grid.Row="1" CornerRadius="20" Margin="5,5,5,5" Style="{StaticResource CustomBorder}">
@@ -195,9 +196,9 @@
                 </Border>
                 <Border x:Name="ButtonsChenger" Grid.Row="2" Padding="2" Margin="0,0,0,20" Style="{StaticResource CustomBorder}">
                     <Grid>
-                        <Button x:Name="AddButton" Style="{DynamicResource MaterialDesignPaperLightButton}"  Content="ADD" Background="#135c25"  BorderBrush="Transparent"   VerticalAlignment="Center" Margin="5" Width="100"/>
-                        <Button x:Name="SaveChangeButton" Style="{DynamicResource MaterialDesignPaperLightButton}" Content="Save"  VerticalAlignment="Center" BorderBrush="Transparent"   Margin="5" Width="100"/>
-                        <Button x:Name="DeleteButton" Style="{DynamicResource MaterialDesignPaperLightButton}" Content="Delete" Background="#540d0d"  BorderBrush="Transparent"  VerticalAlignment="Center" Margin="5" Width="100"/>
+                        <Button x:Name="AddButton" Style="{DynamicResource MaterialDesignPaperLightButton}"  Content="Add" Background="#135c25"  BorderBrush="Transparent"   VerticalAlignment="Center" Margin="5" Width="100" Visibility="Collapsed"/>
+                        <Button x:Name="ChangeButton" Style="{DynamicResource MaterialDesignPaperLightButton}" Content="Update"  VerticalAlignment="Center" BorderBrush="Transparent"   Margin="5" Width="100" Visibility="Collapsed"/>
+                        <Button x:Name="DeleteButton" Style="{DynamicResource MaterialDesignPaperLightButton}" Content="Delete" Background="#540d0d"  BorderBrush="Transparent"  VerticalAlignment="Center" Margin="5" Width="100" Visibility="Collapsed"/>
                     </Grid>
                 </Border>
             </Grid>

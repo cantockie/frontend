@@ -28,6 +28,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CursachFront.Core\CursachFront.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Source\7.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

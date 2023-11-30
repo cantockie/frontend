@@ -28,9 +28,6 @@
     <Compile Update="PageUserCabinet.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="searching.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Veiw.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
