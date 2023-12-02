@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CursachFront.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -77,9 +78,21 @@ namespace CursachFront
         /// //////////////////кнопки User/
         private void ToMoreInformation(object sender, RoutedEventArgs e) { FindesPages.Content = Info; }
         public static void CancellMoreInformation(MainWindow mainWindow) { mainWindow.CansellMoreInformationMetod(); }
-        public static void ToMoreInformationEnotherframe(MainWindow mainWindow) { mainWindow.ToMoreInformationMetod(); }
+        public static void ToMoreInformationEnotherframe(MainWindow mainWindow, Prisoner pr) { mainWindow.ToMoreInformationMetod(pr); }
 
-        private void ToMoreInformationMetod() { FindesPages.Content = Info; }
+        private void ToMoreInformationMetod(Prisoner selectedPrisoner)
+        {
+            // Create a single instance of More_info
+            More_info moreInfoPage = new More_info();
+
+            // Pass the selected prisoner to the More_info page
+            moreInfoPage.SetSelectedPrisoner(selectedPrisoner);
+
+            // Navigate to the More_info page
+            FindesPages.Content = moreInfoPage;
+
+            // Optionally, you may want to add logic for additional navigation or information display.
+        }
         public void CansellMoreInformationMetod() { FindesPages.Content = null; }
         /// //////////////////кнопки FullCabinet/
         private void ToFullUserCabinet(object sender, RoutedEventArgs e) { FindesPages.Content = FullUserCabinet; }

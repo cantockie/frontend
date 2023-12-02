@@ -6,24 +6,38 @@ namespace CursachFront.Core.Services.Prisoners;
 
 public class PrisonerService
 {
-    public IEnumerable<Prisoner> GetFilteredAsync(SearchFilter filter)
-    {
-        return LocalDb.Prisoners.Where(prp =>
-            (string.IsNullOrEmpty(filter.Name) || prp.Name.Contains(filter.Name))
-            && (string.IsNullOrEmpty(filter.Surname) || prp.Surname.Contains(filter.Surname))
-            && (string.IsNullOrEmpty(filter.Hospital) || prp.Hospital.Contains(filter.Hospital))
-            && (filter.Birthday is null || prp.Birthday.Equals(filter.Birthday))
-            && (string.IsNullOrEmpty(filter.ColorHair) || prp.ColorHair.Contains(filter.ColorHair))
-            && (string.IsNullOrEmpty(filter.Country) || prp.Country.Contains(filter.Country))
-            && (string.IsNullOrEmpty(filter.LastSee) || prp.LastSee.Contains(filter.LastSee))
-            && (string.IsNullOrEmpty(filter.CriminalArticles) || prp.CriminalArticles.Contains(filter.CriminalArticles))
-        );
-    }
-    //public IEnumerable<Prisoner> GetFilteredShort(SearchFilter filter)
-    //{
-    //    return LocalDb.Prisoners.Where();
-    //}
+    
+        public IEnumerable<Prisoner> GetFilteredAsync(SearchFilter filter)
+        {
+            DateTime? birthday = string.IsNullOrEmpty(filter.Birthday) ? null : (DateTime?)DateTime.Parse(filter.Birthday);
 
+            return LocalDb.Prisoners.Where(prp =>
+                (string.IsNullOrEmpty(filter.Name) || prp.Name.Contains(filter.Name)) &&
+                (string.IsNullOrEmpty(filter.Surname) || prp.Surname.Contains(filter.Surname)) &&
+                (string.IsNullOrEmpty(filter.Country) || prp.Country.Contains(filter.Country)) &&
+                (string.IsNullOrEmpty(filter.CrimeSpec) || prp.CrimeSpec.Contains(filter.CrimeSpec)) &&
+                (!birthday.HasValue || prp.Birthday == birthday) &&
+                (string.IsNullOrEmpty(filter.ColorHair) || prp.ColorHair.Contains(filter.ColorHair)) &&
+                (string.IsNullOrEmpty(filter.EyeColor) || prp.EyeColor.Contains(filter.EyeColor))
+            );
+        }
+    
+    
+    public IEnumerable<Prisoner> GetFilteredShort(SearchFilter filter)
+    {
+        if (string.IsNullOrEmpty(filter.Status) || Enum.TryParse(filter.Status, out CursachFront.Core.Models.Status statusEnum))
+        {
+            return LocalDb.Prisoners.Where(prp =>
+                (string.IsNullOrEmpty(filter.Country) || prp.Country.Contains(filter.Country)) &&
+                (string.IsNullOrEmpty(filter.Gang) || prp.Gang.Contains(filter.Gang)) &&
+                (string.IsNullOrEmpty(filter.Status) || prp.Status.ToString() == filter.Status)
+            );
+        }
+        else
+        {
+            throw new ArgumentException("Invalid status string.");
+        }
+    }
     public void Add(Prisoner prisoner)
         => LocalDb.Prisoners.Add(prisoner);
 

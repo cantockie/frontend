@@ -18,4 +18,6 @@ public class AppUser
     public int Protection { get; set; }
   public string HashedPassword { get; set; }
   public string Username { get; set; }
+    public string PhotoName { get; set; }
+    public string FingerName { get; set; }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using CursachFront.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +14,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using Newtonsoft.Json;
+using System.IO;
+using Microsoft.Xaml.Behaviors.Core;
 namespace CursachFront
 {
     /// <summary>
@@ -20,40 +24,67 @@ namespace CursachFront
     /// </summary>
     public partial class searching : Page
     {
+        PrisonerFilterViewModel _pfvm;
+        private int PrisonInd; 
         public searching()
         {
             InitializeComponent();
-           
-            List<Person> people = new List<Person>
-            {
-                new Person { FirstName = "John", LastName = "Doe", ImagePath = "path/to/image1.jpg" },
-                new Person { FirstName = "Alice", LastName = "Smith", ImagePath = "path/to/image2.jpg" },
-                // Добавляем другие объекты Person
-            };
-
-            // Устанавливаем этот список в качестве источника данных для ListView
-            dataListView.ItemsSource = people;
-        }
-        public class Person
-        {
-            public string FirstName { get; set; }
-            public string LastName { get; set; }
-            public string ImagePath { get; set; }
+            _pfvm = new PrisonerFilterViewModel();
+            DataContext = new PrisonerFilterViewModel();
         }
 
-        // Создаем список людей для отображения в ListView
-        List<Person> people = new List<Person>
-{
-    new Person { FirstName = "John", LastName = "Doe", ImagePath = "path/to/image1.jpg" },
-    new Person { FirstName = "Alice", LastName = "Smith", ImagePath = "path/to/7.jpg" },
-    // Добавляем другие объекты Person
-};
+
+ 
         private void ToMoreInfo(object sender, RoutedEventArgs e)
         {
-            MainWindow.ToMoreInformationEnotherframe((MainWindow)Window.GetWindow(this));
-        }//адмін панель
+            if (dataListView.SelectedItem != null)
+            {
+                var selectedPrisoner = dataListView.SelectedItem as Prisoner;
+
+                if (selectedPrisoner != null)
+                {
+                //    More_info moreInfoPage = new More_info();
+                //    moreInfoPage.SetSelectedPrisoner(selectedPrisoner);
+
+                    // Вызов метода для перехода на страницу More_info
+                    MainWindow.ToMoreInformationEnotherframe((MainWindow)Window.GetWindow(this), selectedPrisoner);
+                }
+            }
+        }
+        private void OnListViewSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (dataListView.SelectedItem != null)
+            {
+
+                var selectedPrisoner = dataListView.SelectedItem as Prisoner;
 
 
+                if (selectedPrisoner != null)
+                {
+                    Name.Text = selectedPrisoner.Name;
+                    SName.Text = selectedPrisoner.Surname;
+                    klichka.Text = selectedPrisoner.Hospital;
+                    Hender.Text = selectedPrisoner.Gender;
+                    Dr.Text = selectedPrisoner.Birthday.ToString();
+                    Country.Text = selectedPrisoner.Country;
+                    Hair.Text = selectedPrisoner.ColorHair;
+                    LastCountry.Text = selectedPrisoner.LastSee;
+                    Status.Text = selectedPrisoner.Status.ToString();
+                    Criminal.Text = selectedPrisoner.CriminalArticles.ToString();
+                    PrisonInd = Convert.ToInt32(selectedPrisoner.Id);
+                    FotocarSuspect.Source = new BitmapImage(new Uri(selectedPrisoner.PhotoName, UriKind.Absolute));
+                    ImprintImage.Source = new BitmapImage(new Uri(selectedPrisoner.FingerName, UriKind.Absolute));
+                }
+                else { }
+
+              
+
+
+
+            }
+
+        }
+        
     }
 
 }

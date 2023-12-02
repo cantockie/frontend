@@ -8,6 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800" 
       Title="Veiw" >
     <Page.Resources>
+        <local:PrisonerViewModel x:Key="PrisonerViewModel"/>
         <Style x:Key="CustomTextBoxStyle" TargetType="TextBox" BasedOn="{StaticResource MaterialDesignTextBox}">
             <Setter Property="VerticalAlignment" Value="Center" />
             <Setter Property="MinWidth" Value="300" />
@@ -17,7 +18,7 @@
             <Setter Property="FontSize" Value="12" />
         </Style>
     </Page.Resources>
-    <Grid>
+    <Grid DataContext="{StaticResource PrisonerViewModel}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -30,14 +31,20 @@
         <Border Grid.ColumnSpan="2" Grid.RowSpan="3" Background="#101317" Opacity="0.9"/>
         <Border x:Name="SkrollPole" Grid.Column="0" Grid.ColumnSpan="2"  Grid.Row="1" Grid.RowSpan="2" Padding="10"  CornerRadius="10">
             <Border x:Name="InsadeSkrollPole" BorderBrush="Azure" BorderThickness="1" CornerRadius="10">
-                <ListView x:Name="dataListView" Grid.Column="0">
+                <ListView x:Name="dataListView" Grid.Column="0" ItemsSource="{Binding Prisoners}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <Border BorderBrush="Azure" BorderThickness="1" Background="Transparent" Margin="5" CornerRadius="10" Width="1380" >
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock Text="{Binding FirstName}" Margin="3" VerticalAlignment="Center" FontSize="20" Foreground="WhiteSmoke"/>
-                                    <TextBlock Text="{Binding LastName}" Margin="3"  VerticalAlignment="Center" FontSize="20" Foreground="WhiteSmoke"/>
-                                    <Image     Source="{Binding ImagePath}" Width="50" Height="50" Margin="5"/>
+                                <StackPanel Orientation="Horizontal" >
+                                    <TextBox IsReadOnly="True" x:Name="Id" VerticalAlignment="Bottom"  Text="{Binding Id}"  Margin="5" FontSize="20" Foreground="WhiteSmoke"></TextBox>
+                                    <TextBox IsReadOnly="True" x:Name="Firstname" Text="{Binding Name}" Margin="5" VerticalAlignment="Bottom" FontSize="20" Foreground="WhiteSmoke"></TextBox>
+                                    <TextBox IsReadOnly="True" x:Name="Surname" VerticalAlignment="Bottom"  Text="{Binding Surname}" Margin="5" FontSize="20" Foreground="WhiteSmoke"></TextBox>
+                                    <TextBox IsReadOnly="True" x:Name="Status" Text="{Binding Status}" Margin="5" VerticalAlignment="Bottom" FontSize="20" Foreground="WhiteSmoke"></TextBox>
+                                    <TextBox IsReadOnly="True" x:Name="Birthdate" VerticalAlignment="Bottom"  Text="{Binding Birthday}" Margin="5" FontSize="20" Foreground="WhiteSmoke"></TextBox>
+                                    <TextBox IsReadOnly="True" x:Name="Blood" VerticalAlignment="Bottom"  Text="{Binding BloodType}" Margin="5" FontSize="20" Foreground="WhiteSmoke"></TextBox>
+                                    <TextBox IsReadOnly="True" x:Name="Gender" VerticalAlignment="Bottom"  Text="{Binding Gender}" Margin="5" FontSize="20" Foreground="WhiteSmoke"></TextBox>
+                                    <TextBox IsReadOnly="True" x:Name="Gang" VerticalAlignment="Bottom"  Text="{Binding Gang}" Margin="5" FontSize="20" Foreground="Red"></TextBox>
+
                                 </StackPanel>
                             </Border>
                         </DataTemplate>
@@ -49,13 +56,13 @@
             <Grid>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <Border Width="{Binding Width, ElementName=SearchingParametrName}"     Background="Azure"  CornerRadius="10"  Margin="4,0,4,0" >
-                        <TextBox  x:Name="Contry"  Style="{DynamicResource CustomTextBoxStyle}"/>
+                        <TextBox  x:Name="Contry" Text="{Binding Country}" Style="{DynamicResource CustomTextBoxStyle}"/>
                     </Border>
                     <Border Width="{Binding Width, ElementName=SearchingParametrSecondName}" Background="Azure" CornerRadius="10"  Margin="4,0,4,0">
-                        <TextBox  x:Name="Gang" Style="{DynamicResource CustomTextBoxStyle}"/>
+                        <TextBox  x:Name="Gang" Text="{Binding Gang}" Style="{DynamicResource CustomTextBoxStyle}"/>
                     </Border>
                     <Border Width="{Binding Width, ElementName=SearchingParametrSecondName}" Background="Azure" CornerRadius="10"   Margin="4,0,4,0">
-                        <TextBox  x:Name="Status" Style="{DynamicResource CustomTextBoxStyle}"/>
+                        <TextBox  x:Name="Status" Text="{Binding Status}" Style="{DynamicResource CustomTextBoxStyle}"/>
                     </Border>
                 </StackPanel>
             </Grid>

@@ -8,6 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800" Background="Transparent"
       Title="searching">
     <Page.Resources>
+        <local:PrisonerFilterViewModel x:Key="PrisonerFilterViewModel"/>
         <Style x:Key="CustomTextBoxStyle" TargetType="TextBox" BasedOn="{StaticResource MaterialDesignTextBox}">
             <Setter Property="VerticalAlignment" Value="Center" />
             <Setter Property="Margin" Value="3" />
@@ -24,7 +25,7 @@
 
 
 
-    <Grid>
+    <Grid DataContext="{StaticResource PrisonerFilterViewModel}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -38,14 +39,14 @@
 
         <Border x:Name="SkrollPole" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" Padding="10"  CornerRadius="10" >
             <Border x:Name="InsadeSkrollPole" BorderBrush="Azure" BorderThickness="1" CornerRadius="10">
-                <ListView x:Name="dataListView" Grid.Column="0">
+                <ListView x:Name="dataListView" Grid.Column="0" ItemsSource="{Binding Prisoners}"  SelectionChanged="OnListViewSelectionChanged">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <Border Margin="5" MinWidth="56" Width="690"  MaxWidth="900"  Padding="5" Style="{StaticResource CustomBorder}" >
                                 <StackPanel Orientation="Horizontal">
-                                    <TextBlock Text="{Binding FirstName}" Margin="3" VerticalAlignment="Center" FontSize="20" Foreground="WhiteSmoke"/>
-                                    <TextBlock Text="{Binding LastName}"  Margin="3"  VerticalAlignment="Center" FontSize="20" Foreground="WhiteSmoke"/>
-                                    <Image     Source="{Binding ImagePath}" Width="50" Height="50" Margin="5"/>
+                                    <TextBlock Text="{Binding Name}" Margin="3" VerticalAlignment="Center" FontSize="20" Foreground="WhiteSmoke"/>
+                                    <TextBlock Text="{Binding Surname}"  Margin="3"  VerticalAlignment="Center" FontSize="20" Foreground="WhiteSmoke"/>
+                                    <Image     Source="{Binding PhotoName}" Width="50" Height="50" Margin="5"/>
                                 </StackPanel>
                             </Border>
                         </DataTemplate>
@@ -175,25 +176,25 @@
             <Grid>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <Border Width="{Binding Width, ElementName=SearchingParametrName}"  Background="Azure" CornerRadius="10"  Margin="4,0,4,0" >
-                        <TextBox  x:Name="SearchingParametrName" MinWidth="150" Width="200" MaxWidth="500"  Style="{DynamicResource CustomTextBoxStyle}" />
+                        <TextBox  x:Name="SearchingParametrName" Text="{Binding Name}" MinWidth="150" Width="200" MaxWidth="500"  Style="{DynamicResource CustomTextBoxStyle}" />
                     </Border>
                     <Border Width="{Binding Width, ElementName=SearchingParametrSecondName}" Background="Azure" CornerRadius="10"  Margin="4,0,4,0">
-                        <TextBox  x:Name="SearchingParametrSecondName" MinWidth="{Binding MinWidth, ElementName=SearchingParametrName}"  Width="{Binding Width, ElementName=SearchingParametrName}"   MaxWidth="{Binding MaxWidth, ElementName=SearchingParametrName}" Style="{DynamicResource CustomTextBoxStyle}"/>
+                        <TextBox  x:Name="SearchingParametrSecondName" Text="{Binding Surname}" MinWidth="{Binding MinWidth, ElementName=SearchingParametrName}"  Width="{Binding Width, ElementName=SearchingParametrName}"   MaxWidth="{Binding MaxWidth, ElementName=SearchingParametrName}" Style="{DynamicResource CustomTextBoxStyle}"/>
                     </Border>
                     <Border Width="{Binding Width, ElementName=SearchingParametrLastKlikuxa}" Background="Azure" CornerRadius="10"  Margin="4,0,4,0" >
-                        <TextBox  x:Name="SearchingParametrKlikuxa"  MinWidth="{Binding MinWidth, ElementName=SearchingParametrName}"  Width="{Binding Width, ElementName=SearchingParametrName}"   MaxWidth="{Binding MaxWidth, ElementName=SearchingParametrName}" Style="{DynamicResource CustomTextBoxStyle}"/>
+                        <TextBox  x:Name="SearchingParametrKlikuxa" Text="{Binding Country }" MinWidth="{Binding MinWidth, ElementName=SearchingParametrName}"  Width="{Binding Width, ElementName=SearchingParametrName}"   MaxWidth="{Binding MaxWidth, ElementName=SearchingParametrName}" Style="{DynamicResource CustomTextBoxStyle}"/>
                     </Border>
                     <Border Width="{Binding Width, ElementName=SearchingParametrAge}" Background="Azure"  CornerRadius="10"  Margin="4,0,4,0">
-                        <TextBox  x:Name="SearchingParametrAge"  MinWidth="{Binding MinWidth, ElementName=SearchingParametrName}"  Width="{Binding Width, ElementName=SearchingParametrName}"   MaxWidth="{Binding MaxWidth, ElementName=SearchingParametrName}" Style="{DynamicResource CustomTextBoxStyle}"/>
+                        <TextBox  x:Name="SearchingParametrAge" Text="{Binding Crimespec}" MinWidth="{Binding MinWidth, ElementName=SearchingParametrName}"  Width="{Binding Width, ElementName=SearchingParametrName}"   MaxWidth="{Binding MaxWidth, ElementName=SearchingParametrName}" Style="{DynamicResource CustomTextBoxStyle}"/>
                     </Border>
                     <Border Width="{Binding Width, ElementName=SearchingParametrCountry}" Background="Azure" CornerRadius="10"  Margin="4,0,4,0">
-                        <TextBox  x:Name="SearchingParametrCountry"   MinWidth="{Binding MinWidth, ElementName=SearchingParametrName}"  Width="{Binding Width, ElementName=SearchingParametrName}"   MaxWidth="{Binding MaxWidth, ElementName=SearchingParametrName}" Style="{DynamicResource CustomTextBoxStyle}"/>
+                        <TextBox  x:Name="SearchingParametrCountry" Text="{Binding Birthday}"  MinWidth="{Binding MinWidth, ElementName=SearchingParametrName}"  Width="{Binding Width, ElementName=SearchingParametrName}"   MaxWidth="{Binding MaxWidth, ElementName=SearchingParametrName}" Style="{DynamicResource CustomTextBoxStyle}"/>
                     </Border>
                     <Border Width="{Binding Width, ElementName=SearchingParametrHair}" Background="Azure" CornerRadius="10"  Margin="4,0,4,0" >
-                        <TextBox  x:Name="SearchingParametrHair"  MinWidth="{Binding MinWidth, ElementName=SearchingParametrName}"  Width="{Binding Width, ElementName=SearchingParametrName}"   MaxWidth="{Binding MaxWidth, ElementName=SearchingParametrName}" Style="{DynamicResource CustomTextBoxStyle}"/>
+                        <TextBox  x:Name="SearchingParametrHair" Text="{Binding ColorHair}" MinWidth="{Binding MinWidth, ElementName=SearchingParametrName}"  Width="{Binding Width, ElementName=SearchingParametrName}"   MaxWidth="{Binding MaxWidth, ElementName=SearchingParametrName}" Style="{DynamicResource CustomTextBoxStyle}"/>
                     </Border>
                     <Border Width="{Binding Width, ElementName=SearchingParametrLastLocation}" Background="Azure" CornerRadius="10"  Margin="4,0,4,0" >
-                        <TextBox  x:Name="SearchingParametrLastLocation"  MinWidth="{Binding MinWidth, ElementName=SearchingParametrName}"  Width="{Binding Width, ElementName=SearchingParametrName}"   MaxWidth="{Binding MaxWidth, ElementName=SearchingParametrName}" Style="{DynamicResource CustomTextBoxStyle}"/>
+                        <TextBox  x:Name="SearchingParametrLastLocation" Text="{Binding EyeColor}"  MinWidth="{Binding MinWidth, ElementName=SearchingParametrName}"  Width="{Binding Width, ElementName=SearchingParametrName}"   MaxWidth="{Binding MaxWidth, ElementName=SearchingParametrName}" Style="{DynamicResource CustomTextBoxStyle}"/>
                     </Border>
                 </StackPanel>
             </Grid>

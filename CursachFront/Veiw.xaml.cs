@@ -20,9 +20,18 @@ namespace CursachFront
     /// </summary>
     public partial class Veiw : Page
     {
+        private PrisonerViewModel _prisonerViewModel;
+
         public Veiw()
         {
             InitializeComponent();
+            _prisonerViewModel = new PrisonerViewModel();
+            LoadAllAlive();
+        }
+        public void LoadAllAlive()
+        {
+            Status.Text = "Alive";
+            Status.Text = "";
         }
     }
 }

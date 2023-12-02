@@ -220,7 +220,7 @@
                 <Border Grid.RowSpan="2" Padding="5" Margin="0,0,0,20" Style="{StaticResource CustomBorder}">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="BIO : " Foreground="WhiteSmoke" ></TextBlock>
-                        <TextBox x:Name="BIO"    Foreground="WhiteSmoke" TextWrapping="Wrap" MinLines="100" Width="300" MaxWidth="600" ></TextBox>
+                        <TextBox x:Name="BIO"  Foreground="WhiteSmoke" TextWrapping="Wrap" MinLines="100" Width="251" MaxWidth="600" Height="241" ></TextBox>
                     </StackPanel>
                 </Border>
                 <Border x:Name="ButtonsChenger" Grid.Row="2" Padding="2" Margin="0,0,0,20" Style="{StaticResource CustomBorder}">
@@ -230,7 +230,7 @@
                             <RowDefinition/>
                         </Grid.RowDefinitions>
                         <Button x:Name="BackToSearching"   Grid.Row="0"  Click="Back"  Style="{DynamicResource MaterialDesignPaperLightButton}"    Content="Back" BorderBrush="Transparent" VerticalAlignment="Center"  Margin="5" Width="100"/>
-                        <Button x:Name="ToHTML" Grid.Row="1"  Style="{DynamicResource MaterialDesignPaperLightButton}"      Content="HTML" BorderBrush="Transparent" VerticalAlignment="Center"  Margin="5" Width="100"/>
+                        <Button x:Name="ToHTML" Grid.Row="1" Style="{DynamicResource MaterialDesignPaperLightButton}"      Content="HTML" BorderBrush="Transparent" VerticalAlignment="Center"  Margin="5" Width="100"/>
                
                     </Grid>
                 </Border>
