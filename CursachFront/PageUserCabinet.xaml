@@ -60,18 +60,18 @@
                 <Border Background="#12161f" Grid.ColumnSpan="2" Grid.RowSpan="2"  CornerRadius="20"  ></Border>
         <StackPanel Grid.Row="1" Orientation="Vertical">
                     <TextBlock Text="Name"       Foreground="WhiteSmoke"   TextAlignment="Left"     FontSize="20"   Margin="5" />
-                    <TextBlock Text="First Name" Foreground="WhiteSmoke"   TextAlignment="Left"     FontSize="20"   Margin="5"/>
+                    <TextBlock Text="FirstName" Foreground="WhiteSmoke"   TextAlignment="Left"     FontSize="20"   Margin="5"/>
                     <TextBlock Text="Status"     Foreground="WhiteSmoke"   TextAlignment="Left"     FontSize="20"   Margin="5" />
-                    <TextBlock Text="Experience" Foreground="WhiteSmoke"   TextAlignment="Left"     FontSize="20"   Margin="5" />
+                    <TextBlock Text="Education" Foreground="WhiteSmoke"   TextAlignment="Left"     FontSize="20"   Margin="5" />
                     <TextBlock Text="Contry"     Foreground="WhiteSmoke"   TextAlignment="Left"     FontSize="20"   Margin="5" />
                     <TextBlock  Text="Level"     Foreground="WhiteSmoke"   TextAlignment="Left"     FontSize="20"   Margin="5" />
                 </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="1"  Orientation="Vertical">
-                    <TextBox x:Name="Name" Text="Родриго"        Foreground="WhiteSmoke"  TextAlignment="Left"  FontSize="20"  Margin="2"  />
-                    <TextBox x:Name="Sname" Text="Борджия"       Foreground="WhiteSmoke"  TextAlignment="Left"  FontSize="20"  />
-                    <TextBox x:Name="Status" Text="Офицер"       Foreground="WhiteSmoke"  TextAlignment="Left"  FontSize="20"   />
-                    <TextBox x:Name="Experience" Text="2 года"   Foreground="WhiteSmoke"  TextAlignment="Left"  FontSize="20"  />
-                    <TextBox x:Name="ContryOficer" Text="UKR"    Foreground="WhiteSmoke"  TextAlignment="Left"  FontSize="20"  />
+                    <TextBox x:Name="Name" Text=""        Foreground="WhiteSmoke"  TextAlignment="Left"  FontSize="20"  Margin="2"  />
+                    <TextBox x:Name="Sname" Text=""       Foreground="WhiteSmoke"  TextAlignment="Left"  FontSize="20"  />
+                    <TextBox x:Name="Status" Text=""       Foreground="WhiteSmoke"  TextAlignment="Left"  FontSize="20"   />
+                    <TextBox x:Name="Experience" Text=""   Foreground="WhiteSmoke"  TextAlignment="Left"  FontSize="20"  />
+                    <TextBox x:Name="ContryOficer" Text=""    Foreground="WhiteSmoke"  TextAlignment="Left"  FontSize="20"  />
                     <TextBox x:Name="Level" Text="3"             Foreground="WhiteSmoke"  TextAlignment="Left"  FontSize="20" />
             </StackPanel>
             </Grid>
@@ -83,7 +83,7 @@
                 <Border x:Name="FotocartBorder" Width="{Binding Width, ElementName=Mask}" Height="{Binding Height, ElementName=Mask}" CornerRadius="10" BorderBrush="Azure" BorderThickness="1" Padding="0">
                     <Grid>
                         <Border x:Name="ImageMask" Background="Transparent">
-                            <Image x:Name="FotocarSuspect" Source="/Source/7.jpg" Stretch="Fill">
+                            <Image x:Name="FotocarOficer" Stretch="Fill">
                                 <Image.OpacityMask>
                                     <VisualBrush Visual="{Binding ElementName=Mask}"/>
                                 </Image.OpacityMask>

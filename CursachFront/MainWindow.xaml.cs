@@ -1,8 +1,10 @@
-﻿using CursachFront.Core.Models;
+﻿using CursachFront.Core;
+using CursachFront.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Nodes;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -29,8 +31,23 @@ namespace CursachFront
         private static NewUser NUser = new NewUser();
         private static More_info Info = new More_info();
         private static FullUserCabinet FullUserCabinet = new FullUserCabinet();
+        private ProfileData _current;
+        public ProfileData GetProf()
+            => new()
+            {
+                Country = _current.Country,
+                Education = _current.Education,
+                FirstName = _current.FirstName,
+                LastName = _current.LastName,
+                ProfileImage = _current.ProfileImage,
+                Rank = _current.Rank,
+                Role = _current.Role
+            };
+      
         public MainWindow()
         {
+            _current = LocalIdentity.GetProfile();
+            
             InitializeComponent();
         }
         private void ToOption(object sender, RoutedEventArgs e) { OptionsPages.Content = Options; }

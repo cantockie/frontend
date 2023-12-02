@@ -230,7 +230,7 @@
                             <RowDefinition/>
                         </Grid.RowDefinitions>
                         <Button x:Name="BackToSearching"   Grid.Row="0"  Click="Back"  Style="{DynamicResource MaterialDesignPaperLightButton}"    Content="Back" BorderBrush="Transparent" VerticalAlignment="Center"  Margin="5" Width="100"/>
-                        <Button x:Name="ToHTML" Grid.Row="1" Style="{DynamicResource MaterialDesignPaperLightButton}"      Content="HTML" BorderBrush="Transparent" VerticalAlignment="Center"  Margin="5" Width="100"/>
+                        <Button Click="ToHTML_Click" x:Name="ToHTML" Grid.Row="1" Style="{DynamicResource MaterialDesignPaperLightButton}"      Content="HTML" BorderBrush="Transparent" VerticalAlignment="Center"  Margin="5" Width="100"/>
                
                     </Grid>
                 </Border>

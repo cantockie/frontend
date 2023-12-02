@@ -7,7 +7,8 @@ public static class LocalIdentity
 {
     private static bool _authorized;
     private static bool _isInRole;
-    private static AppUser _user = null;
+    private static AppUser _user  = null;
+    public static AppUser _userInCabinet  = _user;
 
     public static bool Authorized
     {
@@ -39,9 +40,15 @@ public static class LocalIdentity
         if (_user is null)
             throw new Exception();
 
-        return new()
+        return new() 
         {
-            FullName = _user.FirstName
+            FirstName = _user.FirstName,
+            LastName = _user.LastName,
+            Role = _user.Role,
+            Education = _user.Education,
+            Country = _user.Country,
+            Rank = _user.Rank,
+            ProfileImage = _user.PhotoName
         };
     }
 }

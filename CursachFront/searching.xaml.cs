@@ -17,6 +17,7 @@ using System.Windows.Shapes;
 using Newtonsoft.Json;
 using System.IO;
 using Microsoft.Xaml.Behaviors.Core;
+using CursachFront.Core.Services.Path;
 namespace CursachFront
 {
     /// <summary>
@@ -72,8 +73,10 @@ namespace CursachFront
                     Status.Text = selectedPrisoner.Status.ToString();
                     Criminal.Text = selectedPrisoner.CriminalArticles.ToString();
                     PrisonInd = Convert.ToInt32(selectedPrisoner.Id);
-                    FotocarSuspect.Source = new BitmapImage(new Uri(selectedPrisoner.PhotoName, UriKind.Absolute));
-                    ImprintImage.Source = new BitmapImage(new Uri(selectedPrisoner.FingerName, UriKind.Absolute));
+                    string face = PathFindService.GetPath(selectedPrisoner.PhotoName, true);
+                    string finger = PathFindService.GetPath(selectedPrisoner.FingerName, false);
+                    FotocarSuspect.Source = new BitmapImage(new Uri(face, UriKind.Absolute));
+                    ImprintImage.Source = new BitmapImage(new Uri(face, UriKind.Absolute));
                 }
                 else { }
 
