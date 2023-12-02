@@ -72,6 +72,7 @@ namespace CursachFront
         {
             MainWindow.ToFullUserCabinetEnotherframe((MainWindow)Window.GetWindow(this));
             MainWindow.CancellCabinet((MainWindow)Window.GetWindow(this));
+           
         }
     }
 }

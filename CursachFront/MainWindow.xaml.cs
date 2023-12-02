@@ -127,8 +127,8 @@ namespace CursachFront
         /// //////////////////кнопки FullCabinet/
         private void ToFullUserCabinet(object sender, RoutedEventArgs e) { FindesPages.Content = FullUserCabinet; }
         public static void CancellFullUserCabinet(MainWindow mainWindow) { mainWindow.CansellFullUserCabinetMetod(); }
-        public static void ToFullUserCabinetEnotherframe(MainWindow mainWindow) {   mainWindow.ToFullUserCabinetMetod();}
-        public static void ToBackFullUserCabinetEnotherframe(MainWindow mainWindow) { mainWindow.GoBackFullUserCabinetMetod(); }
+        public static void ToFullUserCabinetEnotherframe(MainWindow mainWindow) { mainWindow.ToFullUserCabinetMetod(); FullUserCabinet.ToSUpdateInterfaceEnotherframe(FullUserCabinet); }
+        public static void ToBackFullUserCabinetEnotherframe(MainWindow mainWindow) { mainWindow.GoBackFullUserCabinetMetod();  }
 
         private void ToFullUserCabinetMetod() { FindesPages.Content = FullUserCabinet;}
         public void  CansellFullUserCabinetMetod() { FindesPages.Content = null; }

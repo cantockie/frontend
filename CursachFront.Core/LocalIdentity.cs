@@ -40,7 +40,7 @@ public static class LocalIdentity
         if (_user is null)
             throw new Exception();
 
-        return new() 
+        return new()
         {
             FirstName = _user.FirstName,
             LastName = _user.LastName,
@@ -48,7 +48,14 @@ public static class LocalIdentity
             Education = _user.Education,
             Country = _user.Country,
             Rank = _user.Rank,
-            ProfileImage = _user.PhotoName
+            ProfileImage = _user.PhotoName,
+            Gender = _user.Gender,
+            BirthDay = _user.BirthDay,
+            Departments = _user.Departments,
+            Email = _user.Email,
+            Specifications = _user.Specifications,
+            Bio = _user.Bio,
+            Id = _user.Id,
         };
     }
 }
