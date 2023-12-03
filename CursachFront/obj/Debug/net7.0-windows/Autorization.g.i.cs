@@ -152,7 +152,7 @@ namespace CursachFront {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/CursachFront;V1.0.0.0;component/autorization.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/CursachFront;component/autorization.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Autorization.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
