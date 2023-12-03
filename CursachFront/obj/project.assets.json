@@ -210,19 +210,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\yyarm\\.nuget\\packages\\": {}
+    "C:\\Users\\Администратор\\.nuget\\packages\\": {},
+    "D:\\VScomponent\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yyarm\\Desktop\\Нова папка (2)\\CursachFront\\frontend\\CursachFront\\CursachFront.csproj",
+      "projectUniqueName": "C:\\Users\\Администратор\\Documents\\GitHub\\frontend\\CursachFront\\CursachFront.csproj",
       "projectName": "CursachFront",
-      "projectPath": "C:\\Users\\yyarm\\Desktop\\Нова папка (2)\\CursachFront\\frontend\\CursachFront\\CursachFront.csproj",
-      "packagesPath": "C:\\Users\\yyarm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yyarm\\Desktop\\Нова папка (2)\\CursachFront\\frontend\\CursachFront\\obj\\",
+      "projectPath": "C:\\Users\\Администратор\\Documents\\GitHub\\frontend\\CursachFront\\CursachFront.csproj",
+      "packagesPath": "C:\\Users\\Администратор\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Администратор\\Documents\\GitHub\\frontend\\CursachFront\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\VScomponent\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\yyarm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Администратор\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -230,14 +235,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "C:\\Users\\yyarm\\Desktop\\Нова папка (2)\\CursachFront\\frontend\\CursachFront.Core\\CursachFront.Core.csproj": {
-              "projectPath": "C:\\Users\\yyarm\\Desktop\\Нова папка (2)\\CursachFront\\frontend\\CursachFront.Core\\CursachFront.Core.csproj"
+            "C:\\Users\\Администратор\\Documents\\GitHub\\frontend\\CursachFront.Core\\CursachFront.Core.csproj": {
+              "projectPath": "C:\\Users\\Администратор\\Documents\\GitHub\\frontend\\CursachFront.Core\\CursachFront.Core.csproj"
             }
           }
         }
@@ -276,7 +282,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
