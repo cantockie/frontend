@@ -79,8 +79,8 @@ namespace CursachFront
                 }
                 catch
                 {
-                    _finger = PathFindService.GetPath("mark2.png", false);
-                    ImprintImage.Source = new BitmapImage(new Uri(_face, UriKind.Absolute));
+                    _finger = PathFindService.GetPath("mark1.png", false);
+                    ImprintImage.Source = new BitmapImage(new Uri(_finger, UriKind.Absolute));
                 }
             }
         }

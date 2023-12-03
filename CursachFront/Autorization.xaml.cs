@@ -62,7 +62,7 @@ namespace CursachFront
                     }
                     if (anonymius)
                     {
-                        username = "guest@gmail.com";
+                        username = "eva.green@gmail.com";
                         password = "dasdasdas12";
                     }
                 }
