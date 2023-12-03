@@ -8,6 +8,108 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Sources\Faces\events.png" />
+    <None Remove="Sources\Faces\face1.jpg" />
+    <None Remove="Sources\Faces\face10.jpg" />
+    <None Remove="Sources\Faces\face100.jpeg" />
+    <None Remove="Sources\Faces\face11.jpg" />
+    <None Remove="Sources\Faces\face12.jpg" />
+    <None Remove="Sources\Faces\face13.jpg" />
+    <None Remove="Sources\Faces\face14.jpg" />
+    <None Remove="Sources\Faces\face15.jpg" />
+    <None Remove="Sources\Faces\face16.jpg" />
+    <None Remove="Sources\Faces\face17.jpg" />
+    <None Remove="Sources\Faces\face18.jpg" />
+    <None Remove="Sources\Faces\face19.jpg" />
+    <None Remove="Sources\Faces\face2.jpg" />
+    <None Remove="Sources\Faces\face20.jpg" />
+    <None Remove="Sources\Faces\face21.jpg" />
+    <None Remove="Sources\Faces\face22.jpg" />
+    <None Remove="Sources\Faces\face23.jpg" />
+    <None Remove="Sources\Faces\face24.jpg" />
+    <None Remove="Sources\Faces\face25.jpg" />
+    <None Remove="Sources\Faces\face26.jpg" />
+    <None Remove="Sources\Faces\face27.jpg" />
+    <None Remove="Sources\Faces\face28.jpg" />
+    <None Remove="Sources\Faces\face29.jpg" />
+    <None Remove="Sources\Faces\face3.jpg" />
+    <None Remove="Sources\Faces\face30.jpg" />
+    <None Remove="Sources\Faces\face31.jpg" />
+    <None Remove="Sources\Faces\face32.jpg" />
+    <None Remove="Sources\Faces\face33.jpg" />
+    <None Remove="Sources\Faces\face34.jpg" />
+    <None Remove="Sources\Faces\face35.jpg" />
+    <None Remove="Sources\Faces\face36.jpg" />
+    <None Remove="Sources\Faces\face37.jpg" />
+    <None Remove="Sources\Faces\face38.jpg" />
+    <None Remove="Sources\Faces\face39.jpg" />
+    <None Remove="Sources\Faces\face4.png" />
+    <None Remove="Sources\Faces\face40.jpg" />
+    <None Remove="Sources\Faces\face41.jpg" />
+    <None Remove="Sources\Faces\face42.jpg" />
+    <None Remove="Sources\Faces\face43.jpg" />
+    <None Remove="Sources\Faces\face44.jpg" />
+    <None Remove="Sources\Faces\face45.jpg" />
+    <None Remove="Sources\Faces\face46.jpg" />
+    <None Remove="Sources\Faces\face47.jpg" />
+    <None Remove="Sources\Faces\face48.jpg" />
+    <None Remove="Sources\Faces\face49.jpg" />
+    <None Remove="Sources\Faces\face5.jpg" />
+    <None Remove="Sources\Faces\face50.jpg" />
+    <None Remove="Sources\Faces\face51.jpg" />
+    <None Remove="Sources\Faces\face52.jpg" />
+    <None Remove="Sources\Faces\face53.jpg" />
+    <None Remove="Sources\Faces\face54.jpg" />
+    <None Remove="Sources\Faces\face55.jpg" />
+    <None Remove="Sources\Faces\face56.jpg" />
+    <None Remove="Sources\Faces\face57.jpg" />
+    <None Remove="Sources\Faces\face58.jpg" />
+    <None Remove="Sources\Faces\face59.jpg" />
+    <None Remove="Sources\Faces\face6.jpg" />
+    <None Remove="Sources\Faces\face60.jpg" />
+    <None Remove="Sources\Faces\face61.jpg" />
+    <None Remove="Sources\Faces\face62.jpg" />
+    <None Remove="Sources\Faces\face63.jpg" />
+    <None Remove="Sources\Faces\face64.jpg" />
+    <None Remove="Sources\Faces\face65.jpg" />
+    <None Remove="Sources\Faces\face66.jpg" />
+    <None Remove="Sources\Faces\face67.jpg" />
+    <None Remove="Sources\Faces\face68.jpg" />
+    <None Remove="Sources\Faces\face69.jpg" />
+    <None Remove="Sources\Faces\face7.jpg" />
+    <None Remove="Sources\Faces\face70.jpg" />
+    <None Remove="Sources\Faces\face71.jpg" />
+    <None Remove="Sources\Faces\face72.jpg" />
+    <None Remove="Sources\Faces\face73.jpg" />
+    <None Remove="Sources\Faces\face74.jpg" />
+    <None Remove="Sources\Faces\face75.jpg" />
+    <None Remove="Sources\Faces\face76.jpg" />
+    <None Remove="Sources\Faces\face77.jpg" />
+    <None Remove="Sources\Faces\face78.jpg" />
+    <None Remove="Sources\Faces\face79.jpg" />
+    <None Remove="Sources\Faces\face8.jpg" />
+    <None Remove="Sources\Faces\face80.jpg" />
+    <None Remove="Sources\Faces\face81.jpg" />
+    <None Remove="Sources\Faces\face82.jpg" />
+    <None Remove="Sources\Faces\face83.jpg" />
+    <None Remove="Sources\Faces\face84.jpg" />
+    <None Remove="Sources\Faces\face85.jpg" />
+    <None Remove="Sources\Faces\face86.jpg" />
+    <None Remove="Sources\Faces\face87.jpg" />
+    <None Remove="Sources\Faces\face88.jpg" />
+    <None Remove="Sources\Faces\face89.jpg" />
+    <None Remove="Sources\Faces\face9.jpg" />
+    <None Remove="Sources\Faces\face90.jpg" />
+    <None Remove="Sources\Faces\face91.jpg" />
+    <None Remove="Sources\Faces\face92.jpg" />
+    <None Remove="Sources\Faces\face93.jpg" />
+    <None Remove="Sources\Faces\face94.jpg" />
+    <None Remove="Sources\Faces\face95.jpg" />
+    <None Remove="Sources\Faces\face96.jpg" />
+    <None Remove="Sources\Faces\face97.jpg" />
+    <None Remove="Sources\Faces\face98.jpg" />
+    <None Remove="Sources\Faces\face99.jpg" />
+    <None Remove="Sources\Faces\face99.png" />
     <None Remove="Source\7.jpg" />
     <None Remove="Source\Down.png" />
     <None Remove="Source\GoldZnachok.png" />
@@ -18,6 +120,309 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Sources\Faces\face1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face10.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face100.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face11.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face12.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face13.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face14.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face15.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face16.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face17.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face18.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face19.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face20.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face21.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face22.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face23.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face24.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face25.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face26.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face27.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face28.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face29.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face30.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face31.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face32.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face33.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face34.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face35.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face36.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face37.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face38.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face39.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face40.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face41.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face42.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face43.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face44.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face45.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face46.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face47.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face48.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face49.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face5.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face50.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face51.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face52.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face53.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face54.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face55.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face56.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face57.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face58.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face59.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face6.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face60.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face61.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face62.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face63.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face64.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face65.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face66.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face67.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face68.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face69.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face7.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face70.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face71.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face72.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face73.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face74.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face75.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face76.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face77.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face78.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face79.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face8.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face80.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face81.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face82.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face83.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face84.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face85.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face86.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face87.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face88.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face89.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face9.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face90.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face91.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face92.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face93.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face94.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face95.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face96.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face97.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face98.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face99.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Sources\Faces\face99.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Source\Down.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -47,10 +452,6 @@
     <Resource Include="Source\pngwing.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Sources\Faces\" />
   </ItemGroup>
 
 </Project>
