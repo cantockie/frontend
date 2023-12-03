@@ -139,7 +139,9 @@ namespace CursachFront
 
         private void toView_Button(object sender, RoutedEventArgs e)
         {
-
+            MainWindow mainWindow = new MainWindow();
+            _identityService.SignIn("guest@gmail.com", "dasdasdas12");
+            mainWindow.Show();
         }
     }
 }

@@ -25,7 +25,7 @@ public class IdentityService
     private AppUser AuthorizeUser(string username, string password)
         => LocalDb.Users.FirstOrDefault(prp => prp.Username.Equals(username) && prp.HashedPassword.Equals(password));
     
-    static byte[] GenerateSalt()
+    protected static byte[] GenerateSalt()
     {
         const int SaltLength = 64;
         byte[] salt = new byte[SaltLength];
@@ -35,7 +35,7 @@ public class IdentityService
 
         return salt;
     }
-    static byte[] GenerateSha256Hash(string password, byte[] salt)
+    protected static byte[] GenerateSha256Hash(string password, byte[] salt)
     {
         byte[] passwordBytes = Encoding.UTF8.GetBytes(password);
         byte[] saltedPassword = new byte[salt.Length + passwordBytes.Length];
@@ -43,5 +43,12 @@ public class IdentityService
         using var hash = new SHA256CryptoServiceProvider();
 
         return hash.ComputeHash(saltedPassword);
+    }
+    public string GenPassword(string password)
+    {
+
+        var salt = GenerateSalt();
+        var hash = Convert.ToBase64String(GenerateSha256Hash(password, salt));
+        return hash;
     }
 }

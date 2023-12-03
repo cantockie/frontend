@@ -117,6 +117,10 @@ namespace CursachFront
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             string[] dateFormats = { "yyyy.MM.dd", "yyyy/MM/dd", "yyyy-MM-dd" };
+            if (_face is null)
+                _face = "face1.jpg";
+            if (_finger is null)
+                _finger = "mark1.jpg";
             if (Enum.TryParse(Status.Text, out Status statusValue))
             {
                 if (DateTime.TryParseExact(Dr.Text, dateFormats, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime valueDr))
@@ -158,6 +162,10 @@ namespace CursachFront
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
             string[] dateFormats = { "yyyy.MM.dd", "yyyy/MM/dd", "yyyy-MM-dd" };
+            if (_face is null)
+                _face = "face1.jpg";
+            if (_finger is null)
+                _finger = "mark1.jpg";
             if (Enum.TryParse(Status.Text, out Status statusValue))
             {
                 if (DateTime.TryParseExact(Dr.Text, dateFormats, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime valueDr))

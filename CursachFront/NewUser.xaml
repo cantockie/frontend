@@ -60,7 +60,7 @@
             </ComboBox>
         </Border>
         <Border Grid.Column="1" Grid.Row="1" CornerRadius="20" Margin="5,5,5,5" Style="{StaticResource CustomBorder}">
-            <TextBox x:Name="id"  Margin="10" FontSize="20" BorderBrush="Azure" Foreground="WhiteSmoke" VerticalAlignment="Center" />
+            <TextBox x:Name="id" TextChanged="id_TextChanged"  Margin="10" FontSize="20" BorderBrush="Azure" Foreground="WhiteSmoke" VerticalAlignment="Center" />
         </Border>
         <Border x:Name="InsadeChangerSuspect" Grid.Column="1" Grid.Row="2" Grid.RowSpan="2" Padding="4" Margin="5" Style="{StaticResource CustomBorder}">
             <Grid>
@@ -228,9 +228,9 @@
                 </Border>
                 <Border x:Name="ButtonsChenger" Grid.Row="2" Padding="2" Margin="0,0,0,20" Style="{StaticResource CustomBorder}">
                     <Grid>
-                        <Button x:Name="AddButton" Style="{DynamicResource MaterialDesignPaperLightButton}"  Content="Add" Background="#135c25"  BorderBrush="Transparent"   VerticalAlignment="Center" Margin="5" Width="100" Visibility="Collapsed"/>
-                        <Button x:Name="ChangeButton" Style="{DynamicResource MaterialDesignPaperLightButton}" Content="Update"  VerticalAlignment="Center" BorderBrush="Transparent"   Margin="5" Width="100" Visibility="Collapsed"/>
-                        <Button x:Name="DeleteButton" Style="{DynamicResource MaterialDesignPaperLightButton}" Content="Delete" Background="#540d0d"  BorderBrush="Transparent"  VerticalAlignment="Center" Margin="5" Width="100" Visibility="Collapsed"/>
+                        <Button Click="AddButton_Click" x:Name="AddButton" Style="{DynamicResource MaterialDesignPaperLightButton}"  Content="Add" Background="#135c25"  BorderBrush="Transparent"   VerticalAlignment="Center" Margin="5" Width="100" Visibility="Hidden"/>
+                        <Button Click="UpdateButton_Click" x:Name="ChangeButton" Style="{DynamicResource MaterialDesignPaperLightButton}" Content="Update"  VerticalAlignment="Center" BorderBrush="Transparent"   Margin="5" Width="100" Visibility="Hidden"/>
+                        <Button Click="DeleteButton_Click"  x:Name="DeleteButton" Style="{DynamicResource MaterialDesignPaperLightButton}" Content="Delete" Background="#540d0d"  BorderBrush="Transparent"  VerticalAlignment="Center" Margin="5" Width="100" Visibility="Hidden"/>
                     </Grid>
                 </Border>
             </Grid>

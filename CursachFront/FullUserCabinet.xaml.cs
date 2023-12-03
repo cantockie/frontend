@@ -61,14 +61,31 @@ namespace CursachFront
                 Level.Text = _current.Role;
                 BIOOficer.Text = _current.Bio;
                 idOficer.Text = _current.Id.ToString();
-                string face = PathFindService.GetPath(CurrentUser.ProfileImage, true);
-                string finger = PathFindService.GetPath(CurrentUser.ProfileImage, true);
+                string _face = PathFindService.GetPath(CurrentUser.ProfileImage, true);
+                string _finger = PathFindService.GetPath(CurrentUser.ProfileImage, false);
 
-                FotocarOficer.Source = new BitmapImage(new Uri(face, UriKind.Absolute));
-                ImprintImage.Source = new BitmapImage(new Uri(finger, UriKind.Absolute));
+                try 
+                {
+                    FotocarOficer.Source = new BitmapImage(new Uri(_face, UriKind.Absolute));
+
+                }
+                catch
+                {
+                    _face = PathFindService.GetPath("face1.jpg", true);
+                    FotocarOficer.Source = new BitmapImage(new Uri(_face, UriKind.Absolute));
+                }
+                try {
+                    ImprintImage.Source = new BitmapImage(new Uri(_finger, UriKind.Absolute));
+                }
+                catch
+                {
+                    _finger = PathFindService.GetPath("mark2.png", false);
+                    ImprintImage.Source = new BitmapImage(new Uri(_face, UriKind.Absolute));
+                }
             }
-
         }
+
+        
         public static void ToSUpdateInterfaceEnotherframe(FullUserCabinet fullUserCabinet) { fullUserCabinet.UbdateFullCabinet(); }
         private void b(object sender, RoutedEventArgs e)
         {        
