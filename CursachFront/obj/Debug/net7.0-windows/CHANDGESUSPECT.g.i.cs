@@ -389,7 +389,7 @@ namespace CursachFront {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/CursachFront;V1.0.0.0;component/chandgesuspect.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/CursachFront;component/chandgesuspect.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\CHANDGESUSPECT.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
