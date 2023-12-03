@@ -63,7 +63,7 @@ namespace CursachFront
                 Hair.Text = selectedPrisoner.ColorHair;
                 Country.Text = selectedPrisoner.Country;
                 LastCountry.Text = selectedPrisoner.LastSee;
-                Status.Text = selectedPrisoner.Status.ToString();
+                Status.Text = selectedPrisoner._Status.ToString();
                 Criminal.Text = selectedPrisoner.CriminalArticles;
                 Weight.Text = selectedPrisoner.Weight.ToString();
                 EyeColor.Text = selectedPrisoner.EyeColor;

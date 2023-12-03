@@ -6,7 +6,8 @@ public enum Status
     Alive,
     Die,
     Terminated,
-    Prisoned
+    Prisoned,
+    None
 }
 public class Prisoner
 {
@@ -20,7 +21,7 @@ public class Prisoner
     public string ColorHair { get; set; }
     public string Country { get; set; }
     public string LastSee { get; set; }
-    public Status Status { get; set; }
+    public Status _Status { get; set; }
 
 
     public string CriminalArticles { get; set; }

@@ -10,6 +10,7 @@ using System.Diagnostics.Eventing.Reader;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -37,6 +38,7 @@ namespace CursachFront
             InitializeComponent();
             ButtonSelectFoto.Click += ButtonSelectFoto_Click;
             ButtonSelectImprint.Click += ButtonSelectImprint_Click;
+            _prisonerService = new PrisonerService();
         }
         private void ButtonSelectFoto_Click(object sender, RoutedEventArgs e)
         {
@@ -144,7 +146,7 @@ namespace CursachFront
                         BloodType = blood.Text,
                         Married = (Married.Text == "Yes") ? true : false,
                         Profession = Profession.Text,
-                        Status = statusValue,
+                        _Status = statusValue,
                         ColorHair = Hair.Text,
                         FirstCrimes = FirstCrimes.Text,
                         LastSee = LastCountry.Text,
@@ -189,7 +191,7 @@ namespace CursachFront
                         BloodType = blood.Text,
                         Married = (Married.Text == "Yes") ? true : false,
                         Profession = Profession.Text,
-                        Status = statusValue,
+                        _Status = statusValue,
                         ColorHair = Hair.Text,
                         FirstCrimes = FirstCrimes.Text,
                         LastSee = LastCountry.Text,
@@ -207,6 +209,109 @@ namespace CursachFront
         {
             int ID = Convert.ToInt32(id.Text);
             _prisonerService.Remove(ID);
+        }
+
+        private Prisoner CheckId(Prisoner psr, long ids)
+        {
+            var list = _prisonerService.GetList();
+            int itemCount = list.Count();
+            if (ids > itemCount)
+            {
+                psr.Id = ids;
+                psr.Name = "";
+                psr.Surname = "";
+                psr.Hobbies = "";
+                psr.Hospital = "";
+                psr.Gender = "";
+                psr.PhotoName = "face1.jpg";
+                psr.FingerName = "mark1.png";
+                psr._Status = Core.Models.Status.None;
+                psr.Country = "";
+                psr.Gender = "";
+                psr.Birthday = new DateTime();
+                psr.CrimeSpec = "";
+                psr.CriminalArticles = "";
+                psr.Hobbies = "";
+                psr.FirstCrimes = "";
+                psr.BIO = "";
+                psr.ColorHair = "";
+                psr.EyeColor = "";
+                psr.Married = false;
+                psr.Profession = "";
+                psr.CivilSpec = "";
+                psr.BloodType = "";
+                psr.Weight = 0.0;
+                psr.Gang = "";
+                psr.LastSee = "";
+           
+        
+            }
+            else
+            {
+                psr = list.FirstOrDefault(x => x.Id == ids);
+            }
+            return psr;
+        }
+
+        private void id_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+                if (Vibor.Text == "Change" || Vibor.Text is "Delete")
+                {
+                    long ids;
+
+                    if (long.TryParse(id.Text, out ids))
+                    {
+                        Prisoner usr = new Prisoner();
+                        usr = CheckId(usr, ids);
+                        Name.Text = usr.Name;
+                        SName.Text = usr.Surname;
+                        klichka.Text = usr.Hospital;
+                        Hender.Text = usr.Gender;
+                        BIO.Text = usr.BIO;
+                        Hair.Text = usr.ColorHair;
+                        EyeColor.Text = usr.EyeColor;
+                        blood.Text = usr.BloodType;
+                        Country.Text = usr.Country;
+                        LastCountry.Text = usr.LastSee;
+                        Dr.Text = usr.Birthday.ToString();
+                        CrimeSpecialization.Text = usr.CrimeSpec;
+                        CivilSpecialization.Text = usr.CivilSpec;
+                        FirstCrimes.Text = usr.FirstCrimes;
+                        Married.Text = (usr.Married) ? "YES" : "NO";
+                        Profession.Text = usr.Profession;
+                        Gang.Text = usr.Gang;
+                        FotocarSuspect.Source = new BitmapImage(new Uri(PathFindService.GetPath(usr.PhotoName, true), UriKind.Absolute));
+                        ImprintImage.Source = new BitmapImage(new Uri(PathFindService.GetPath(usr.FingerName, false), UriKind.Absolute));
+                    }
+                
+
+            }
+            else
+            {
+                Name.Text = "";
+                SName.Text = "";
+                klichka.Text = "";
+                Hender.Text = "";
+                BIO.Text = "";
+                Hair.Text = "";
+                EyeColor.Text = "";
+                blood.Text = "";
+                Dr.Text = "";
+                CrimeSpecialization.Text = "";
+                CivilSpecialization.Text = "";
+                FirstCrimes.Text = "";
+                Married.Text = "";
+                Profession.Text = "";
+                _finger = "";
+                _face = "";
+                Gang.Text = "";
+
+
+            }
+
+
+
         }
     }
 }
