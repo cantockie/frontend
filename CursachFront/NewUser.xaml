@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="NewUser">
-    
+
     <Page.Resources>
         <Style x:Key="TransparentButton" TargetType="Button">
             <Setter Property="Background" Value="Transparent"/>
@@ -189,10 +189,42 @@
                     <RowDefinition Height="62*"/>
                 </Grid.RowDefinitions>
                 <Border Grid.RowSpan="2" Padding="5" Margin="0,0,0,20" Style="{StaticResource CustomBorder}">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Personal profile : " Foreground="WhiteSmoke"   Margin="5"></TextBlock>
-                        <TextBox x:Name="BIOOficer" Foreground="WhiteSmoke" TextWrapping="Wrap"  Width="600" ></TextBox>
-                    </StackPanel>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="81*"/>
+                            <RowDefinition Height="172*"/>
+
+                        </Grid.RowDefinitions>
+                        <Border Style="{DynamicResource CustomBorder}">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Border Style="{DynamicResource CustomBorder}" Margin="2">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Login :"  Foreground="WhiteSmoke"   Margin="5" />
+                                        <TextBox x:Name="LogginOficer"  Foreground="WhiteSmoke" TextWrapping="Wrap"  Width="600" ></TextBox>
+                                    </StackPanel>
+                                </Border>
+                                <Border Style="{DynamicResource CustomBorder}" Grid.Row="2" Margin="2">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Password :"  Foreground="WhiteSmoke"   Margin="5" />
+                                        <TextBox x:Name="PasswordOficer"  Foreground="WhiteSmoke" TextWrapping="Wrap"  Width="600"></TextBox>
+                                    </StackPanel>
+                                </Border>
+                            </Grid>
+
+
+                        </Border>
+                        <Border Style="{DynamicResource CustomBorder}" Grid.Row="1">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Personal profile : " Foreground="WhiteSmoke"   Margin="5"></TextBlock>
+                                <TextBox x:Name="BIOOficer" Foreground="WhiteSmoke" TextWrapping="Wrap"  Width="600" ></TextBox>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+
                 </Border>
                 <Border x:Name="ButtonsChenger" Grid.Row="2" Padding="2" Margin="0,0,0,20" Style="{StaticResource CustomBorder}">
                     <Grid>

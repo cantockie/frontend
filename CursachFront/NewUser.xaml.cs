@@ -67,38 +67,63 @@ namespace CursachFront
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             string[] dateFormats = { "yyyy.MM.dd", "yyyy/MM/dd", "yyyy-MM-dd" };
-            if (Enum.TryParse(Status.Text, out Status statusValue))
-            {
-                if (DateTime.TryParseExact(.Text, dateFormats, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime valueDr))
+          
+            
+                if (DateTime.TryParseExact(DrOficer.Text, dateFormats, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime valueDr))
                 {
                     AppUser user = new AppUser()
                     {
-                        Username = Login
-
+                        FirstName = NameOficer.Text,
+                        LastName = SNameOficer.Text,
+                        Username = LogginOficer.Text,
+                        HashedPassword=PasswordOficer.Text,
+                        Bio = BIOOficer.Text,
+                        Gender = HenderOficer.Text,
+                        Country =CountryOficer.Text,
+                        Rank=Rank.Text,
+                        Education=EducationOficer.Text,
+                        Departments=DepartmentsOficer.Text,
+                        Specifications = SpecializationOficer.Text,
+                        Email= ContactInformationOficer.Text,
+                        BirthDay = valueDr,
+                        Role=Level.Text,
+                        FingerName = _finger,                       
                     };
                     _userService.Add(user);
                 }
                 else throw new Exception("Incorrect form of data");
-            };
+            
 
         }
 
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
             string[] dateFormats = { "yyyy.MM.dd", "yyyy/MM/dd", "yyyy-MM-dd" };
-            if (Enum.TryParse(Status.Text, out Status statusValue))
-            {
-                if (DateTime.TryParseExact(.Text, dateFormats, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime valueDr))
+            
+                if (DateTime.TryParseExact(DrOficer.Text, dateFormats, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime valueDr))
                 {
                     AppUser user = new AppUser()
                     {
-                        Username = Login
+                        FirstName = NameOficer.Text,
+                        LastName = SNameOficer.Text,
+                        Username = LogginOficer.Text,
+                        HashedPassword = PasswordOficer.Text,
+                        Bio = BIOOficer.Text,
+                        Gender = HenderOficer.Text,
+                        Country = CountryOficer.Text,
+                        Rank = Rank.Text,
+                        Education = EducationOficer.Text,
+                        Departments = DepartmentsOficer.Text,
+                        Specifications = SpecializationOficer.Text,
+                        Email = ContactInformationOficer.Text,
+                        BirthDay = valueDr,
+                        Role = Level.Text,
+                        FingerName = _finger,
 
                     };
                     _userService.Update(user);
                 }
                 else throw new Exception("Incorrect form of data");
-            };
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
