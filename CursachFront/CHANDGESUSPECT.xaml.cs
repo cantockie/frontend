@@ -114,6 +114,8 @@ namespace CursachFront
                 DeleteButton.Visibility = Visibility.Visible;
             }
         }
+
+
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             string[] dateFormats = { "yyyy.MM.dd", "yyyy/MM/dd", "yyyy-MM-dd" };
