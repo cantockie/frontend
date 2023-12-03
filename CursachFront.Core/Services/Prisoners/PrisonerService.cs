@@ -39,7 +39,11 @@ public class PrisonerService
         }
     }
     public void Add(Prisoner prisoner)
-        => LocalDb.Prisoners.Add(prisoner);
+    {
+        int Id = LocalDb.Prisoners.Count + 1;
+        prisoner.Id = Id;
+        LocalDb.Prisoners.Add(prisoner);
+    }
 
     public void Update(Prisoner prisoner)
     {

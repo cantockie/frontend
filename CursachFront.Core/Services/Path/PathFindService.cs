@@ -8,6 +8,14 @@ namespace CursachFront.Core.Services.Path
 {
     public static class PathFindService
     {
+        public static string GetPath(string file)
+        {
+          
+            string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string fullPath = GetProjectDirectory(currentDirectory) + file;
+            return fullPath;
+
+        }
         public static string GetPath(string file,bool faceOrFinger)
         {
             string choice = GetChoice(faceOrFinger);
