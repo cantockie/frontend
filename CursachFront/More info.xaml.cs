@@ -77,9 +77,25 @@ namespace CursachFront
                 FirstCrimes.Text = selectedPrisoner.FirstCrimes;
                 BIO.Text = selectedPrisoner.BIO;
 
-              
-                FotocarSuspect.Source = new BitmapImage(new Uri(_face, UriKind.Absolute));
-                ImprintImage.Source = new BitmapImage(new Uri(_face, UriKind.Absolute));
+                if (_face is not null)
+                {
+                    FotocarSuspect.Source = new BitmapImage(new Uri(_face, UriKind.Absolute));
+                    
+                }
+                else
+                {
+                    _face = PathFindService.GetPath("face1.jpg", true);           
+                    FotocarSuspect.Source = new BitmapImage(new Uri(_face, UriKind.Absolute));
+                }
+                if (_finger is not null)
+                {
+                    ImprintImage.Source = new BitmapImage(new Uri(_finger, UriKind.Absolute));
+                }
+                else 
+                {
+                    _finger = PathFindService.GetPath("mark2.png", false);
+                    ImprintImage.Source = new BitmapImage(new Uri(_face, UriKind.Absolute));
+                }
             }
 
             }

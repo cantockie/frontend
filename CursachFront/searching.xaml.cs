@@ -18,6 +18,7 @@ using Newtonsoft.Json;
 using System.IO;
 using Microsoft.Xaml.Behaviors.Core;
 using CursachFront.Core.Services.Path;
+using System.Diagnostics;
 namespace CursachFront
 {
     /// <summary>
@@ -73,12 +74,31 @@ namespace CursachFront
                     Status.Text = selectedPrisoner.Status.ToString();
                     Criminal.Text = selectedPrisoner.CriminalArticles.ToString();
                     PrisonInd = Convert.ToInt32(selectedPrisoner.Id);
-                    string face = PathFindService.GetPath(selectedPrisoner.PhotoName, true);
-                    string finger = PathFindService.GetPath(selectedPrisoner.FingerName, false);
-                    FotocarSuspect.Source = new BitmapImage(new Uri(face, UriKind.Absolute));
-                    ImprintImage.Source = new BitmapImage(new Uri(face, UriKind.Absolute));
+                    string _face = PathFindService.GetPath(selectedPrisoner.PhotoName, true);
+                    string _finger = PathFindService.GetPath(selectedPrisoner.FingerName, false);
+                    FotocarSuspect.Source = new BitmapImage(new Uri(_face, UriKind.Absolute));
+                    ImprintImage.Source = new BitmapImage(new Uri(_finger, UriKind.Absolute));
+                    if (_face is not null)
+                    {
+                        FotocarSuspect.Source = new BitmapImage(new Uri(_face, UriKind.Absolute));
+
+                    }
+                    else
+                    {
+                        _face = PathFindService.GetPath("face1.jpg", true);
+                        FotocarSuspect.Source = new BitmapImage(new Uri(_face, UriKind.Absolute));
+                    }
+                    if (_finger is not null)
+                    {
+                        ImprintImage.Source = new BitmapImage(new Uri(_finger, UriKind.Absolute));
+                    }
+                    else
+                    {
+                        _finger = PathFindService.GetPath("mark2.png", false);
+                        ImprintImage.Source = new BitmapImage(new Uri(_face, UriKind.Absolute));
+                    }
                 }
-                else { }
+            }
 
               
 
@@ -90,4 +110,4 @@ namespace CursachFront
         
     }
 
-}
+

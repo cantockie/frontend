@@ -1,5 +1,8 @@
 using CursachFront.Core.Models;
 using CursachFront.Core.Models.Enums;
+using System.Data;
+using System.Diagnostics.Metrics;
+using System.Reflection;
 
 namespace CursachFront.Core;
 
@@ -38,9 +41,26 @@ public static class LocalIdentity
     public static ProfileData GetProfile()
     {
         if (_user is null)
-            throw new Exception();
-
-        return new()
+        {
+            return new()
+            {
+                FirstName = "guest",
+                LastName = " ",
+                Role = "GUEST",
+                Education = " ",
+                Country = " ",
+                Rank = " ",
+                ProfileImage = "face1.jpg",
+                Gender = "undefined",
+                BirthDay = DateTime.MinValue,
+                Departments = "",
+                Email = "",
+                Specifications = "",
+                Bio = "",
+                Id = 0
+            };
+        }
+        else return new()
         {
             FirstName = _user.FirstName,
             LastName = _user.LastName,

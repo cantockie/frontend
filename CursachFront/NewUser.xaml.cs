@@ -6,6 +6,7 @@ using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.Eventing.Reader;
 using System.Diagnostics.Metrics;
 using System.Globalization;
 using System.IO;
@@ -42,6 +43,7 @@ namespace CursachFront
             InitializeComponent();
             ButtonSelectFoto.Click += ButtonSelectFoto_Click;
             ButtonSelectImprint.Click += ButtonSelectImprint_Click;
+            _userService = new UserService();
             
         }
 
@@ -67,29 +69,34 @@ namespace CursachFront
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             string[] dateFormats = { "yyyy.MM.dd", "yyyy/MM/dd", "yyyy-MM-dd" };
-          
-            
-                if (DateTime.TryParseExact(DrOficer.Text, dateFormats, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime valueDr))
+            if (_face is null)
+                _face = "face1.jpg";
+            if (_finger is null)
+                _finger = "mark1.jpg";
+
+            if (DateTime.TryParseExact(DrOficer.Text, dateFormats, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime valueDr))
                 {
-                    AppUser user = new AppUser()
-                    {
-                        FirstName = NameOficer.Text,
-                        LastName = SNameOficer.Text,
-                        Username = LogginOficer.Text,
-                        HashedPassword=PasswordOficer.Text,
-                        Bio = BIOOficer.Text,
-                        Gender = HenderOficer.Text,
-                        Country =CountryOficer.Text,
-                        Rank=Rank.Text,
-                        Education=EducationOficer.Text,
-                        Departments=DepartmentsOficer.Text,
-                        Specifications = SpecializationOficer.Text,
-                        Email= ContactInformationOficer.Text,
-                        BirthDay = valueDr,
-                        Role=Level.Text,
-                        FingerName = _finger,                       
+                AppUser user = new AppUser()
+                {
+                    FirstName = NameOficer.Text,
+                    LastName = SNameOficer.Text,
+                    Username = LogginOficer.Text,
+                    HashedPassword = PasswordOficer.Text,
+                    Bio = BIOOficer.Text,
+                    Gender = HenderOficer.Text,
+                    Country = CountryOficer.Text,
+                    Rank = Rank.Text,
+                    Education = EducationOficer.Text,
+                    Departments = DepartmentsOficer.Text,
+                    Specifications = SpecializationOficer.Text,
+                    Email = ContactInformationOficer.Text,
+                    BirthDay = valueDr,
+                    Role = Level.Text,
+                    FingerName = _finger,
+                    PhotoName = _face
                     };
-                    _userService.Add(user);
+                _userService.Add(user);
+                    
                 }
                 else throw new Exception("Incorrect form of data");
             
@@ -99,8 +106,11 @@ namespace CursachFront
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
             string[] dateFormats = { "yyyy.MM.dd", "yyyy/MM/dd", "yyyy-MM-dd" };
-            
-                if (DateTime.TryParseExact(DrOficer.Text, dateFormats, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime valueDr))
+            if (_face is null)
+                _face = "face1.jpg";
+            if (_finger is null)
+                _finger = "mark1.jpg";
+            if (DateTime.TryParseExact(DrOficer.Text, dateFormats, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime valueDr))
                 {
                     AppUser user = new AppUser()
                     {
@@ -184,5 +194,91 @@ namespace CursachFront
             }
         }
 
+        private void id_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (Vibor.Text == "Change" || Vibor.Text is "Delete")
+            {
+                long ids;
+                
+            if (long.TryParse(id.Text, out ids))
+            {
+                    AppUser usr = new AppUser();
+                    usr = CheckId(usr, ids);
+                    NameOficer.Text = usr.FirstName;
+                    SNameOficer.Text = usr.LastName;
+                    LogginOficer.Text = usr.Username;
+                    PasswordOficer.Text = usr.HashedPassword;
+                    BIOOficer.Text = usr.Bio;
+                    HenderOficer.Text = usr.Gender;
+                    CountryOficer.Text = usr.Country;
+                    Rank.Text = usr.Rank;
+                    DrOficer.Text = usr.BirthDay.ToString();
+                    EducationOficer.Text = usr.Education;
+                    DepartmentsOficer.Text = usr.Departments;
+                    SpecializationOficer.Text = usr.Specifications;
+                    ContactInformationOficer.Text = usr.Email;
+                    Level.Text = usr.Role;
+                    _face = PathFindService.GetPath(usr.PhotoName, true);
+                    _finger = PathFindService.GetPath(usr.FingerName, false);
+                    FotocarSuspect.Source = new BitmapImage(new Uri(_face, UriKind.Absolute));
+                    ImprintImage.Source = new BitmapImage(new Uri(_finger, UriKind.Absolute));
+                }
+           
+            }
+            else 
+            {
+                    NameOficer.Text = "";
+                    SNameOficer.Text = "";
+                    LogginOficer.Text = "";
+                    PasswordOficer.Text = "";
+                    BIOOficer.Text = "";
+                    HenderOficer.Text = "";
+                    CountryOficer.Text = "";
+                    Rank.Text = "";
+                    DrOficer.Text = "";
+                    EducationOficer.Text = "";
+                    DepartmentsOficer.Text = "";
+                    SpecializationOficer.Text = "";
+                    ContactInformationOficer.Text = "";
+                    Level.Text = "";
+                    _finger = "";
+                    _face = "";
+
+            }
+            
+           
+   
+        }
+        private AppUser CheckId(AppUser usr, long ids) 
+        {
+            var list = _userService.GetList();
+            int itemCount = list.Count();
+            if (ids > itemCount)
+            {
+                usr.Id = ids;
+                usr.FirstName = "";
+                usr.Email = "";
+                usr.Bio = "";
+                usr.Departments = "";
+                usr.LastName = "";
+                usr.PhotoName = "face1.jpg";
+                usr.FingerName = "mark1.png";
+                usr.Username = "";
+                usr.Country = "";
+                usr.Gender = "";
+                usr.BirthDay = new DateTime();
+                usr.Education = "";
+                usr.Protection = 0;
+                usr.Rank = "";
+                usr.Specifications = "";
+                usr.HashedPassword = "";
+                usr.Role = "";
+            }
+            else
+            {
+                usr = list.FirstOrDefault(x => x.Id == ids);
+            }
+            return usr;
+        }
     }
 }
