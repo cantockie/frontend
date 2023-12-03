@@ -12,11 +12,11 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\yyarm\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\yyarm\\.nuget\\packages"
+      "C:\\Users\\Администратор\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Администратор\\.nuget\\packages",
+      "D:\\VScomponent\\NuGetPackages"
     ],
     "configProperties": {
-      "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true,
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
     }
   }
