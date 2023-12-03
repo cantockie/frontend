@@ -333,7 +333,7 @@ namespace CursachFront {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/CursachFront;component/more%20info.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/CursachFront;V1.0.0.0;component/more%20info.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\More info.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
