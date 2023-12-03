@@ -1,5 +1,6 @@
 ﻿using CursachFront.Core;
 using CursachFront.Core.Models;
+using CursachFront.Core.Services.Path;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +33,7 @@ namespace CursachFront
         private static More_info Info = new More_info();
         private static FullUserCabinet FullUserCabinet = new FullUserCabinet();
         private ProfileData _current;
-        public ProfileData GetProf()
+        private ProfileData GetProf()
             => new()
             {
                 Country = _current.Country,
@@ -42,6 +43,8 @@ namespace CursachFront
                 ProfileImage = _current.ProfileImage,
                 Rank = _current.Rank,
                 Role = _current.Role
+
+              
             };
       
         public MainWindow()
@@ -49,13 +52,23 @@ namespace CursachFront
             _current = LocalIdentity.GetProfile();
             
             InitializeComponent();
+            StatusBlock.Text = _current.Rank;
+            NameOficer.Text = _current.FirstName;
+            SNameOficer.Text = _current.LastName;
+            string face = PathFindService.GetPath(_current.ProfileImage, true);
+            FotocarOficer.Source = new BitmapImage(new Uri(face, UriKind.Absolute));
         }
         private void ToOption(object sender, RoutedEventArgs e) { OptionsPages.Content = Options; }
         public static void Cancell(MainWindow mainWindow) { mainWindow.CansellOptionMetod();}
         public  void CansellOptionMetod() { OptionsPages.Content = null; } 
 
 
-        private void ToCabinet(object sender, RoutedEventArgs e) { CadinetOficer.Content = Cabinets; }
+        private void ToCabinet(object sender, RoutedEventArgs e) { 
+            CadinetOficer.Content = Cabinets;
+            PageUserCabinet.ToSUpdateInterfaceEnotherframe(Cabinets);
+
+
+        }
         public static void CancellCabinet(MainWindow mainWindow) { mainWindow.CansellCabinetMetod(); }
         public void CansellCabinetMetod() { CadinetOficer.Content = null; }
        
@@ -100,13 +113,13 @@ namespace CursachFront
         private void ToMoreInformationMetod(Prisoner selectedPrisoner)
         {
             // Create a single instance of More_info
-            More_info moreInfoPage = new More_info();
+            More_info Info = new More_info();
 
             // Pass the selected prisoner to the More_info page
-            moreInfoPage.SetSelectedPrisoner(selectedPrisoner);
+            Info.SetSelectedPrisoner(selectedPrisoner);
 
             // Navigate to the More_info page
-            FindesPages.Content = moreInfoPage;
+            FindesPages.Content = Info;
 
             // Optionally, you may want to add logic for additional navigation or information display.
         }
@@ -114,8 +127,8 @@ namespace CursachFront
         /// //////////////////кнопки FullCabinet/
         private void ToFullUserCabinet(object sender, RoutedEventArgs e) { FindesPages.Content = FullUserCabinet; }
         public static void CancellFullUserCabinet(MainWindow mainWindow) { mainWindow.CansellFullUserCabinetMetod(); }
-        public static void ToFullUserCabinetEnotherframe(MainWindow mainWindow) {   mainWindow.ToFullUserCabinetMetod();}
-        public static void ToBackFullUserCabinetEnotherframe(MainWindow mainWindow) { mainWindow.GoBackFullUserCabinetMetod(); }
+        public static void ToFullUserCabinetEnotherframe(MainWindow mainWindow) { mainWindow.ToFullUserCabinetMetod(); FullUserCabinet.ToSUpdateInterfaceEnotherframe(FullUserCabinet); }
+        public static void ToBackFullUserCabinetEnotherframe(MainWindow mainWindow) { mainWindow.GoBackFullUserCabinetMetod();  }
 
         private void ToFullUserCabinetMetod() { FindesPages.Content = FullUserCabinet;}
         public void  CansellFullUserCabinetMetod() { FindesPages.Content = null; }

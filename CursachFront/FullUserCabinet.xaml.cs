@@ -1,5 +1,10 @@
-﻿using System;
+﻿using CursachFront.Core;
+using CursachFront.Core.Models;
+using CursachFront.Core.Services.Path;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,10 +25,51 @@ namespace CursachFront
     /// </summary>
     public partial class FullUserCabinet : Page
     {
+        private ProfileData currentUser;
+        private ProfileData _current;
+        public ProfileData CurrentUser
+        {
+            get { return currentUser; }
+            set
+            {
+                currentUser = value;
+                // Обновите ваш интерфейс на основе текущего пользователя
+                UbdateFullCabinet();
+            }
+        }
+
         public FullUserCabinet()
         {
+           _current = LocalIdentity.GetProfile();
             InitializeComponent();
+            CurrentUser = LocalIdentity.GetProfile();
         }
+        private void UbdateFullCabinet() 
+        {
+            if (CurrentUser != null)
+            {
+                NameOficer.Text = _current.FirstName;
+                SNameOficer.Text = _current.LastName;
+                HenderOficer.Text = _current.Gender;
+                Rank.Text = _current.Rank;
+                DrOficer.Text = _current.BirthDay.ToString();
+                EducationOficer.Text = _current.Education;
+                CountryOficer.Text = _current.Country;
+                DepartmentsOficer.Text = _current.Departments;
+                SpecializationOficer.Text = _current.Specifications;
+                ContactInformationOficer.Text = _current.Email;
+                Level.Text = _current.Role;
+                BIOOficer.Text = _current.Bio;
+                idOficer.Text = _current.Id.ToString();
+                string face = PathFindService.GetPath(CurrentUser.ProfileImage, true);
+                string finger = PathFindService.GetPath(CurrentUser.ProfileImage, true);
+
+                FotocarOficer.Source = new BitmapImage(new Uri(face, UriKind.Absolute));
+                ImprintImage.Source = new BitmapImage(new Uri(finger, UriKind.Absolute));
+            }
+
+        }
+        public static void ToSUpdateInterfaceEnotherframe(FullUserCabinet fullUserCabinet) { fullUserCabinet.UbdateFullCabinet(); }
         private void b(object sender, RoutedEventArgs e)
         {        
             MainWindow.ToBackFullUserCabinetEnotherframe((MainWindow)Window.GetWindow(this));

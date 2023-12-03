@@ -16,8 +16,9 @@ public class AppUser
   public string Specifications { get; set; }
     public string Email { get; set; }
     public int Protection { get; set; }
-  public string HashedPassword { get; set; }
-  public string Username { get; set; }
+   public string HashedPassword { get; set; }
+   public string Username { get; set; }
     public string PhotoName { get; set; }
     public string FingerName { get; set; }
+    public string Bio { get; set; }
 }

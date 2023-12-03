@@ -43,6 +43,9 @@ namespace CursachFront
             CurrentUser = LocalIdentity.GetProfile();
         }
 
+        public static void ToSUpdateInterfaceEnotherframe(PageUserCabinet pageUserCabinet) { pageUserCabinet.UpdateInterface(); }
+
+
         private void UpdateInterface()
         {
             // Обновите ваш интерфейс на основе свойств текущего пользователя
@@ -56,7 +59,7 @@ namespace CursachFront
                 ContryOficer.Text = CurrentUser.Country;
                 Level.Text = CurrentUser.Rank;
                 string face = PathFindService.GetPath(CurrentUser.ProfileImage, true);
-                //FotocarOficer.Source = new BitmapImage(new Uri(face, UriKind.Absolute));
+                FotocarOficer.Source = new BitmapImage(new Uri(face, UriKind.Absolute));
             }
         }
 
@@ -69,6 +72,7 @@ namespace CursachFront
         {
             MainWindow.ToFullUserCabinetEnotherframe((MainWindow)Window.GetWindow(this));
             MainWindow.CancellCabinet((MainWindow)Window.GetWindow(this));
+           
         }
     }
 }

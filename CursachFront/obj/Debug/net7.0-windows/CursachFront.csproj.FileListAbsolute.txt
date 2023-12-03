@@ -246,3 +246,4 @@ C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\bin\D
 C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\bin\Debug\net7.0-windows\CursachFront.Core.dll
 C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\bin\Debug\net7.0-windows\CursachFront.Core.pdb
 C:\Users\yyarm\Desktop\Нова папка (2)\CursachFront\frontend\CursachFront\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\Администратор\Documents\GitHub\frontend\CursachFront\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs

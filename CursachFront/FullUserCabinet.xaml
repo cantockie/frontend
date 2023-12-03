@@ -52,7 +52,7 @@
                         <Border x:Name="FotocartBorder" Margin="30,20,60,30" Width="{Binding Width, ElementName=Mask}" Height="{Binding Height, ElementName=Mask}"  Style="{StaticResource CustomBorder}">
                             <Grid>
                                 <Border x:Name="ImageMask" Background="Transparent">
-                                    <Image x:Name="FotocarSuspect" Source="/Source/7.jpg" Stretch="Fill">
+                                    <Image x:Name="FotocarOficer" Source="/Source/7.jpg" Stretch="Fill">
                                         <Image.OpacityMask>
                                             <VisualBrush Visual="{Binding ElementName=Mask}"/>
                                         </Image.OpacityMask>
