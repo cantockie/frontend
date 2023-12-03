@@ -71,7 +71,7 @@ namespace CursachFront
                     Country.Text = selectedPrisoner.Country;
                     Hair.Text = selectedPrisoner.ColorHair;
                     LastCountry.Text = selectedPrisoner.LastSee;
-                    Status.Text = selectedPrisoner.Status.ToString();
+                    Status.Text = selectedPrisoner._Status.ToString();
                     Criminal.Text = selectedPrisoner.CriminalArticles.ToString();
                     PrisonInd = Convert.ToInt32(selectedPrisoner.Id);
                     string _face = PathFindService.GetPath(selectedPrisoner.PhotoName, true);

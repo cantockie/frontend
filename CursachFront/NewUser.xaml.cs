@@ -129,6 +129,7 @@ namespace CursachFront
                         BirthDay = valueDr,
                         Role = Level.Text,
                         FingerName = _finger,
+                        PhotoName = _face
 
                     };
                     _userService.Update(user);
@@ -207,7 +208,7 @@ namespace CursachFront
                     NameOficer.Text = usr.FirstName;
                     SNameOficer.Text = usr.LastName;
                     LogginOficer.Text = usr.Username;
-                    PasswordOficer.Text = usr.HashedPassword;
+                    PasswordOficer.Text = "";
                     BIOOficer.Text = usr.Bio;
                     HenderOficer.Text = usr.Gender;
                     CountryOficer.Text = usr.Country;
@@ -218,10 +219,8 @@ namespace CursachFront
                     SpecializationOficer.Text = usr.Specifications;
                     ContactInformationOficer.Text = usr.Email;
                     Level.Text = usr.Role;
-                    _face = PathFindService.GetPath(usr.PhotoName, true);
-                    _finger = PathFindService.GetPath(usr.FingerName, false);
-                    FotocarSuspect.Source = new BitmapImage(new Uri(_face, UriKind.Absolute));
-                    ImprintImage.Source = new BitmapImage(new Uri(_finger, UriKind.Absolute));
+                    FotocarSuspect.Source = new BitmapImage(new Uri(PathFindService.GetPath(usr.PhotoName, true), UriKind.Absolute));
+                    ImprintImage.Source = new BitmapImage(new Uri(PathFindService.GetPath(usr.FingerName, false), UriKind.Absolute));
                 }
            
             }

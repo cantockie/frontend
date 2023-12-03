@@ -7,7 +7,10 @@ namespace CursachFront.Core.Services.Prisoners;
 public class PrisonerService 
 {
     private readonly CursachConfiguration _configuration;
-
+    public PrisonerService()
+    {
+        _configuration = new CursachConfiguration();
+    }
     public IEnumerable<Prisoner> GetFilteredAsync(SearchFilter filter)
     {
         DateTime? birthday = string.IsNullOrEmpty(filter.Birthday) ? null : (DateTime?)DateTime.Parse(filter.Birthday);
@@ -31,7 +34,7 @@ public class PrisonerService
             return LocalDb.Prisoners.Where(prp =>
                 (string.IsNullOrEmpty(filter.Country) || prp.Country.Contains(filter.Country)) &&
                 (string.IsNullOrEmpty(filter.Gang) || prp.Gang.Contains(filter.Gang)) &&
-                (string.IsNullOrEmpty(filter.Status) || prp.Status.ToString() == filter.Status)
+                (string.IsNullOrEmpty(filter.Status) || prp._Status.ToString() == filter.Status)
             );
         }
         else
@@ -65,6 +68,9 @@ public class PrisonerService
 
         LocalDb.Prisoners.Remove(prisoner);
         _configuration.SaveToFile();
+        
     }
+    public List<Prisoner> GetList()
+           => LocalDb.Prisoners.ToList();
 
 }

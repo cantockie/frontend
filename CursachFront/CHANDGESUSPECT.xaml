@@ -53,13 +53,13 @@
 
         <Border Grid.Column="0" Grid.Row="1" Margin="5,5,5,5" CornerRadius="20" Style="{DynamicResource CustomBorder}">
             <ComboBox x:Name="Vibor" Margin="10" FontSize="20" Foreground="WhiteSmoke"  BorderBrush="Azure"  VerticalAlignment="Center" SelectionChanged="Vibor_SelectionChanged" >
-                <ComboBoxItem x:Name="Change" Content="Change"  Foreground="Black"  />
+                <ComboBoxItem  x:Name="Change" Content="Change"  Foreground="Black"  />
                 <ComboBoxItem x:Name="Add" Content="Add"     Foreground="Black"  />
                 <ComboBoxItem x:Name="Delete" Content="Delete"  Foreground="Black" />
             </ComboBox>
         </Border>
         <Border Grid.Column="1" Grid.Row="1" Margin="5,5,5,5" CornerRadius="20" Style="{DynamicResource CustomBorder}">
-            <TextBox x:Name="id"  Margin="10" FontSize="20" BorderBrush="Azure" Foreground="WhiteSmoke" VerticalAlignment="Center" />
+            <TextBox x:Name="id" TextChanged="id_TextChanged" Margin="10" FontSize="20" BorderBrush="Azure" Foreground="WhiteSmoke" VerticalAlignment="Center" />
         </Border>
         <Border x:Name="InsadeChangerSuspect" Grid.Column="1" Grid.Row="2" Grid.RowSpan="2" Margin="5,5,5,5" Style="{DynamicResource CustomBorder}" Padding="4" >
             <Grid>
@@ -78,7 +78,7 @@
                         <Border x:Name="FotocartBorder" Margin="30,20,60,30" Width="{Binding Width, ElementName=Mask}" Height="{Binding Height, ElementName=Mask}" Style="{DynamicResource CustomBorder}">
                             <Grid>
                                 <Border x:Name="ImageMask" Background="Transparent">
-                                    <Image x:Name="FotocarSuspect" Source="/Source/7.jpg" Stretch="Fill">
+                                    <Image x:Name="FotocarSuspect"  Stretch="Fill">
                                         <Image.OpacityMask>
                                             <VisualBrush Visual="{Binding ElementName=Mask}"/>
                                         </Image.OpacityMask>
@@ -90,7 +90,7 @@
                     </Grid>
                 </Border>
                 <Border x:Name="ImprintBorder" Grid.Column="0" Grid.Row="1" Margin="30,30,60,30"  Padding="5" Style="{DynamicResource CustomBorder}" >
-                    <Image x:Name="ImprintImage" Source="\Source\pngwing.png"></Image>
+                    <Image x:Name="ImprintImage" ></Image>
                 </Border>
                 <Button x:Name="ButtonSelectImprint" Grid.Column="0" Grid.Row="1"  Margin="30,30,60,30" Width="{Binding Width, ElementName=ImprintBorder}" Height="{Binding Height, ElementName=ImprintBorder}" Style="{DynamicResource TransparentButton}" Click="ButtonSelectImprint_Click"></Button>
                 <Border x:Name="ParametrsSubjectborder" Grid.Column="1" Grid.RowSpan="2"  Grid.ColumnSpan="2" Margin="0,20,0,30" Style="{DynamicResource CustomBorder}" Padding="20">

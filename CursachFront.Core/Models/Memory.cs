@@ -9,6 +9,5 @@ namespace CursachFront.Core.Models
     public class Memory
     {
         public string Login { get; set; }
-        public string Password { get; set; }
     }
 }

@@ -15,5 +15,6 @@ namespace CursachFront.Core.Services.Prisoners
         void Add(Prisoner prisoner);
         void Update(Prisoner prisoner);
         void Remove(long Id);
+        List<Prisoner> GetList();
     }
 }

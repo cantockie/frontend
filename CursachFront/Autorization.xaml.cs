@@ -18,6 +18,7 @@ namespace CursachFront
         private readonly MemoryService _memoryService;
         private Memory _memory;
         private int i = 0;
+        private bool anonymius = false;
 
         public Autorization()
         {
@@ -30,7 +31,6 @@ namespace CursachFront
             if (_memory is not null)
             {
                 Login.Text = _memory.Login;
-                passwordBox.Password = _memory.Password;
                 RememberMe.IsChecked = true;
             }
            
@@ -53,11 +53,20 @@ namespace CursachFront
 
             try
             {
-                string username = Login.Text;
-                string password = passwordBox.Password;
-
+                string username = "", password = "";
+                {
+                    if (!anonymius)
+                    {
+                        username = Login.Text;
+                        password = passwordBox.Password;
+                    }
+                    if (anonymius)
+                    {
+                        username = "guest@gmail.com";
+                        password = "dasdasdas12";
+                    }
+                }
                 MemoryCheck(username, password);
-
                 _identityService.SignIn(username, password);
 
                 MainWindow newWindow = new MainWindow();
@@ -68,7 +77,7 @@ namespace CursachFront
             {
                 i++;
                 MessageBox.Show(ex.Message);
-                
+
 
             }
             if(i == 3)
@@ -97,12 +106,12 @@ namespace CursachFront
         {
             if (_memory is null)
             {
-                _memory = new Memory { Login = username, Password = password };
+                _memory = new Memory { Login = username};
             }
             else
             {
+                if(_memory.Login != "guest@gmail.com")
                 username = _memory.Login;
-                password = _memory.Password;
             }
 
             if (RememberMe.IsChecked == true)
@@ -113,6 +122,8 @@ namespace CursachFront
             {
                 _memoryService.ClearMemoryFile();
             }
+            if (_memory.Login is "guest@gmail.com")
+                _memoryService.ClearMemoryFile();
         }
 
         private void ViewPassword_Click(object sender, RoutedEventArgs e)
@@ -139,9 +150,8 @@ namespace CursachFront
 
         private void toView_Button(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
-            _identityService.SignIn("guest@gmail.com", "dasdasdas12");
-            mainWindow.Show();
+            anonymius = true;
+            toMainwindow(sender, e);
         }
     }
 }
