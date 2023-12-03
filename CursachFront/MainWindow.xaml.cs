@@ -55,8 +55,8 @@ namespace CursachFront
             StatusBlock.Text = _current.Rank;
             NameOficer.Text = _current.FirstName;
             SNameOficer.Text = _current.LastName;
-            //string face = PathFindService.GetPath(_current.ProfileImage, true);
-            //FotocarOficer.Source = new BitmapImage(new Uri(face, UriKind.Absolute));
+            string face = PathFindService.GetPath(_current.ProfileImage, true);
+            FotocarOficer.Source = new BitmapImage(new Uri(face, UriKind.Absolute));
         }
         private void ToOption(object sender, RoutedEventArgs e) { OptionsPages.Content = Options; }
         public static void Cancell(MainWindow mainWindow) { mainWindow.CansellOptionMetod();}
