@@ -21,6 +21,223 @@
             <Setter Property="BorderThickness" Value="1" />
             <Setter Property="CornerRadius" Value="10" />
         </Style>
+        <Style TargetType="TextBox" x:Key="PlaceholderTextBoxStyle" BasedOn="{StaticResource CustomTextBoxStyle}">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Grid>
+                            <TextBox x:Name="PART_TextBox"
+                                     Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Text}"
+                                     Background="Transparent"
+                                     BorderBrush="Gray"/>
+                            <TextBlock x:Name="PART_Placeholder"
+                                       Text="Name"
+                                       Foreground="Gray"
+                                       VerticalAlignment="Center"
+                                       Visibility="Collapsed"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="Text" Value="">
+                                <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                            <Trigger Property="Text" Value="{x:Null}">
+                                <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Collapsed"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="TextBox" x:Key="PlaceholderTextBoxStyle1" BasedOn="{StaticResource CustomTextBoxStyle}">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Grid>
+                            <TextBox x:Name="PART_TextBox"
+                             Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Text}"
+                             Background="Transparent"
+                             BorderBrush="Gray"/>
+                            <TextBlock x:Name="PART_Placeholder"
+                               Text="Surname"
+                               Foreground="Gray"
+                                VerticalAlignment="Center"        
+                               Visibility="Collapsed"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="Text" Value="">
+                                <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                            <Trigger Property="Text" Value="{x:Null}">
+                                <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Collapsed"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="TextBox" x:Key="PlaceholderTextBoxStyle2" BasedOn="{StaticResource CustomTextBoxStyle}">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Grid>
+                            <TextBox x:Name="PART_TextBox"
+                     Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Text}"
+                     Background="Transparent"
+                     BorderBrush="Gray"/>
+                            <TextBlock x:Name="PART_Placeholder"
+                       Text="Country"
+                       Foreground="Gray"
+                       VerticalAlignment="Center"              
+                       Visibility="Collapsed"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="Text" Value="">
+                                <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                            <Trigger Property="Text" Value="{x:Null}">
+                                <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Collapsed"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="TextBox" x:Key="PlaceholderTextBoxStyle3" BasedOn="{StaticResource CustomTextBoxStyle}">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Grid>
+                            <TextBox x:Name="PART_TextBox"
+              Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Text}"
+              Background="Transparent"
+              BorderBrush="Gray"/>
+                            <TextBlock x:Name="PART_Placeholder"
+                Text="Specialization"
+                Foreground="Gray"
+               VerticalAlignment="Center"
+                Visibility="Collapsed"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="Text" Value="">
+                                <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                            <Trigger Property="Text" Value="{x:Null}">
+                                <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Collapsed"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="TextBox" x:Key="PlaceholderTextBoxStyle4" BasedOn="{StaticResource CustomTextBoxStyle}">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Grid>
+                            <TextBox x:Name="PART_TextBox"
+       Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Text}"
+       Background="Transparent"
+       BorderBrush="Gray"/>
+                            <TextBlock x:Name="PART_Placeholder"
+         Text="Birthday"
+         Foreground="Gray"
+         VerticalAlignment="Center"
+         Visibility="Collapsed"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="Text" Value="">
+                                <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                            <Trigger Property="Text" Value="{x:Null}">
+                                <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Collapsed"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="TextBox" x:Key="PlaceholderTextBoxStyle5" BasedOn="{StaticResource CustomTextBoxStyle}">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Grid>
+                            <TextBox x:Name="PART_TextBox"
+       Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Text}"
+       Background="Transparent"
+       BorderBrush="Gray"/>
+                            <TextBlock x:Name="PART_Placeholder"
+         Text="Color Hair"
+         Foreground="Gray"
+                                        VerticalAlignment="Center"
+         Visibility="Collapsed"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="Text" Value="">
+                                <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                            <Trigger Property="Text" Value="{x:Null}">
+                                <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Collapsed"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="TextBox" x:Key="PlaceholderTextBoxStyle6" BasedOn="{StaticResource CustomTextBoxStyle}">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Grid>
+                            <TextBox x:Name="PART_TextBox"
+ Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Text}"
+ Background="Transparent"
+ BorderBrush="Gray"/>
+                            <TextBlock x:Name="PART_Placeholder"
+                                        VerticalAlignment="Center"
+   Text="Color Eye"
+   Foreground="Gray"
+   Visibility="Collapsed"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="Text" Value="">
+                                <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                            <Trigger Property="Text" Value="{x:Null}">
+                                <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Collapsed"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Page.Resources>
 
 
@@ -176,25 +393,25 @@
             <Grid>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <Border Width="{Binding Width, ElementName=SearchingParametrName}"  Background="Azure" CornerRadius="10"  Margin="4,0,4,0" >
-                        <TextBox  x:Name="SearchingParametrName" Text="{Binding Name}" MinWidth="150" Width="200" MaxWidth="500"  Style="{DynamicResource CustomTextBoxStyle}" />
+                        <TextBox  x:Name="SearchingParametrName" Text="{Binding Name}" MinWidth="150" Width="200" MaxWidth="500"  Style="{DynamicResource PlaceholderTextBoxStyle}" />
                     </Border>
                     <Border Width="{Binding Width, ElementName=SearchingParametrSecondName}" Background="Azure" CornerRadius="10"  Margin="4,0,4,0">
-                        <TextBox  x:Name="SearchingParametrSecondName" Text="{Binding Surname}" MinWidth="{Binding MinWidth, ElementName=SearchingParametrName}"  Width="{Binding Width, ElementName=SearchingParametrName}"   MaxWidth="{Binding MaxWidth, ElementName=SearchingParametrName}" Style="{DynamicResource CustomTextBoxStyle}"/>
+                        <TextBox  x:Name="SearchingParametrSecondName" Text="{Binding Surname}" MinWidth="{Binding MinWidth, ElementName=SearchingParametrName}"  Width="{Binding Width, ElementName=SearchingParametrName}"   MaxWidth="{Binding MaxWidth, ElementName=SearchingParametrName}"     Style="{DynamicResource PlaceholderTextBoxStyle1}"/>
                     </Border>
                     <Border Width="{Binding Width, ElementName=SearchingParametrLastKlikuxa}" Background="Azure" CornerRadius="10"  Margin="4,0,4,0" >
-                        <TextBox  x:Name="SearchingParametrKlikuxa" Text="{Binding Country }" MinWidth="{Binding MinWidth, ElementName=SearchingParametrName}"  Width="{Binding Width, ElementName=SearchingParametrName}"   MaxWidth="{Binding MaxWidth, ElementName=SearchingParametrName}" Style="{DynamicResource CustomTextBoxStyle}"/>
+                        <TextBox  x:Name="SearchingParametrKlikuxa" Text="{Binding Country }" MinWidth="{Binding MinWidth, ElementName=SearchingParametrName}"  Width="{Binding Width, ElementName=SearchingParametrName}"   MaxWidth="{Binding MaxWidth, ElementName=SearchingParametrName}"       Style="{DynamicResource PlaceholderTextBoxStyle2}"/>
                     </Border>
                     <Border Width="{Binding Width, ElementName=SearchingParametrAge}" Background="Azure"  CornerRadius="10"  Margin="4,0,4,0">
-                        <TextBox  x:Name="SearchingParametrAge" Text="{Binding Crimespec}" MinWidth="{Binding MinWidth, ElementName=SearchingParametrName}"  Width="{Binding Width, ElementName=SearchingParametrName}"   MaxWidth="{Binding MaxWidth, ElementName=SearchingParametrName}" Style="{DynamicResource CustomTextBoxStyle}"/>
+                        <TextBox  x:Name="SearchingParametrAge" Text="{Binding Crimespec}" MinWidth="{Binding MinWidth, ElementName=SearchingParametrName}"  Width="{Binding Width, ElementName=SearchingParametrName}"   MaxWidth="{Binding MaxWidth, ElementName=SearchingParametrName}"          Style="{DynamicResource PlaceholderTextBoxStyle3}"/>
                     </Border>
                     <Border Width="{Binding Width, ElementName=SearchingParametrCountry}" Background="Azure" CornerRadius="10"  Margin="4,0,4,0">
-                        <TextBox  x:Name="SearchingParametrCountry" Text="{Binding Birthday}"  MinWidth="{Binding MinWidth, ElementName=SearchingParametrName}"  Width="{Binding Width, ElementName=SearchingParametrName}"   MaxWidth="{Binding MaxWidth, ElementName=SearchingParametrName}" Style="{DynamicResource CustomTextBoxStyle}"/>
+                        <TextBox  x:Name="SearchingParametrCountry" Text="{Binding Birthday}"  MinWidth="{Binding MinWidth, ElementName=SearchingParametrName}"  Width="{Binding Width, ElementName=SearchingParametrName}"   MaxWidth="{Binding MaxWidth, ElementName=SearchingParametrName}"      Style="{DynamicResource PlaceholderTextBoxStyle4}"/>
                     </Border>
                     <Border Width="{Binding Width, ElementName=SearchingParametrHair}" Background="Azure" CornerRadius="10"  Margin="4,0,4,0" >
-                        <TextBox  x:Name="SearchingParametrHair" Text="{Binding ColorHair}" MinWidth="{Binding MinWidth, ElementName=SearchingParametrName}"  Width="{Binding Width, ElementName=SearchingParametrName}"   MaxWidth="{Binding MaxWidth, ElementName=SearchingParametrName}" Style="{DynamicResource CustomTextBoxStyle}"/>
+                        <TextBox  x:Name="SearchingParametrHair" Text="{Binding ColorHair}" MinWidth="{Binding MinWidth, ElementName=SearchingParametrName}"  Width="{Binding Width, ElementName=SearchingParametrName}"   MaxWidth="{Binding MaxWidth, ElementName=SearchingParametrName}"         Style="{DynamicResource PlaceholderTextBoxStyle5}"/>
                     </Border>
                     <Border Width="{Binding Width, ElementName=SearchingParametrLastLocation}" Background="Azure" CornerRadius="10"  Margin="4,0,4,0" >
-                        <TextBox  x:Name="SearchingParametrLastLocation" Text="{Binding EyeColor}"  MinWidth="{Binding MinWidth, ElementName=SearchingParametrName}"  Width="{Binding Width, ElementName=SearchingParametrName}"   MaxWidth="{Binding MaxWidth, ElementName=SearchingParametrName}" Style="{DynamicResource CustomTextBoxStyle}"/>
+                        <TextBox  x:Name="SearchingParametrLastLocation" Text="{Binding EyeColor}"  MinWidth="{Binding MinWidth, ElementName=SearchingParametrName}"  Width="{Binding Width, ElementName=SearchingParametrName}"   MaxWidth="{Binding MaxWidth, ElementName=SearchingParametrName}" Style="{DynamicResource PlaceholderTextBoxStyle6}"/>
                     </Border>
                 </StackPanel>
             </Grid>
