@@ -11,7 +11,6 @@
     <None Remove="Sources\Faces\events.png" />
     <None Remove="Sources\Faces\face1.jpg" />
     <None Remove="Sources\Faces\face10.jpg" />
-    <None Remove="Sources\Faces\face100.jpeg" />
     <None Remove="Sources\Faces\face11.jpg" />
     <None Remove="Sources\Faces\face12.jpg" />
     <None Remove="Sources\Faces\face13.jpg" />
@@ -110,6 +109,7 @@
     <None Remove="Sources\Faces\face98.jpg" />
     <None Remove="Sources\Faces\face99.jpg" />
     <None Remove="Sources\Faces\face99.png" />
+    <None Remove="Sources\Faces\face991.jpeg" />
     <None Remove="Source\7.jpg" />
     <None Remove="Source\Down.png" />
     <None Remove="Source\GoldZnachok.png" />
@@ -126,7 +126,7 @@
     <Resource Include="Sources\Faces\face10.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Sources\Faces\face100.jpeg">
+    <Resource Include="Sources\Faces\face991.jpeg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Sources\Faces\face11.jpg">
