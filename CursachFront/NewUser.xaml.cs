@@ -201,26 +201,48 @@ namespace CursachFront
             {
                 long ids;
                 
-            if (long.TryParse(id.Text, out ids))
+            if (long.TryParse(id.Text, out ids)&&ids>0)
             {
                     AppUser usr = new AppUser();
-                    usr = CheckId(usr, ids);
-                    NameOficer.Text = usr.FirstName;
-                    SNameOficer.Text = usr.LastName;
-                    LogginOficer.Text = usr.Username;
-                    PasswordOficer.Text = "";
-                    BIOOficer.Text = usr.Bio;
-                    HenderOficer.Text = usr.Gender;
-                    CountryOficer.Text = usr.Country;
-                    Rank.Text = usr.Rank;
-                    DrOficer.Text = usr.BirthDay.ToString();
-                    EducationOficer.Text = usr.Education;
-                    DepartmentsOficer.Text = usr.Departments;
-                    SpecializationOficer.Text = usr.Specifications;
-                    ContactInformationOficer.Text = usr.Email;
-                    Level.Text = usr.Role;
-                    FotocarSuspect.Source = new BitmapImage(new Uri(PathFindService.GetPath(usr.PhotoName, true), UriKind.Absolute));
-                    ImprintImage.Source = new BitmapImage(new Uri(PathFindService.GetPath(usr.FingerName, false), UriKind.Absolute));
+                    if (usr != null)
+                    {
+                        usr = CheckId(usr, ids);
+                        NameOficer.Text = usr.FirstName;
+                        SNameOficer.Text = usr.LastName;
+                        LogginOficer.Text = usr.Username;
+                        PasswordOficer.Text = "";
+                        BIOOficer.Text = usr.Bio;
+                        HenderOficer.Text = usr.Gender;
+                        CountryOficer.Text = usr.Country;
+                        Rank.Text = usr.Rank;
+                        DrOficer.Text = usr.BirthDay.ToString();
+                        EducationOficer.Text = usr.Education;
+                        DepartmentsOficer.Text = usr.Departments;
+                        SpecializationOficer.Text = usr.Specifications;
+                        ContactInformationOficer.Text = usr.Email;
+                        Level.Text = usr.Role;
+                        FotocarSuspect.Source = new BitmapImage(new Uri(PathFindService.GetPath(usr.PhotoName, true), UriKind.Absolute));
+                        ImprintImage.Source = new BitmapImage(new Uri(PathFindService.GetPath(usr.FingerName, false), UriKind.Absolute));
+                    }
+                    else
+                    {
+                        NameOficer.Text = "";
+                        SNameOficer.Text = "";
+                        LogginOficer.Text = "";
+                        PasswordOficer.Text = "";
+                        BIOOficer.Text = "";
+                        HenderOficer.Text = "";
+                        CountryOficer.Text = "";
+                        Rank.Text = "";
+                        DrOficer.Text = "";
+                        EducationOficer.Text = "";
+                        DepartmentsOficer.Text = "";
+                        SpecializationOficer.Text = "";
+                        ContactInformationOficer.Text = "";
+                        Level.Text = "";
+                        _finger = "";
+                        _face = "";
+                    }
                 }
            
             }

@@ -260,9 +260,11 @@ namespace CursachFront
                 {
                     long ids;
 
-                    if (long.TryParse(id.Text, out ids))
+                if (long.TryParse(id.Text, out ids) && ids > 0)
+                {
+                    Prisoner usr = new Prisoner();
+                    if (usr != null)
                     {
-                        Prisoner usr = new Prisoner();
                         usr = CheckId(usr, ids);
                         Name.Text = usr.Name;
                         SName.Text = usr.Surname;
@@ -284,7 +286,31 @@ namespace CursachFront
                         FotocarSuspect.Source = new BitmapImage(new Uri(PathFindService.GetPath(usr.PhotoName, true), UriKind.Absolute));
                         ImprintImage.Source = new BitmapImage(new Uri(PathFindService.GetPath(usr.FingerName, false), UriKind.Absolute));
                     }
-                
+                    
+                }
+                else
+                {
+                    Name.Text = "";
+                    SName.Text = "";
+                    klichka.Text = "";
+                    Hender.Text = "";
+                    BIO.Text = "";
+                    Hair.Text = "";
+                    EyeColor.Text = "";
+                    blood.Text = "";
+                    Dr.Text = "";
+                    CrimeSpecialization.Text = "";
+                    CivilSpecialization.Text = "";
+                    FirstCrimes.Text = "";
+                    Married.Text = "";
+                    Profession.Text = "";
+                    _finger = "";
+                    _face = "";
+                    Gang.Text = "";
+
+
+                }
+
 
             }
             else
