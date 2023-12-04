@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CursachFront.Core.CursachConfiguration">
+    <Position X="0.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CursachFront.Core.LocalDb">
+    <Position X="0.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CursachFront.Core.LocalIdentity">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CursachFront.Core.Services.Users.UserService">
+    <Position X="2.25" Y="11.25" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CursachFront.Core.Services.Prisoners.PrisonerService">
+    <Position X="4" Y="10.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CursachFront.Core.Services.Path.PathFindService">
+    <Position X="5.75" Y="12" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CursachFront.Core.Services.Auth.IdentityService">
+    <Position X="7.5" Y="11" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="MemoryService">
+    <Position X="7.5" Y="9" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CursachFront.Core.Models.ProfileData">
+    <Position X="9.25" Y="9" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CursachFront.Core.Models.Prisoner">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CursachFront.Core.Models.Memory">
+    <Position X="7.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CursachFront.Core.Models.AppUser">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CursachFront.Core.Models.FilterUsers.SearchFilter">
+    <Position X="11" Y="7" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CursachFront.Core.Models.Enums.Roles">
+    <Position X="9.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CursachFront.Veiw">
+    <Position X="16.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAEA=</HashCode>
+      <FileName>Veiw.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CursachFront.searching">
+    <Position X="14.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAABAAAAAAAAAAAAAACAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>searching.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CursachFront.PageUserCabinet">
+    <Position X="14.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAQACAAAQAAAAAgAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>PageUserCabinet.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CursachFront.PageOption">
+    <Position X="14.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAQAAAAACAAACAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>PageOption.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CursachFront.NewUser">
+    <Position X="14.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAIAAAAACAAAAABQAEgAAAACAABAAEAAAAgAA=</HashCode>
+      <FileName>NewUser.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CursachFront.More_info">
+    <Position X="16.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQAAAAAQAAAAAAAAAAAABAAAAAAEAAAAgABQAACAgAA=</HashCode>
+      <FileName>More info.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CursachFront.MainWindow">
+    <Position X="18.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>A9AgAApAVIAIgRAGgGAAAAQ1wQQFAEAMAQYEFGBSBAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CursachFront.FullUserCabinet">
+    <Position X="16.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAACAAAQAAAAAAAAAEAEAAQAABAAAAAA=</HashCode>
+      <FileName>FullUserCabinet.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CursachFront.CHANDGESUSPECT">
+    <Position X="20" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAIAAAAACAAAAABQAEgAAAACAABAAAAQAAgAA=</HashCode>
+      <FileName>CHANDGESUSPECT.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CursachFront.Autorization">
+    <Position X="20" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABgAAAAAAAAQAAAAAQNAAAAABIAAABBIAAAQ=</HashCode>
+      <FileName>Autorization.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CursachFront.App">
+    <Position X="20" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAABAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CursachFront.PrisonerFilterViewModel">
+    <Position X="23.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAIAAIAgAAQAAAIEAAAEQAhAIIEAAACAAAAQCEAAA=</HashCode>
+      <FileName>ViewModels\PrisonerFilterViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CursachFront.PrisonerViewModel">
+    <Position X="25.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CEAAAAAsAAAAAAAAIEAAAAAAgAIIAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>ViewModels\PrisonerViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="CursachFront.Core.Services.Users.IUserService">
+    <Position X="2.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -4,7 +4,7 @@ using CursachFront.Core.Models.FilterUsers;
 
 namespace CursachFront.Core.Services.Prisoners;
 
-public class PrisonerService 
+public class PrisonerService : IPrisonerService
 {
     private readonly CursachConfiguration _configuration;
     public PrisonerService()
