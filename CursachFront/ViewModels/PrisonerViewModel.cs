@@ -76,7 +76,6 @@ namespace CursachFront
             _prisonerService = new PrisonerService();
             Prisoners = new ObservableCollection<Prisoner>();
             UpdatePrisoners();
-            // Subscribe to PropertyChanged events
             PropertyChanged += OnPropertyChanged;
           
         }

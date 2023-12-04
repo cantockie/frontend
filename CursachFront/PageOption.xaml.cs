@@ -56,7 +56,7 @@ namespace CursachFront
         {
             MainWindow.ToChangeSubjectEnotherframe((MainWindow)Window.GetWindow(this));
             MainWindow.Cancell((MainWindow)Window.GetWindow(this));
-        }//изменение додиков
+        }
         private void ToUserEnotherFrameOption(object sender, RoutedEventArgs e)
         {
             MainWindow.ToNewUserEnotherframe((MainWindow)Window.GetWindow(this));

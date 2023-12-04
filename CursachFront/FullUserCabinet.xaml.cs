@@ -33,7 +33,6 @@ namespace CursachFront
             set
             {
                 currentUser = value;
-                // Обновите ваш интерфейс на основе текущего пользователя
                 UbdateFullCabinet();
             }
         }

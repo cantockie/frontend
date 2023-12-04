@@ -1,8 +1,4 @@
 using CursachFront.Core.Models;
-using CursachFront.Core.Models.Enums;
-using System.Data;
-using System.Diagnostics.Metrics;
-using System.Reflection;
 
 namespace CursachFront.Core;
 
@@ -20,7 +16,6 @@ public static class LocalIdentity
     
     public static bool IsInRole(string role)
     {
-         //return Roles.GetRoles().Any(prp => prp.Equals(_user.Role));; 
          return _user.Role == role;
     }
     

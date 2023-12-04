@@ -31,7 +31,6 @@ namespace CursachFront
             set
             {
                 currentUser = value;
-                // Обновите ваш интерфейс на основе текущего пользователя
                 UpdateInterface();
             }
         }
@@ -39,7 +38,6 @@ namespace CursachFront
         public PageUserCabinet()
         {
             InitializeComponent();
-            // При создании страницы вы можете установить текущего пользователя
             CurrentUser = LocalIdentity.GetProfile();
         }
 
@@ -48,8 +46,6 @@ namespace CursachFront
 
         private void UpdateInterface()
         {
-            // Обновите ваш интерфейс на основе свойств текущего пользователя
-            // Например, вы можете обновить текстовые блоки, изображения и так далее.
             if (CurrentUser != null)
             {
                 Name.Text = CurrentUser.FirstName;

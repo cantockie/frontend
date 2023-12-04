@@ -28,8 +28,8 @@ public class Prisoner
     public string PhotoName { get; set; }
     public string FingerName { get; set; }
     public double Weight { get; set; }
-    public string EyeColor {  get; set; }
-    public string Hobbies { get; set; } 
+    public string EyeColor { get; set; }
+    public string Hobbies { get; set; }
     public string BloodType { get; set; }
     public string Profession { get; set; }
     public bool Married { get; set; }
@@ -37,5 +37,5 @@ public class Prisoner
     public string CrimeSpec { get; set; }
     public string Gang { get; set; }
     public string FirstCrimes { get; set; }
-    public string BIO { get; set; } 
+    public string BIO { get; set; }
 }

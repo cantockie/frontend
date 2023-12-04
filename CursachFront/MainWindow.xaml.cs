@@ -112,16 +112,11 @@ namespace CursachFront
 
         private void ToMoreInformationMetod(Prisoner selectedPrisoner)
         {
-            // Create a single instance of More_info
             More_info Info = new More_info();
 
-            // Pass the selected prisoner to the More_info page
             Info.SetSelectedPrisoner(selectedPrisoner);
 
-            // Navigate to the More_info page
             FindesPages.Content = Info;
-
-            // Optionally, you may want to add logic for additional navigation or information display.
         }
         public void CansellMoreInformationMetod() { FindesPages.Content = null; }
         /// //////////////////кнопки FullCabinet/
