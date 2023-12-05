@@ -217,7 +217,7 @@ namespace CursachFront
                         Rank.Text = usr.Rank;
                         DrOficer.Text = usr.BirthDay.ToString();
                         EducationOficer.Text = usr.Education;
-                        DepartmentsOficer.Text = usr.Departments;
+                        DepartmentsOficer.Text = usr.Departments;                        
                         SpecializationOficer.Text = usr.Specifications;
                         ContactInformationOficer.Text = usr.Email;
                         Level.Text = usr.Role;

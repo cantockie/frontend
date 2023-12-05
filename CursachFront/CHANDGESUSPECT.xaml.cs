@@ -10,6 +10,7 @@ using System.Diagnostics.Eventing.Reader;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
@@ -145,12 +146,12 @@ namespace CursachFront
                         Hobbies = InterestsHobbies.Text,
                         BloodType = blood.Text,
                         Married = (Married.Text == "Yes") ? true : false,
-                        Profession = Profession.Text,
-                        _Status = statusValue,
+                        Profession = Profession.Text,                 
                         ColorHair = Hair.Text,
                         FirstCrimes = FirstCrimes.Text,
                         LastSee = LastCountry.Text,
                         PhotoName = _face,
+                        _Status = statusValue,
                         FingerName = _finger,
                         Birthday = valueDr
 
@@ -277,6 +278,9 @@ namespace CursachFront
                         Country.Text = usr.Country;
                         LastCountry.Text = usr.LastSee;
                         Dr.Text = usr.Birthday.ToString();
+                        Status.Text= usr._Status.ToString();
+                        Weight.Text= usr._Status.ToString();
+                        Criminal.Text= usr.CriminalArticles;
                         CrimeSpecialization.Text = usr.CrimeSpec;
                         CivilSpecialization.Text = usr.CivilSpec;
                         FirstCrimes.Text = usr.FirstCrimes;
@@ -303,11 +307,12 @@ namespace CursachFront
                     CivilSpecialization.Text = "";
                     FirstCrimes.Text = "";
                     Married.Text = "";
+                    Status.Text = "";
                     Profession.Text = "";
                     _finger = "";
                     _face = "";
                     Gang.Text = "";
-
+                    Weight.Text = "";
 
                 }
 
@@ -328,11 +333,12 @@ namespace CursachFront
                 CivilSpecialization.Text = "";
                 FirstCrimes.Text = "";
                 Married.Text = "";
+                Status.Text = "";
                 Profession.Text = "";
                 _finger = "";
                 _face = "";
                 Gang.Text = "";
-
+                Weight.Text = "";
 
             }
 
