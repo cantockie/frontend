@@ -165,7 +165,7 @@
                         <Border Padding="2"  Grid.Row="8"    Margin="5" Style="{DynamicResource CustomBorder}">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Status :" Foreground="WhiteSmoke"   Margin="5"></TextBlock>
-                                <TextBox x:Name="Status" Foreground="WhiteSmoke"  Width="230" ></TextBox>
+                                <TextBox x:Name="Statusz" Foreground="WhiteSmoke"  Width="230" ></TextBox>
                             </StackPanel>
                         </Border>
                         <Border x:Name="Standart" Padding="2"  Grid.Row="9"  Margin="5" Style="{DynamicResource CustomBorder}">

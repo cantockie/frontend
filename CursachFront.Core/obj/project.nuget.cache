@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "oaqAwY/QV9TrvNQXH5pw5U0jg6sPFoqaWx63SEBN0Cxczyhcv9XX2xD2qB91N7PY8FL7yq+bU4lbK5uKY03eAg==",
+  "dgSpecHash": "j6PsVCmIAOv9xMjIcQfIEYRJC9J8V3KR1QQZ0guiDuIZmqoIn8CZf6ELjy9WvpMtnZeBkfeUkF1dNgceBLxIvg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Администратор\\Documents\\GitHub\\frontend\\CursachFront.Core\\CursachFront.Core.csproj",
+  "projectFilePath": "C:\\Users\\yyarm\\Desktop\\Нова папка (2)\\CursachFront\\frontend\\CursachFront.Core\\CursachFront.Core.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Администратор\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\yyarm\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }

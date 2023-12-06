@@ -74,10 +74,11 @@ namespace CursachFront
             if (_finger is null)
                 _finger = "mark1.jpg";
 
-            if (DateTime.TryParseExact(DrOficer.Text, dateFormats, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime valueDr))
-                {
-                AppUser user = new AppUser()
-                {
+           
+                    if (DateTime.TryParse(DrOficer.Text, out DateTime hjh))
+                    {
+                        AppUser user = new AppUser()
+                    {
                     FirstName = NameOficer.Text,
                     LastName = SNameOficer.Text,
                     Username = LogginOficer.Text,
@@ -90,7 +91,7 @@ namespace CursachFront
                     Departments = DepartmentsOficer.Text,
                     Specifications = SpecializationOficer.Text,
                     Email = ContactInformationOficer.Text,
-                    BirthDay = valueDr,
+                    BirthDay = hjh,
                     Role = Level.Text,
                     FingerName = _finger,
                     PhotoName = _face
@@ -109,15 +110,29 @@ namespace CursachFront
             if (_face is null)
                 _face = "face1.jpg";
             if (_finger is null)
-                _finger = "mark1.jpg";
-            if (DateTime.TryParseExact(DrOficer.Text, dateFormats, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime valueDr))
+                _finger = "mark1.png";
+            if (DateTime.TryParse(DrOficer.Text, out DateTime hjh))
+            {
+                AppUser user = new AppUser()
                 {
-                    AppUser user = new AppUser()
-                    {
-                       
-
-                    };
-                    _userService.Update(user);
+                    FirstName = NameOficer.Text,
+                    LastName = SNameOficer.Text,
+                    Username = LogginOficer.Text,
+                    HashedPassword = PasswordOficer.Text,
+                    Bio = BIOOficer.Text,
+                    Gender = HenderOficer.Text,
+                    Country = CountryOficer.Text,
+                    Rank = Rank.Text,
+                    Education = EducationOficer.Text,
+                    Departments = DepartmentsOficer.Text,
+                    Specifications = SpecializationOficer.Text,
+                    Email = ContactInformationOficer.Text,
+                    BirthDay = hjh,
+                    Role = Level.Text,
+                    FingerName = _finger,
+                    PhotoName = _face
+                };
+                _userService.Update(user);
                 }
                 else throw new Exception("Incorrect form of data");
         }

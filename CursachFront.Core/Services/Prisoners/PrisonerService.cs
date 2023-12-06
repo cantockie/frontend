@@ -55,8 +55,32 @@ public class PrisonerService : IPrisonerService
         var data = LocalDb.Prisoners.FirstOrDefault(prp => prp.Id.Equals(prisoner.Id));
         if (data is null)
             throw new Exception("Prisoner not found");
+        data.Name = prisoner.Name;
+        data.Surname = prisoner.Surname;
+        data.Gender = prisoner.Gender;
+        data.BIO = prisoner.BIO;
+        data.Country = prisoner.Country;
+        data.Weight = prisoner.Weight;
+        data.Gender = prisoner.Gender;
+        data.FirstCrimes = prisoner.FirstCrimes;
+        data.Profession = prisoner.Profession;
+        data.BloodType = prisoner.BloodType;
+        data.Gang = prisoner.Gang;
+        data.Married = prisoner.Married;
+        data.Hobbies = prisoner.Hobbies;
+        data.ColorHair = prisoner.ColorHair;
+        data.EyeColor = prisoner.EyeColor;
+        data.LastSee = prisoner.LastSee;
+        data.CivilSpec = prisoner.CivilSpec;
+        data._Status = prisoner._Status;
+        data.CriminalArticles = prisoner.CriminalArticles;
+        data.Hospital = prisoner.Hospital;
+        data.FingerName = prisoner.FingerName;
+        data.PhotoName = prisoner.PhotoName;
+        data.CrimeSpec = prisoner.CrimeSpec;
 
-        data = prisoner;
+        
+        //data = prisoner;
         _configuration.SaveToFile();
     }
 

@@ -32,7 +32,7 @@ namespace CursachFront
     {
         private string _face;
         private string _finger;
-        private readonly PrisonerService _prisonerService;
+        private readonly IPrisonerService _prisonerService;
         public CHANDGESUSPECT()
         {
             InitializeComponent();
@@ -124,11 +124,12 @@ namespace CursachFront
             if (_face is null)
                 _face = "face1.jpg";
             if (_finger is null)
-                _finger = "mark1.jpg";
-            if (Enum.TryParse(Status.Text, out Status statusValue))
+                _finger = "mark1.png";
+            if (Enum.TryParse(Statusz.Text, out Status statusValue))
             {
-                if (DateTime.TryParseExact(Dr.Text, dateFormats, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime valueDr))
+                if (DateTime.TryParse(Dr.Text, out DateTime hjh))
                 {
+
                     Prisoner prisoner = new Prisoner()
                     {
                         Name = Name.Text,
@@ -137,7 +138,7 @@ namespace CursachFront
                         Hospital = klichka.Text,
                         Gender = Hender.Text,
                         Country = Country.Text,
-                        Weight = Convert.ToDouble(Weight),
+                        Weight = Convert.ToDouble(Weight.Text),
                         Gang = Gang.Text,
                         CivilSpec = CivilSpecialization.Text,
                         CrimeSpec = CrimeSpecialization.Text,
@@ -152,28 +153,32 @@ namespace CursachFront
                         LastSee = LastCountry.Text,
                         PhotoName = _face,
                         FingerName = _finger,
-                        Birthday = valueDr
+                        Birthday = hjh
 
                     };
                     _prisonerService.Add(prisoner);
+                    //}
+                    //};
                 }
-                else throw new Exception("Incorrect form of data");
-            };
-      
-         }
+            }
+        }
         
+
+
 
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
-            string[] dateFormats = { "yyyy.MM.dd", "yyyy/MM/dd", "yyyy-MM-dd" };
+            string[] dateFormats = { "yyyy.MM.dd", "yyyy/MM/dd", "yyyy-MM-dd", "yyyy-MM-dd HH:mm:ss", "dd.MM.yyyy H:mm:ss" };
             if (_face is null)
                 _face = "face1.jpg";
             if (_finger is null)
                 _finger = "mark1.jpg";
-            if (Enum.TryParse(Status.Text, out Status statusValue))
+            if (Enum.TryParse(Statusz.Text, out Status statusValue))
             {
-                if (DateTime.TryParseExact(Dr.Text, dateFormats, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime valueDr))
+                if (DateTime.TryParse(Dr.Text, out DateTime hjh))
                 {
+                    //    DateTime i = hjh;
+
                     Prisoner prisoner = new Prisoner()
                     {
                         Name = Name.Text,
@@ -182,7 +187,7 @@ namespace CursachFront
                         Hospital = klichka.Text,
                         Gender = Hender.Text,
                         Country = Country.Text,
-                        Weight = Convert.ToDouble(Weight),
+                        Weight = Convert.ToDouble(Weight.Text),
                         Gang = Gang.Text,
                         CivilSpec = CivilSpecialization.Text,
                         CrimeSpec = CrimeSpecialization.Text,
@@ -197,13 +202,18 @@ namespace CursachFront
                         LastSee = LastCountry.Text,
                         PhotoName = _face,
                         FingerName = _finger,
-                        Birthday = valueDr
+                        Birthday = hjh
+
                     };
+
+                    prisoner.Id = Convert.ToUInt32(id.Text);
                     _prisonerService.Update(prisoner);
                 }
-                else throw new Exception("Incorrect form of data");
-            };
+            }
+            else throw new Exception("Incorrect form of data");
         }
+    
+        
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
@@ -283,6 +293,9 @@ namespace CursachFront
                         Married.Text = (usr.Married) ? "YES" : "NO";
                         Profession.Text = usr.Profession;
                         Gang.Text = usr.Gang;
+                        Statusz.Text = usr._Status.ToString();
+                        Weight.Text = usr.Weight.ToString();
+                        Criminal.Text = usr.CriminalArticles.ToString();
                         FotocarSuspect.Source = new BitmapImage(new Uri(PathFindService.GetPath(usr.PhotoName, true), UriKind.Absolute));
                         ImprintImage.Source = new BitmapImage(new Uri(PathFindService.GetPath(usr.FingerName, false), UriKind.Absolute));
                     }

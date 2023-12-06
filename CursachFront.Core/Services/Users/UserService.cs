@@ -34,6 +34,22 @@ namespace CursachFront.Core.Services.Users
             var hashed = GenPassword(au.HashedPassword);
             au.HashedPassword = hashed;
             data = au;
+            data.Rank = au.Rank;
+            data.Email = au.Email;
+            data.Education = au.Education;
+            data.HashedPassword = hashed;
+            data.BirthDay = au.BirthDay;
+            data.Departments = au.Departments;
+            data.Id = au.Id;
+            data.Role = au.Role;
+            data.Bio = au.Bio;
+            data.PhotoName = au.PhotoName;
+            data.FingerName = au.FingerName;
+            data.Gender = au.Gender;
+            data.BirthDay = au.BirthDay;
+            data.Country = au.Country;
+            data.Specifications = au.Specifications;
+            data.Username = au.Username;
             _configuration.SaveToFile();
         }
 
