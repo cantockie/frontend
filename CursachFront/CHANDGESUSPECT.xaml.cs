@@ -96,7 +96,7 @@ namespace CursachFront
         {
             ComboBoxItem selectedItem = (ComboBoxItem)Vibor.SelectedItem;
 
-            if (selectedItem == null)
+            if (selectedItem is null)
                 return;
 
             AddButton.Visibility = Visibility.Collapsed;
@@ -290,54 +290,36 @@ namespace CursachFront
                 }
                 else
                 {
-                    Name.Text = "";
-                    SName.Text = "";
-                    klichka.Text = "";
-                    Hender.Text = "";
-                    BIO.Text = "";
-                    Hair.Text = "";
-                    EyeColor.Text = "";
-                    blood.Text = "";
-                    Dr.Text = "";
-                    CrimeSpecialization.Text = "";
-                    CivilSpecialization.Text = "";
-                    FirstCrimes.Text = "";
-                    Married.Text = "";
-                    Profession.Text = "";
-                    _finger = "";
-                    _face = "";
-                    Gang.Text = "";
-
-
+                    FillEmpty();
                 }
-
-
             }
             else
             {
-                Name.Text = "";
-                SName.Text = "";
-                klichka.Text = "";
-                Hender.Text = "";
-                BIO.Text = "";
-                Hair.Text = "";
-                EyeColor.Text = "";
-                blood.Text = "";
-                Dr.Text = "";
-                CrimeSpecialization.Text = "";
-                CivilSpecialization.Text = "";
-                FirstCrimes.Text = "";
-                Married.Text = "";
-                Profession.Text = "";
-                _finger = "";
-                _face = "";
-                Gang.Text = "";
-
-
+                FillEmpty();
             }
 
 
 
+        }
+        private void FillEmpty()
+        {
+            Name.Text = "";
+            SName.Text = "";
+            klichka.Text = "";
+            Hender.Text = "";
+            BIO.Text = "";
+            Hair.Text = "";
+            EyeColor.Text = "";
+            blood.Text = "";
+            Dr.Text = "";
+            CrimeSpecialization.Text = "";
+            CivilSpecialization.Text = "";
+            FirstCrimes.Text = "";
+            Married.Text = "";
+            Profession.Text = "";
+            _finger = "";
+            _face = "";
+            Gang.Text = "";
         }
     }
 }

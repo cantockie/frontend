@@ -52,7 +52,7 @@ namespace CursachFront
 
         public void Gets()
         {
-            if (selectedPrisoner != null)
+            if (selectedPrisoner is not null)
             {
                 
                 Name.Text = selectedPrisoner.Name;
@@ -168,7 +168,6 @@ namespace CursachFront
 
                     MessageBox.Show($"Файл '{saveFileDialog.FileName}' успешно сохранен.", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
 
-                    // Открываем сохраненный файл в браузере
                     Process.Start(new ProcessStartInfo
                     {
                         FileName = saveFileDialog.FileName,

@@ -13,6 +13,7 @@ namespace CursachFront.Core.Services.Users
         void Add(AppUser au);
         void Update(AppUser au);
         void Remove(long Id);
+        List<AppUser> GetList();
     }
 
 }

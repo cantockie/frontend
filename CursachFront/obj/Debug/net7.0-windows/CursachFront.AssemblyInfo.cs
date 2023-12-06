@@ -14,11 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CursachFront")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< Updated upstream
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61136a937f6a76e704afb63f287bbda414266254")]
->>>>>>> Stashed changes
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03cd1141864fa335808648f8740f65a9cd7c3cfc")]
 [assembly: System.Reflection.AssemblyProductAttribute("CursachFront")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CursachFront")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -45,7 +45,7 @@ namespace CursachFront
         }
         private void UbdateFullCabinet() 
         {
-            if (CurrentUser != null)
+            if (CurrentUser is not null)
             {
                 NameOficer.Text = _current.FirstName;
                 SNameOficer.Text = _current.LastName;

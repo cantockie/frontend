@@ -37,7 +37,7 @@ namespace CursachFront
     {
         private string _face;
         private string _finger;
-        private readonly UserService _userService;
+        private readonly IUserService _userService;
         public NewUser()
         {
             InitializeComponent();
@@ -114,22 +114,7 @@ namespace CursachFront
                 {
                     AppUser user = new AppUser()
                     {
-                        FirstName = NameOficer.Text,
-                        LastName = SNameOficer.Text,
-                        Username = LogginOficer.Text,
-                        HashedPassword = PasswordOficer.Text,
-                        Bio = BIOOficer.Text,
-                        Gender = HenderOficer.Text,
-                        Country = CountryOficer.Text,
-                        Rank = Rank.Text,
-                        Education = EducationOficer.Text,
-                        Departments = DepartmentsOficer.Text,
-                        Specifications = SpecializationOficer.Text,
-                        Email = ContactInformationOficer.Text,
-                        BirthDay = valueDr,
-                        Role = Level.Text,
-                        FingerName = _finger,
-                        PhotoName = _face
+                       
 
                     };
                     _userService.Update(user);
@@ -177,22 +162,27 @@ namespace CursachFront
             {
                 string selectedFilePath = openFileDialog.FileName;
                 string destinationPath = PathFindService.GetPath("\\Sources\\Fingermarks");
+                ImagesSet(selectedFilePath, destinationPath);
 
-                try
-                {
-                    string fileName = System.IO.Path.GetFileName(selectedFilePath);
-                    _finger = fileName;
-                    string destinationFilePath = System.IO.Path.Combine(destinationPath, fileName);
-                    File.Copy(selectedFilePath, destinationFilePath, true);
-                    BitmapImage bitmapImage = new BitmapImage(new Uri(destinationFilePath));
-                    ImprintImage.Source = bitmapImage;
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Ошибка загрузки/копирования изображения: {ex.Message}");
-                }
-                MessageBox.Show("Well!");
+
             }
+        }
+        private void ImagesSet(string selectedFilePath, string destinationPath)
+        {
+            try
+            {
+                string fileName = System.IO.Path.GetFileName(selectedFilePath);
+                _finger = fileName;
+                string destinationFilePath = System.IO.Path.Combine(destinationPath, fileName);
+                File.Copy(selectedFilePath, destinationFilePath, true);
+                BitmapImage bitmapImage = new BitmapImage(new Uri(destinationFilePath));
+                ImprintImage.Source = bitmapImage;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ошибка загрузки/копирования изображения: {ex.Message}");
+            }
+            MessageBox.Show("Well!");
         }
 
         private void id_TextChanged(object sender, TextChangedEventArgs e)
@@ -226,49 +216,32 @@ namespace CursachFront
                     }
                     else
                     {
-                        NameOficer.Text = "";
-                        SNameOficer.Text = "";
-                        LogginOficer.Text = "";
-                        PasswordOficer.Text = "";
-                        BIOOficer.Text = "";
-                        HenderOficer.Text = "";
-                        CountryOficer.Text = "";
-                        Rank.Text = "";
-                        DrOficer.Text = "";
-                        EducationOficer.Text = "";
-                        DepartmentsOficer.Text = "";
-                        SpecializationOficer.Text = "";
-                        ContactInformationOficer.Text = "";
-                        Level.Text = "";
-                        _finger = "";
-                        _face = "";
+                       
                     }
                 }
            
             }
             else 
-            {
-                    NameOficer.Text = "";
-                    SNameOficer.Text = "";
-                    LogginOficer.Text = "";
-                    PasswordOficer.Text = "";
-                    BIOOficer.Text = "";
-                    HenderOficer.Text = "";
-                    CountryOficer.Text = "";
-                    Rank.Text = "";
-                    DrOficer.Text = "";
-                    EducationOficer.Text = "";
-                    DepartmentsOficer.Text = "";
-                    SpecializationOficer.Text = "";
-                    ContactInformationOficer.Text = "";
-                    Level.Text = "";
-                    _finger = "";
-                    _face = "";
-
-            }
-            
-           
-   
+             FillEmpty();
+        }
+        private void FillEmpty()
+        {
+            NameOficer.Text = "";
+            SNameOficer.Text = "";
+            LogginOficer.Text = "";
+            PasswordOficer.Text = "";
+            BIOOficer.Text = "";
+            HenderOficer.Text = "";
+            CountryOficer.Text = "";
+            Rank.Text = "";
+            DrOficer.Text = "";
+            EducationOficer.Text = "";
+            DepartmentsOficer.Text = "";
+            SpecializationOficer.Text = "";
+            ContactInformationOficer.Text = "";
+            Level.Text = "";
+            _finger = "";
+            _face = "";
         }
         private AppUser CheckId(AppUser usr, long ids) 
         {

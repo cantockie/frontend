@@ -40,7 +40,7 @@ namespace CursachFront
         {
             MainWindow.Cancell((MainWindow)Window.GetWindow(this));
        
-        }//кнопка закрития бордера
+        }
         private void ToSearchgFrameOption(object sender, RoutedEventArgs e)
         {
             MainWindow.ToSearchingEnotherframe((MainWindow)Window.GetWindow(this));
@@ -51,7 +51,7 @@ namespace CursachFront
         {
             MainWindow.ToViewEnotherframe((MainWindow)Window.GetWindow(this));
             MainWindow.Cancell((MainWindow)Window.GetWindow(this));
-        }//навигация к просмотру бази
+        }
         private void ToOptionSuspectsFrameOption(object sender, RoutedEventArgs e)
         {
             MainWindow.ToChangeSubjectEnotherframe((MainWindow)Window.GetWindow(this));
@@ -61,6 +61,7 @@ namespace CursachFront
         {
             MainWindow.ToNewUserEnotherframe((MainWindow)Window.GetWindow(this));
             MainWindow.Cancell((MainWindow)Window.GetWindow(this));
-        }//адмін панель
+        }
     }
+
 }

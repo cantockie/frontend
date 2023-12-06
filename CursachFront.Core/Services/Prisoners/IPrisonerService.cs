@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CursachFront.Core.Services.Prisoners
 {
-    internal interface IPrisonerService
+    public interface IPrisonerService
     {
         IEnumerable<Prisoner> GetFilteredAsync(SearchFilter filter);
         IEnumerable<Prisoner> GetFilteredShort(SearchFilter filter);
