@@ -121,7 +121,7 @@ namespace CursachFront
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            string[] dateFormats = { "yyyy.MM.dd", "yyyy/MM/dd", "yyyy-MM-dd" };
+            string[] dateFormats = { "yyyy.MM.dd", "yyyy/MM/dd", "yyyy-MM-dd", "yyyy-MM-dd HH:mm:ss", "dd.MM.yyyy H:mm:ss" };
             if (_face is null)
                 _face = "face1.jpg";
             if (_finger is null)
@@ -166,7 +166,7 @@ namespace CursachFront
 
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
-            string[] dateFormats = { "yyyy.MM.dd", "yyyy/MM/dd", "yyyy-MM-dd" };
+            string[] dateFormats = { "yyyy.MM.dd", "yyyy/MM/dd", "yyyy-MM-dd", "yyyy-MM-dd HH:mm:ss", "dd.MM.yyyy H:mm:ss" };
             if (_face is null)
                 _face = "face1.jpg";
             if (_finger is null)
@@ -183,7 +183,7 @@ namespace CursachFront
                         Hospital = klichka.Text,
                         Gender = Hender.Text,
                         Country = Country.Text,
-                        Weight = Convert.ToDouble(Weight),
+                        Weight = Convert.ToDouble(Weight.Text),
                         Gang = Gang.Text,
                         CivilSpec = CivilSpecialization.Text,
                         CrimeSpec = CrimeSpecialization.Text,

@@ -54,7 +54,7 @@ namespace CursachFront
         {
             if (selectedPrisoner != null)
             {
-                
+                id.Text = "id "+selectedPrisoner.Id.ToString(); 
                 Name.Text = selectedPrisoner.Name;
                 SName.Text = selectedPrisoner.Surname;
                 klichka.Text = selectedPrisoner.Hospital;
